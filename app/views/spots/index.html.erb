@@ -1,0 +1,9 @@
+<% @spots.each do |spot| %>
+  <p>
+    <%= spot.name %>
+    <%= spot.description %>
+    <%= spot.postal_code %>
+    <%= spot.address %>
+    <%= image_tag spot.image.url %>
+  </p>
+<% end %>
