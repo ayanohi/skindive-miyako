@@ -3,7 +3,7 @@ class Spot < ApplicationRecord
 
   with_options presence: true do
     validates :name
-    validates :area_id
+    # validates :area_id
   end
 
 end
