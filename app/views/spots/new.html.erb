@@ -1,4 +1,4 @@
-<p class="new-title">スポットを追加する</p>
+<p class="page-title">スポットを追加する</p>
 <%= form_with model: @spot, local: true do |f| %>
   <div class="container">
     <form action="＃" method="get" class="row">
@@ -15,15 +15,16 @@
         <div class="form-group">
           <p>住所<%= f.text_field :address, class: "form-control" %></p>
         </div>
+        <div class="form-group">
+          <p>写真<%= f.file_field :image, accept: "image/png,image/jpeg,image/gif", class: "form-control-file" %></p>
+        </div>
+
 <%
 =begin
 %>
 
         <div class="form-group">
           <p>エリア<%= f.text_field :area, class: "form-control" %></p>
-        </div>
-        <div class="form-group">
-          <p>写真<%= f.text_field :image, class: "form-control" %></p>
         </div>
 <%
 =end
