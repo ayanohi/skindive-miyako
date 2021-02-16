@@ -1,0 +1,20 @@
+<h1 class="text-center">エリア一覧</h1>
+
+<div class="col-md-5 mx-auto">
+  <table class="table table-sm">
+    <thead class="thead-light">
+      <tr>
+        <th>ID</th>
+        <th>エリア名</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @areas.each do |area| %>
+        <tr>
+          <td><%= area.id %></td>
+          <td><%= area.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

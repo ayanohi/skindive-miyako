@@ -16,7 +16,7 @@
               <div class="card-body">
                 <h4>
                   <%= link_to spot.name, root_path, {class: 'card-link'} %>
-                  <%# <%= link_to spot.area, root_path, {class: "card-link card-area"} %>
+                  <%= link_to spot.area.name, root_path, {class: "card-link card-area"} %>
                 </h4>
                 <p class="card-text">
                   <%= spot.description %>
