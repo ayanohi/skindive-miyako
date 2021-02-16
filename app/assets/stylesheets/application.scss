@@ -15,6 +15,7 @@
  */
 
 @import "bootstrap/scss/bootstrap";
+@import "modules/header";
 
 * {
   margin: 0;
@@ -31,22 +32,7 @@ h1 {
   color: #313131;
 }
 
-/* --------------- header --------------- */
-nav {
-  padding: 0 2rem !important;
-  a {
-    color: #EFEFEF;
-    margin-right: 2rem;
-    font-size: 0.8rem;
-  }
-  a:hover {
-    color: #313131;
-  }
-}
 
-.navbar-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-}
 
 /* --------------- footer --------------- */
 footer {
