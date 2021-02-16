@@ -1,7 +1,7 @@
 class SpotsController < ApplicationController
 
   def index
-    @spots = Spot.all
+    @spots = Spot.all.order(id: :desc)
   end
 
   def new
