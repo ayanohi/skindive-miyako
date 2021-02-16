@@ -16,6 +16,7 @@
 
 @import "bootstrap/scss/bootstrap";
 @import "modules/header";
+@import "modules/footer";
 
 * {
   margin: 0;
@@ -30,26 +31,4 @@ body {
 
 h1 {
   color: #313131;
-}
-
-
-
-/* --------------- footer --------------- */
-footer {
-  background-color: #fff;
-  padding: 1rem 0;
-  a {
-    display: block;
-    color: #707070;
-    text-align: center;
-    font-family: sans-serif;
-  }
-  .footer-two {
-    font-size: 0.6rem;
-    padding-left: 0.6rem;
-  }
-  .footer-three {
-    font-size: 0.6rem;
-    padding-top: 0.2rem;
-  }
 }
