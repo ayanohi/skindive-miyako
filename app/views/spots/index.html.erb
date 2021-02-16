@@ -1,9 +1,83 @@
-<% @spots.each do |spot| %>
-  <p>
-    <%= spot.name %>
-    <%= spot.description %>
-    <%= spot.postal_code %>
-    <%= spot.address %>
-    <%= image_tag spot.image.url %>
-  </p>
-<% end %>
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #08080859;">
+    <a class="navbar-brand" href="#">Top</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-around" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">スポット一覧</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">今日のおすすめ</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            エリアで探す
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">宮古島</a>
+            <a class="dropdown-item" href="#">伊良部島</a>
+            <a class="dropdown-item" href="#">下地島</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            条件で探す
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">ウミガメ</a>
+            <a class="dropdown-item" href="#">マンタ</a>
+            <a class="dropdown-item" href="#">洞窟</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">サインイン</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-title">
+    <h1>すべてのスポット</h1>
+    <p>宮古島在住者が「スキンダイビングならここ！」と通い続ける、人気のスポットをご紹介</p>
+  </section>
+
+  <section class="index-card">
+    <div class="container">
+      <div class="row">
+        <% @spots.each do |spot| %>
+          <div class="col-lg-4 col-md-6 p-md-3">
+            <div class="card border-0 rounded-0">
+              <%= link_to root_path do %>
+                <%= image_tag spot.image.url, class: 'card-img-top rounded-0' %>
+              <% end %>
+              <div class="card-body">
+                <h4>
+                  <%= link_to spot.name, root_path, {class: 'card-link'} %>
+                  <%# <%= link_to spot.area, root_path, {class: "card-link card-area"} %>
+                </h4>
+                <p class="card-text">
+                  <%= spot.description %>
+                </p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <a href="#">Where to swim?<span class="footer-two">in Miyako</span></a>
+  <a href="#" class="footer-three">Copyright  @ayalikesweb  All Right</a>
+</footer>
