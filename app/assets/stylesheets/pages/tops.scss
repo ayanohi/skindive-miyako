@@ -17,3 +17,19 @@
     }
   }
 }
+
+body {
+  background-color: #fff !important;
+}
+
+.about {
+  background-color: #EFEFEF;
+  .container {
+    margin-left: 0;
+    .pic {
+      background-image: image-url("turtle.jpg");
+      height: 20rem;
+      background-size: cover;
+    }
+  }
+}
