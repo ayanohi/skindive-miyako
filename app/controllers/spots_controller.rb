@@ -35,6 +35,12 @@ class SpotsController < ApplicationController
     end
   end
 
+  def destroy
+    spot = Spot.find(params[:id])
+    spot.destroy
+    redirect_to spots_path
+  end
+
   private
   def spot_params
     params.require(:spot).permit(
