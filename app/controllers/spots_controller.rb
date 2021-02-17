@@ -19,6 +19,7 @@ class SpotsController < ApplicationController
   end
 
   def show
+    @areas = Area.all
     @spot = Spot.find(params[:id])
   end
 
