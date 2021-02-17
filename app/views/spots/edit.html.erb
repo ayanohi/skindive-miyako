@@ -1,0 +1,39 @@
+<h1 class="page-title">スポットを編集する</h1>
+<%= form_with model: @spot, local: true do |f| %>
+  <div class="container">
+    <form action="＃" method="get" class="row">
+      <div class=".col-md-2 .col-md-offset-5">
+        <div class="form-group">
+          <p>スポット名<%= f.text_field :name, class: "form-control" %></p>
+        </div>
+        <div class="form-group col-md-3 p-0">
+          <p>エリア名<%= f.select :area_id, Area.all.map { |area| [area.name, area.id] }, {}, class: "form-control" %></p>
+        </div>
+        <div class="form-group">
+          <p>説明<%= f.text_area :description, class: "form-control" %></p>
+        </div>
+        <div class="form-group">
+          <p>郵便番号<%= f.text_field :postal_code, class: "form-control" %></p>
+        </div>
+        <div class="form-group">
+          <p>住所<%= f.text_field :address, class: "form-control" %></p>
+        </div>
+        <div class="form-group">
+          <p>写真<%= f.file_field :image, accept: "image/png,image/jpeg,image/gif", class: "form-control-file" %></p>
+        </div>
+
+<%
+=begin
+%>
+
+        <div class="form-group">
+          <p>エリア<%= f.text_field :area, class: "form-control" %></p>
+        </div>
+<%
+=end
+%>
+        <%= f.submit "送信", class: "btn btn-info" %>
+      </div>
+    </form>
+  </div>
+<% end %>
