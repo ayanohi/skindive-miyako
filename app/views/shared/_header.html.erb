@@ -20,9 +20,9 @@
             エリアで探す
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">宮古島</a>
-            <a class="dropdown-item" href="#">伊良部島</a>
-            <a class="dropdown-item" href="#">下地島</a>
+            <% @areas.each do |area| %>
+              <a class="dropdown-item" href="#"><%= area.name %></a>
+            <% end %>
           </div>
         </li>
 
