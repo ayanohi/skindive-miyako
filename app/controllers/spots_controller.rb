@@ -1,8 +1,8 @@
 class SpotsController < ApplicationController
+  before_action :set_area, only: %i[index new show]
 
   def index
     @spots = Spot.all.order(id: :desc)
-    @areas = Area.all
   end
 
   def new
@@ -19,7 +19,6 @@ class SpotsController < ApplicationController
   end
 
   def show
-    @areas = Area.all
     @spot = Spot.find(params[:id])
   end
 
@@ -37,5 +36,9 @@ class SpotsController < ApplicationController
       :image,
       :area_id
     )
+  end
+
+  def set_area
+    @areas = Area.all
   end
 end
