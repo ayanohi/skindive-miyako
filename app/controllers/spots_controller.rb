@@ -18,6 +18,11 @@ class SpotsController < ApplicationController
     end
   end
 
+  def show
+    @areas = Area.all
+    @spot = Spot.find(params[:id])
+  end
+
   private
   def spot_params
     params.require(:spot).permit(

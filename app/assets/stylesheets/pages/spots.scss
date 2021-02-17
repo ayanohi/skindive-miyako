@@ -1,5 +1,5 @@
 /* --------------- main--------------- */
-main {
+.show-index {
   max-width: 992px;
   margin:0 auto;
 }
@@ -9,6 +9,7 @@ main {
   text-align: center;
 }
 
+//スポット一覧
 /* --------------- card-section --------------- */
 .index-card{
   padding-top: 2rem;
@@ -41,20 +42,69 @@ main {
 }
 
 
-
-
-
 /* ---------------  --------------- */
 @media not all and (min-width: 768px) {
   /* 768pxを含まずそれより小さい場合 */
   .index-card .col-lg-4 {
     padding: 2rem;
   }
+
+  .tab-content .col-md-8 {
+    padding: 2rem;
+  }
+
 }
 
 @media not all and (min-width: 576px) {
   /* 576pxを含まずそれより小さい場合 */
   .index-card .col-lg-4 {
     padding: 3rem 0;
+  }
+}
+
+
+//スポット詳細
+/* --------------- spot-show --------------- */
+.spot-show {
+  .title {
+    text-align: center;
+    h1 {
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 3rem;
+    }
+    h1:before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      display: inline-block;
+      width: 80px;
+      height: 5px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-color: #B9D0D7;
+      border-radius: 2px;
+    }
+  }
+
+  .nav-tabs {
+    .nav-link {
+      color: #707070;
+      border: 0.5px solid #EFEFEF;
+      border-bottom: none;
+      border-radius: 0;
+    }
+    .nav-link:hover, .nav-link.active {
+      background-color:#EFEFEF;
+    }
+  }
+
+  .tab-content {
+    background-color: #EFEFEF;
+    .container {
+      padding: 4rem 0;
+    }
   }
 }

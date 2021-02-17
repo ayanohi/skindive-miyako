@@ -1,0 +1,61 @@
+<section class="spot-show">
+  <div class="title">
+    <h1><%= @spot.name %></h1>
+  </div>
+
+  <div class="col-md-5 mx-auto">
+    <ul class="nav nav-tabs nav-justified">
+      <li class="nav-item">
+        <a href="#tab1" class="nav-link active" data-toggle="tab">特徴</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab2" class="nav-link" data-toggle="tab">口コミ</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab3" class="nav-link" data-toggle="tab">マップ</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-content">
+    <div id="tab1" class="tab-pane active">
+      <div class="container col-md-8 mx-auto">
+        <div class="row">
+          <div class="col-md-8 order-md-2">
+            <%= @spot.description %>
+          </div>
+          <div class="col-md-4 order-md-1">
+            <%= image_tag @spot.image.url, class: 'img-fluid rounded', alt: 'Responsive image' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab2" class="tab-pane">
+      <div class="container col-md-8 mx-auto">
+        <div class="row">
+          <div class="col-md-8 order-md-2">
+            <p>口コミ</p>
+          </div>
+          <div class="col-md-4 order-md-1">
+            <%= image_tag @spot.image.url, class: 'img-fluid rounded', alt: 'Responsive image' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab3" class="tab-pane">
+      <div class="container col-md-8 mx-auto">
+        <div class="row">
+          <div class="col-md-8 order-md-2">
+            <p>マップ</p>
+          </div>
+          <div class="col-md-4 order-md-1">
+            <%= image_tag @spot.image.url, class: 'img-fluid rounded', alt: 'Responsive image' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
