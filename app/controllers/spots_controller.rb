@@ -1,5 +1,5 @@
 class SpotsController < ApplicationController
-  before_action :set_area, only: %i[index new show]
+  before_action :set_area, only: %i[index new show edit]
 
   def index
     @spots = Spot.all.order(id: :desc)
