@@ -10,12 +10,12 @@
         <% @spots.each do |spot| %>
           <div class="col-lg-4 col-md-6 p-md-3">
             <div class="card border-0 rounded-0">
-              <%= link_to root_path do %>
+              <%= link_to spot_path(spot.id) do %>
                 <%= image_tag spot.image.url, class: 'card-img-top rounded-0' %>
               <% end %>
               <div class="card-body">
                 <h4>
-                  <%= link_to spot.name, root_path, {class: 'card-link'} %>
+                  <%= link_to spot.name, spot_path(spot.id), {class: 'card-link'} %>
                   <%= link_to spot.area.name, root_path, {class: "card-link card-area"} %>
                 </h4>
                 <p class="card-text">
