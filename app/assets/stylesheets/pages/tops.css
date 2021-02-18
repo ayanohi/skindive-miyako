@@ -1,0 +1,35 @@
+.home-header {
+  width: 100%;
+}
+
+.home-header .home-header-top {
+  margin-left: 12vw;
+  margin-top: 12vw;
+  background-image: image-url("top.jpeg");
+  height: 40vw;
+  background-size: cover;
+  position: relative;
+}
+
+.home-header .home-header-top h1 {
+  position: absolute;
+  top: -8vw;
+  right: 0;
+  font-family: english-grotesque, sans-serif;
+  font-size: 10vw;
+  color: #313131;
+}
+
+.about {
+  background-color: #EFEFEF;
+}
+
+.about .container {
+  margin-left: 0;
+}
+
+.about .container .pic {
+  background-image: image-url("turtle.jpg");
+  height: 20rem;
+  background-size: cover;
+}
