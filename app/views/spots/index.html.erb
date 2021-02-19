@@ -12,7 +12,7 @@
         <%# <%= f.search_field :name_cont %>
         <%= f.label :area_id, "エリア" %>
         <%= f.collection_select :area_id_eq, Area.all, :id, :name, :include_blank => '指定なし' %>
-        <%= f.submit "検索" %>
+        <%= f.submit "検索", class: 'p-2'%>
       <% end %>
 
       <div class="row">
