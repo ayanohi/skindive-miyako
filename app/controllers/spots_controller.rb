@@ -2,7 +2,8 @@ class SpotsController < ApplicationController
   before_action :set_area, only: %i[index new show edit update]
 
   def index
-    @spots = Spot.all.order(id: :desc)
+    @q = Spot.ransack(params[:q])
+    @spots = @q.result
   end
 
   def new
