@@ -11,6 +11,11 @@
 }
 
 /* --------------- card-section --------------- */
+#q_area_id_eq {
+  padding: 0.7rem;
+  margin: 1rem;
+}
+
 .index-card {
   padding-top: 2rem;
   padding-bottom: 4rem;
