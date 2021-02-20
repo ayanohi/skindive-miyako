@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-  def index
+  before_action :get_areas
+
+  def get_areas
     @areas = Area.all
   end
 end

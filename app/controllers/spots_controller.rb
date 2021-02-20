@@ -1,5 +1,4 @@
 class SpotsController < ApplicationController
-  before_action :set_area, only: %i[index new show edit update]
 
   def index
     @spots = Spot.all
@@ -56,7 +55,4 @@ class SpotsController < ApplicationController
     )
   end
 
-  def set_area
-    @areas = Area.all
-  end
 end
