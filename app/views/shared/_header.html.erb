@@ -20,7 +20,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <% @areas.each do |area| %>
-              <a class="dropdown-item" href="#"><%= area.name %></a>
+              <%= link_to area.name, spots_path(@q, 'q[area_id_eq]': area.id), class: 'dropdown-item' %>
             <% end %>
           </div>
         </li>
