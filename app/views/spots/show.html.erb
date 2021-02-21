@@ -23,6 +23,11 @@
         <div class="row">
           <div class="col-md-8 order-md-2">
             <%= @spot.description %>
+            <p>
+              <% @spot.get_creatures.each do |creature| %>
+                <%= link_to(creature.name, root_path, class: 'p-2') %>
+              <% end %>
+            </p>
               <p>
                 <button type="button" class="btn btn-outline-info m-3">
                   <%=link_to "編集", edit_spot_path(@spot.id), class: 'text-info' %>

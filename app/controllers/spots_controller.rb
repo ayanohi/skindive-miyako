@@ -51,7 +51,8 @@ class SpotsController < ApplicationController
       :postal_code,
       :address,
       :image,
-      :area_id
+      :area_id,
+      creature_ids: []
     )
   end
 
