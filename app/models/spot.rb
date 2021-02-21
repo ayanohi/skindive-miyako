@@ -9,4 +9,11 @@ class Spot < ApplicationRecord
     validates :area_id
   end
 
+  def get_creatures
+    spot_creatures = []
+    creatures.each do |creature|
+      spot_creatures << creature.name
+    end
+  end
+
 end
