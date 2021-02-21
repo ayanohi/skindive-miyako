@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_20_100020) do
+ActiveRecord::Schema.define(version: 2021_02_21_095312) do
 
   create_table "areas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 2021_02_20_100020) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "spot_creatures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "spot_id", null: false
+    t.bigint "creature_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["creature_id"], name: "index_spot_creatures_on_creature_id"
+    t.index ["spot_id", "creature_id"], name: "index_spot_creatures_on_spot_id_and_creature_id", unique: true
+    t.index ["spot_id"], name: "index_spot_creatures_on_spot_id"
   end
 
   create_table "spots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -36,5 +46,7 @@ ActiveRecord::Schema.define(version: 2021_02_20_100020) do
     t.index ["area_id"], name: "index_spots_on_area_id"
   end
 
+  add_foreign_key "spot_creatures", "creatures"
+  add_foreign_key "spot_creatures", "spots"
   add_foreign_key "spots", "areas"
 end
