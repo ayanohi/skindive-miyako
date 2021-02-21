@@ -19,6 +19,11 @@ services:
     volumes:
       - .:/miyako
       - bundle-data:/usr/local/bundle
+      # 1. exclude volumes
+      - /app/vendor
+      - /app/tmp
+      - /app/log
+      - /app/.git
     ports:
       - "3000:3000"
     tty: true
