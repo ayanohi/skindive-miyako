@@ -6,5 +6,6 @@ class CreateSpotCreatures < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index :spot_creatures, [:spot_id, :creature_id], unique: true
   end
 end
