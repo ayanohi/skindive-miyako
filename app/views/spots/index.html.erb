@@ -28,7 +28,7 @@
                   <%= link_to spot.area.name, root_path, {class: "card-link card-area"} %>
                 </h4>
                 <p class="card-text">
-                  <%= spot.description %>
+                  <%= safe_join(spot.description.split("\n"), tag(:br)) %>
                 </p>
               </div>
             </div>
