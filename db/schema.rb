@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_23_105454) do
+ActiveRecord::Schema.define(version: 2021_02_23_114705) do
 
   create_table "areas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,16 @@ ActiveRecord::Schema.define(version: 2021_02_23_105454) do
     t.index ["spot_id"], name: "index_spot_creatures_on_spot_id"
   end
 
+  create_table "spot_features", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "spot_id", null: false
+    t.bigint "feature_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["feature_id"], name: "index_spot_features_on_feature_id"
+    t.index ["spot_id", "feature_id"], name: "index_spot_features_on_spot_id_and_feature_id", unique: true
+    t.index ["spot_id"], name: "index_spot_features_on_spot_id"
+  end
+
   create_table "spots", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.text "description"
@@ -54,5 +64,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_105454) do
 
   add_foreign_key "spot_creatures", "creatures"
   add_foreign_key "spot_creatures", "spots"
+  add_foreign_key "spot_features", "features"
+  add_foreign_key "spot_features", "spots"
   add_foreign_key "spots", "areas"
 end
