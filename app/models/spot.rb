@@ -18,4 +18,11 @@ class Spot < ApplicationRecord
     end
   end
 
+  def get_features
+    spot_features = []
+    features.each do |feature|
+      spot_features << feature.name
+    end
+  end
+
 end

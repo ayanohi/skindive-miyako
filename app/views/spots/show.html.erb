@@ -28,6 +28,11 @@
                 <%= link_to creature.name, spots_path(@q, 'q[creatures_id_eq]': creature.id), class: 'p-2' %>
               <% end %>
             </p>
+            <p>
+              <% @spot.get_features.each do |feature| %>
+                <%= link_to feature.name, spots_path(@q, 'q[features_id_eq]': feature.id), class: 'p-2' %>
+              <% end %>
+            </p>
               <p>
                 <button type="button" class="btn btn-outline-info m-3">
                   <%=link_to "編集", edit_spot_path(@spot.id), class: 'text-info' %>
