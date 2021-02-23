@@ -10,6 +10,14 @@
   text-align: center;
 }
 
+.form-group {
+  margin-top: 2rem;
+}
+
+.form-group .form-control {
+  margin-top: 0.5rem;
+}
+
 /* --------------- card-section --------------- */
 #q_area_id_eq {
   padding: 0.7rem;

@@ -9,6 +9,14 @@
   text-align: center;
 }
 
+//スポット新規登録
+.form-group {
+  margin-top:  2rem;
+  .form-control {
+    margin-top: 0.5rem;
+  }
+}
+
 //スポット一覧
 /* --------------- card-section --------------- */
 #q_area_id_eq {
@@ -53,7 +61,6 @@
   .index-card .col-lg-4 {
     padding: 2rem;
   }
-
   .tab-content .col-md-8 {
     padding: 2rem;
   }
