@@ -6,5 +6,6 @@ class CreateSpotFeatures < ActiveRecord::Migration[6.0]
 
       t.timestamps
     end
+    add_index :spot_features, [:spot_id, :feature_id], unique: true
   end
 end
