@@ -52,7 +52,8 @@ class SpotsController < ApplicationController
       :address,
       :image,
       :area_id,
-      creature_ids: []
+      creature_ids: [],
+      feature_ids: []
     )
   end
 
