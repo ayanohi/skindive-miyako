@@ -30,9 +30,9 @@
             条件で探す
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">ウミガメ</a>
-            <a class="dropdown-item" href="#">マンタ</a>
-            <a class="dropdown-item" href="#">洞窟</a>
+            <% @creatures.each do |creature| %>
+              <%= link_to creature.name, spots_path(@q, 'q[creatures_id_eq]': creature.id), class: 'dropdown-item' %>
+            <% end %>
           </div>
         </li>
 
