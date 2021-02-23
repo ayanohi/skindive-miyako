@@ -33,6 +33,9 @@
             <% @creatures.each do |creature| %>
               <%= link_to creature.name, spots_path(@q, 'q[creatures_id_eq]': creature.id), class: 'dropdown-item' %>
             <% end %>
+            <% @features.each do |feature| %>
+              <%= link_to feature.name, root_path, class: 'dropdown-item' %>
+            <% end %>
           </div>
         </li>
 
