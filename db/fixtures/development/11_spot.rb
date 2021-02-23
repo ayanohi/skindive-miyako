@@ -71,12 +71,72 @@ Spot.seed do |s|
   s.area_id = 6
 end
 
+Spot.seed do |s|
+  s.id = 7
+  s.name = '中の島海岸'
+  s.description = '行きたい
+  行きたい行きたい
+  行きたい行きたい行きたい'
+  s.postal_code = '906-0000'
+  s.address = '沖縄県宮古島市'
+  s.image = Rails.root.join("db/fixtures/img/中の島海岸.jpg").open
+  s.area_id = 5
+end
+
+Spot.seed do |s|
+  s.id = 8
+  s.name = 'ムスヌン浜'
+  s.description = '行きたい
+  行きたい行きたい
+  行きたい行きたい行きたい'
+  s.postal_code = '906-0000'
+  s.address = '沖縄県宮古島市'
+  s.image = Rails.root.join("db/fixtures/img/ムスヌン浜.jpg").open
+  s.area_id = 7
+end
+
+Spot.seed do |s|
+  s.id = 9
+  s.name = '名無ビーチ'
+  s.description = '行きたい
+  行きたい行きたい
+  行きたい行きたい行きたい'
+  s.postal_code = '906-0000'
+  s.address = '沖縄県宮古島市'
+  s.image = Rails.root.join("db/fixtures/img/名無ビーチ.jpg").open
+  s.area_id = 8
+end
+
+Spot.seed do |s|
+  s.id = 10
+  s.name = '長間浜'
+  s.description = '行きたい
+  行きたい行きたい
+  行きたい行きたい行きたい'
+  s.postal_code = '906-0000'
+  s.address = '沖縄県宮古島市'
+  s.image = Rails.root.join("db/fixtures/img/長間浜.jpg").open
+  s.area_id = 7
+end
+
+Spot.seed do |s|
+  s.id = 11
+  s.name = 'シギラ砂地'
+  s.description = '行きたい
+  行きたい行きたい
+  行きたい行きたい行きたい'
+  s.postal_code = '906-0000'
+  s.address = '沖縄県宮古島市'
+  s.image = Rails.root.join("db/fixtures/img/シギラ砂地.jpg").open
+  s.area_id = 2
+end
+
 # Spot.seed do |s|
 #   s.id =
 #   s.name = ''
 #   s.description = ''
-#   s.postal_code = '906-0000'
-#   s.address = '沖縄県宮古島市'
+#   s.postal_code = '0'
+#   s.address = ''
 #   s.image = Rails.root.join("db/fixtures/img/1.jpg").open
 #   s.area_id =
 # end
