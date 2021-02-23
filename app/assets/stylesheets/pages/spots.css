@@ -10,6 +10,14 @@
   text-align: center;
 }
 
+.form-group {
+  margin-top: 2rem;
+}
+
+.form-group .form-control {
+  margin-top: 0.5rem;
+}
+
 /* --------------- card-section --------------- */
 #q_area_id_eq {
   padding: 0.7rem;
@@ -30,7 +38,7 @@
 }
 
 .index-card .card-link {
-  color: #222;
+  color: #555;
 }
 
 .index-card .card-link:hover {
@@ -113,4 +121,47 @@
 
 .spot-show .tab-content .container {
   padding: 4rem 0;
+}
+
+.spot-show .tab-content .tag ul {
+  list-style: none;
+}
+
+.spot-show .tab-content .tag ul span {
+  font-size: 0.8rem;
+  padding-right: 0.4rem;
+}
+
+.spot-show .tab-content .tag ul li {
+  display: inline-block;
+}
+
+.spot-show .tab-content .tag ul li a {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 1em 0 .75em;
+  background-color: #c7d9e9;
+  border-radius: 30px;
+  color: #555;
+  font-size: 0.8rem;
+  margin: 1rem 0.4rem 0 0;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.spot-show .tab-content .tag ul li a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.spot-show .tab-content .tag ul li a:before {
+  content: "#";
+  padding-right: 2px;
+}
+
+.spot-show .tab-content .tag ul li .feature {
+  background-color: #d7d7e8;
 }
