@@ -1,8 +1,9 @@
 class Spot < ApplicationRecord
   belongs_to :area
   has_many :spot_creatures, dependent: :destroy
+  has_many :spot_features, dependent: :destroy
   has_many :creatures, through: :spot_creatures
-  has_many :features
+  has_many :features, through: :spot_features
   mount_uploader :image, ImageUploader
 
   with_options presence: true do
