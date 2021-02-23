@@ -71,6 +71,7 @@
 //スポット詳細
 /* --------------- spot-show --------------- */
 .spot-show {
+  // タイトル
   .title {
     text-align: center;
     h1 {
@@ -94,6 +95,7 @@
     }
   }
 
+  // タブ
   .nav-tabs {
     .nav-link {
       color: #707070;
@@ -110,6 +112,46 @@
     background-color: #EFEFEF;
     .container {
       padding: 4rem 0;
+    }
+
+    // タグ - 特徴
+    .tag {
+      ul {
+      list-style: none;
+        span {
+          font-size: 0.8rem;
+          padding-right: 0.4rem;
+        }
+        li {
+          display: inline-block;
+          a {
+            position: relative;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 1em 0 .75em;
+            background-color: #c7d9e9;
+            border-radius: 30px;
+            color: #555;
+            font-size: 0.8rem;
+            margin: 1rem 0.4rem 0 0;
+            text-decoration: none;
+            -webkit-transition: .2s;
+            transition: .2s;
+          }
+          a:hover {
+            background-color: #555;
+            color: #fff;
+          }
+          a:before {
+            content: "#";
+            padding-right: 2px;
+          }
+          .feature {
+            background-color: #d7d7e8;
+          }
+        }
+      }
     }
   }
 }
