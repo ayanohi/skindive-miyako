@@ -31,7 +31,7 @@
               <div class="card-body">
                 <h4>
                   <%= link_to spot.name, spot_path(spot.id), class: 'card-link' %>
-                  <%= link_to spot.area.name, root_path, class: 'card-link card-area' %>
+                  <%= link_to spot.area.name, spots_path(@q, 'q[area_id_eq]': spot.area.id), class: 'card-link card-area' %>
                 </h4>
                 <p class="card-text">
                   <%= safe_join(spot.description.split("\n"), tag(:br)) %>
