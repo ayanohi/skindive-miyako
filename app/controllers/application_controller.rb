@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   before_action :get_areas
   before_action :get_creatures
   before_action :get_features
+  before_action :configure_permitted_parameters, if: :devise_controller?
+  protect_from_forgery with: :exception
 
   def get_spots
     @spots = Spot.all
@@ -18,5 +20,10 @@ class ApplicationController < ActionController::Base
 
   def get_features
     @features = Feature.all
+  end
+
+  protected
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i(name image introduction pb sns admin))
   end
 end
