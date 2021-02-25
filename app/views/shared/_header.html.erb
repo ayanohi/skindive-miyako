@@ -19,7 +19,7 @@
             エリアで探す
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <%= link_to "すべて表示", spots_path, class: 'dropdown-item' %>
+            <%= link_to "すべて表示", spots_path, class: 'dropdown-item', style: 'color:#999' %>
             <% @areas.each do |area| %>
               <%= link_to area.name, spots_path(@q, 'q[area_id_eq]': area.id), class: 'dropdown-item' %>
             <% end %>
@@ -31,7 +31,7 @@
             条件で探す
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <%= link_to "すべて表示", spots_path, class: 'dropdown-item' %>
+            <%= link_to "すべて表示", spots_path, class: 'dropdown-item', style: 'color:#999' %>
             <% @creatures.each do |creature| %>
               <%= link_to creature.name, spots_path(@q, 'q[creatures_id_eq]': creature.id), class: 'dropdown-item' %>
             <% end %>

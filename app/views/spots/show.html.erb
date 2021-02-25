@@ -47,11 +47,11 @@
                 </ul>
               </section>
 
-              <p>
-                <button type="button" class="btn btn-outline-info m-3">
+              <p class="show-btn">
+                <button type="button" class="btn btn-outline-info mr-2">
                   <%=link_to "編集", edit_spot_path(@spot.id), class: 'text-info' %>
                 </button>
-                <button type="button" class="btn btn-outline-danger m-3">
+                <button type="button" class="btn btn-outline-danger">
                   <%=link_to "削除", spot_path(@spot.id), method: :delete, class: 'text-danger', data: { confirm: "本当に削除しますか？" } %>
                 </button>
               </p>

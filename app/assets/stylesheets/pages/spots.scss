@@ -64,7 +64,6 @@
   .tab-content .col-md-8 {
     padding: 2rem;
   }
-
 }
 
 @media not all and (min-width: 576px) {
@@ -119,6 +118,12 @@
     background-color: #EFEFEF;
     .container {
       padding: 4rem 0;
+      position: relative;
+    }
+    .show-btn {
+      position: absolute;
+      right: 1rem;
+      bottom: -3rem;
     }
 
     // タグ - 特徴

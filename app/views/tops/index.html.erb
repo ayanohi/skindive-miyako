@@ -7,7 +7,8 @@
 <section class="about my-5 mx-auto">
   <div class="container py-5">
     <div class="row">
-      <div class="col-md-6 pic">
+      <div class="col-md-6 p-0">
+        <%= image_tag 'turtle.jpg', alt: '', class: 'm-0 p-0' %>
       </div>
       <div class="col-md-6 px-5">
         <p style="line-height:3rem">風向きなどで、おすすめポイントが毎日変わる宮古島。</br>
@@ -16,6 +17,69 @@
           「あのツアーはサンゴポイントに連れて行ってくれるよ」</br>
           そんな情報を海好きのみんなでシェアしませんか？</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="search-area">
+  <div class="container">
+    <div class="search-icon">
+      <%= image_tag 'glass-icon.png', width: 32, height: 32, alt: '', class: 'mx-2' %>
+      <span>エリアで探す</span>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <% @areas.each do |area| %>
+          <li>
+            <%= link_to area.name, spots_path(@q, 'q[area_id_eq]': area.id), class: 'tag-name' %>
+            <% area.spots.each do |spot| %>
+              <%= link_to spot.name, spot_path(spot.id), class: 'tag-item' %>
+            <% end %>
+          </li>
+        <% end %>
+      </div>
+
+      <div class="col-md-6">
+        <%= image_tag 'map.png' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="search-condition">
+  <div class="container">
+    <div class="search-icon">
+      <%= image_tag 'glass-icon.png', width: 32, height: 32, alt: '', class: 'mx-2'%>
+      <span>条件で探す</span>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <%= image_tag 'turtle-illustration.png' %>
+      </div>
+
+      <div class="col-md-6">
+        <div class="creature">
+          <p>会える生き物</p>
+          <li class="ml-4">
+            <% @creatures.each do |creature| %>
+              <%= link_to creature.name, spots_path(@q, 'q[creatures_id_eq]': creature.id), class: 'tag-item' %>
+            <% end %>
+          </li>
+        </div>
+
+        <div class="feature">
+          <p>その他の特徴</p>
+          <li class="ml-4">
+            <% @features.each do |feature| %>
+             <%= link_to feature.name, spots_path(@q, 'q[features_id_eq]': feature.id), class: 'tag-item' %>
+           <% end %>
+          </li>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

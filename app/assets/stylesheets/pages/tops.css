@@ -1,3 +1,15 @@
+@charset "UTF-8";
+/* --------------- all-section --------------- */
+body {
+  background-color: #fff !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------- home-header-section --------------- */
 .home-header {
   width: 100%;
 }
@@ -20,6 +32,16 @@
   color: #313131;
 }
 
+/* ---------------  --------------- */
+@media not all and (min-width: 768px) {
+  /* 768pxを含まずそれより小さい場合 */
+  .home-header .home-header-top {
+    margin: 0;
+    height: 100vw;
+  }
+}
+
+/* --------------- about-section --------------- */
 .about {
   background-color: #EFEFEF;
 }
@@ -28,8 +50,89 @@
   margin-left: 0;
 }
 
-.about .container .pic {
-  background-image: image-url("turtle.jpg");
-  height: 20rem;
-  background-size: cover;
+/* --------------- search-section --------------- */
+.search-area, .search-condition {
+  padding: 3rem 0 3rem 0;
+}
+
+.search-area li, .search-condition li {
+  list-style: none;
+}
+
+.search-area .search-icon, .search-condition .search-icon {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 1.6rem;
+}
+
+.search-area a, .search-condition a {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 1em 0 .75em;
+  background-color: #e1d9e8;
+  border-radius: 30px;
+  color: #555;
+  font-size: 0.8rem;
+  margin: 0.5rem 0.4rem 0 0;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.search-area .tag-name, .search-condition .tag-name {
+  position: relative;
+  overflow: hidden;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.search-area .tag-name:after, .search-condition .tag-name:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  transform: translate(-100%, 0);
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+  content: "";
+}
+
+.search-area .tag-name:hover:after, .search-condition .tag-name:hover:after {
+  transform: translate(0, 0);
+}
+
+.search-area .tag-item:hover, .search-condition .tag-item:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.search-area .tag-item:before, .search-condition .tag-item:before {
+  content: "#";
+  padding-right: 2px;
+}
+
+.search-area .tag-name, .search-condition .tag-name {
+  background-color: transparent;
+}
+
+.search-condition {
+  background-color: #EFEFEF;
+}
+
+.search-condition .tag-name:after {
+  width: 20%;
+}
+
+.search-condition .creature {
+  margin-bottom: 5rem;
+}
+
+.search-condition .creature a {
+  background-color: #c7d9e9;
+}
+
+.search-condition .feature a {
+  background-color: #d7d7e8;
 }

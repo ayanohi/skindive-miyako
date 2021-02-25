@@ -121,6 +121,13 @@
 
 .spot-show .tab-content .container {
   padding: 4rem 0;
+  position: relative;
+}
+
+.spot-show .tab-content .show-btn {
+  position: absolute;
+  right: 1rem;
+  bottom: -3rem;
 }
 
 .spot-show .tab-content .tag ul {
