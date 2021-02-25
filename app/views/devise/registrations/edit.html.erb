@@ -3,7 +3,7 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-   <div class="field">
+  <div class="field">
     <%= f.label :name, "ユーザーネーム" %><br />
     <%= f.text_field :name, autofocus: true %>
   </div>
@@ -29,6 +29,26 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "プロフィール画像" %><br />
+    <%= f.file_field :image, accept: "image/png,image/jpeg,image/gif", autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :introduction, "プロフィール文" %><br />
+    <%= f.text_area :introduction, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pb, "自己最高記録（m）" %><br />
+    <%= f.text_field :pb, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sns, "インスタアカウント（@不要）" %><br />
+    <%= f.text_field :sns, autofocus: true %>
   </div>
 
   <div class="field">
