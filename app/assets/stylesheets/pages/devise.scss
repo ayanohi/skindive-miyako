@@ -1,0 +1,94 @@
+header {
+	margin-bottom: 5rem !important;
+}
+.sign-in-new, .sign-up-new, .sign-in-edit {
+	background-color: #e6e6e6;
+	padding: 5rem 10rem;
+	width: 85%;
+	margin: 0 auto;
+	.container {
+		background-color: #fff;
+		padding: 2rem 10rem;
+		box-shadow:-8px -8px 16px rgba(170, 170, 170, 0.342);
+	}
+	input {
+		margin: 0.4rem 0;
+		padding: 0.5rem;
+		transition: 0.3s;
+		width: 16rem;
+		border: none;
+		background-color: #e6e6e6;
+	}
+	input:focus {
+		outline: none;
+		box-shadow: 0 0 5px 1px rgba(69, 143, 185, 0.692);
+	}
+	::placeholder {
+		font-size: 0.8rem;
+		color: #949494;
+	}
+	.actions input {
+		background-color: #a3bfd8;
+		color: #fff;
+		width: 10rem;
+		margin-bottom: 2rem;
+	}
+	a {
+		display: inline-block;
+	}
+	.sign-up-link {
+		font-size: 1.2rem;
+		color: #4487be;
+	}
+	.forgot-your-password-link {
+		font-size: 0.8rem;
+		color: #5f7688;
+		margin-top: 1rem;
+	}
+	#user_remember_me {
+		width: 1rem;
+	}
+	.pic {
+		display: flex;
+		align-items: center;
+	}
+}
+
+/* --------------- 新規登録 --------------- */
+.sign-up-new {
+	.login-link {
+		font-size: 0.8rem;
+	}
+	.sign-in-link {
+		color: #4487be;
+	}
+}
+
+/* --------------- アカウント編集 --------------- */
+.sign-in-edit {
+	input, textarea {
+		margin: 0;
+		width: 100%;
+	}
+	textarea {
+		height: 5rem;
+	}
+	label, i, em {
+		margin-top: 2rem;
+		margin-bottom: 0;
+		font-size: 0.9rem;
+	}
+	#user_image {
+		background-color: transparent;
+	}
+	.cancel-account {
+		width: 10rem;
+		font-size: 0.8rem;
+		background-color: transparent;
+		text-align: left;
+		padding: 0;
+	}
+}
+.back-link {
+	color: #4487be;
+}
