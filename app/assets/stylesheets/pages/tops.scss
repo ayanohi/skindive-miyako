@@ -1,3 +1,14 @@
+/* --------------- all-section --------------- */
+body {
+  background-color: #fff !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------- home-header-section --------------- */
 .home-header {
   width: 100%;
   .home-header-top {
@@ -17,19 +28,95 @@
     }
   }
 }
-
-body {
-  background-color: #fff !important;
+/* ---------------  --------------- */
+@media not all and (min-width: 768px) {
+  /* 768pxを含まずそれより小さい場合 */
+  .home-header .home-header-top {
+    margin: 0;
+    height: 100vw;
+  }
 }
 
+
+/* --------------- about-section --------------- */
 .about {
   background-color: #EFEFEF;
   .container {
     margin-left: 0;
-    .pic {
-      background-image: image-url("turtle.jpg");
-      height: 20rem;
-      background-size: cover;
+  }
+}
+
+
+/* --------------- search-section --------------- */
+.search-area, .search-condition {
+  padding: 3rem 0 3rem 0;
+  li {
+    list-style: none;
+  }
+  .search-icon {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 1.6rem;
+  }
+  a {
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 1em 0 .75em;
+      background-color: #e1d9e8;
+      border-radius: 30px;
+      color: #555;
+      font-size: 0.8rem;
+      margin: 0.5rem 0.4rem 0 0;
+      text-decoration: none;
+      -webkit-transition: .2s;
+      transition: .2s;
+  }
+  .tag-name {
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    font-size: 0.9rem;
+  }
+  .tag-name:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #333;
+    transform: translate(-100%, 0);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+    content: "";
+  }
+  .tag-name:hover:after {
+    transform: translate(0, 0);
+  }
+  .tag-item:hover {
+    background-color: #555;
+    color: #fff;
+  }
+  .tag-item:before {
+    content: "#";
+    padding-right: 2px;
+  }
+  .tag-name {
+    background-color: transparent;
+  }
+}
+
+.search-condition {
+  background-color: #EFEFEF;
+  .tag-name:after {
+    width: 20%;
+  }
+  .creature {
+    margin-bottom: 5rem;
+    a {
+      background-color: #c7d9e9;
     }
+  }
+  .feature a {
+    background-color: #d7d7e8;
   }
 }
