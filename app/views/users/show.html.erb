@@ -1,0 +1,56 @@
+<div class="mypage">
+  <h1 class="title">マイページ</h1>
+
+  <section class="profile">
+    <div class="conatainer">
+      <div class="row">
+        <div class="col-4">
+          <%= image_tag @user.image.url, class: 'pic', alt: 'Responsive image' %>
+          <p class="ig">IG <%= link_to @user.sns, 'https://www.instagram.com/#{@user.sns}/', target: '_blank' %></p>
+        </div>
+        <div class="col-8">
+          <div class="name">
+            <span class="myname"><%= @user.name %></span>
+            <span class="m">PB / </span>
+            <span class="pb"><%= @user.pb %></span>
+            <span class="m">m</span>
+          </div>
+          <div class="introduction"><%= @user.introduction %></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tab">
+    <div class="col-md-7 mx-auto">
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+          <a href="#tab1" class="nav-link active" data-toggle="tab">口コミ</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tab2" class="nav-link" data-toggle="tab">行ったスポット</a>
+        </li>
+        <li class="nav-item">
+          <a href="#tab3" class="nav-link" data-toggle="tab">行きたいスポット</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-content">
+      <div id="tab1" class="tab-pane active">
+        <p>口コミ</p>
+      </div>
+
+      <div id="tab2" class="tab-pane">
+        <p>行ったスポット</p>
+      </div>
+
+      <div id="tab3" class="tab-pane">
+        <p>行きたいスポット</p>
+      </div>
+    </div>
+
+
+  </section>
+
+</div>

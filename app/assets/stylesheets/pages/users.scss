@@ -1,0 +1,33 @@
+.mypage {
+  max-width: 992px;
+  margin:0 auto;
+  h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  section {
+    margin-bottom: 4rem !important;
+  }
+  .profile {
+    max-width: 576px;
+    margin:0 auto;
+    .pic {
+      border-radius: 10rem;
+      box-shadow:-5px 5px 5px rgba(170, 170, 170, 0.342);
+    }
+    .ig {
+      text-align: center;
+      padding-top: 0.8rem;
+    }
+    .name {
+      margin-bottom: 1rem;
+      .myname {
+        font-size: 3rem;
+        padding-right: 1.6rem;
+      }
+      .pb {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

@@ -17,9 +17,11 @@
 @import "bootstrap/scss/bootstrap";
 @import "modules/header";
 @import "modules/footer";
+@import "pages/users";
 @import "pages/spots";
 @import "pages/tops";
 @import "pages/devise";
+
 
 * {
   margin: 0;
