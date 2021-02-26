@@ -1,10 +1,12 @@
 class ApplicationController < ActionController::Base
   before_action :get_spots
   before_action :get_areas
+  before_action :get_user
   before_action :get_creatures
   before_action :get_features
   before_action :configure_permitted_parameters, if: :devise_controller?
   protect_from_forgery with: :exception
+  skip_before_action :verify_authenticity_token, only: :create
 
   def get_spots
     @spots = Spot.all
@@ -12,6 +14,11 @@ class ApplicationController < ActionController::Base
 
   def get_areas
     @areas = Area.all
+  end
+
+  def get_user
+    # @user = User.find(params[:id])
+    @user = current_user
   end
 
   def get_creatures
