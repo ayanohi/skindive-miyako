@@ -6,16 +6,34 @@
       <div class="row">
         <div class="col-4">
           <%= image_tag @user.image.url, class: 'pic', alt: 'Responsive image' %>
-          <p class="ig">IG <%= link_to @user.sns, 'https://www.instagram.com/#{@user.sns}/', target: '_blank' %></p>
+          <% if @user.sns.blank? %>
+            <p class="ig">INSTAGRAM 未登録</p>
+          <% else %>
+            <p class="ig">IG <%= link_to @user.sns, 'https://www.instagram.com/#{@user.sns}/', target: '_blank' %></p>
+          <% end %>
         </div>
         <div class="col-8">
           <div class="name">
             <span class="myname"><%= @user.name %></span>
-            <span class="m">PB / </span>
-            <span class="pb"><%= @user.pb %></span>
+            <span class="m">PB</span>
+            <span class="pb">
+              <% if @user.sns.blank? %>
+                <span> ? </span>
+              <% else %>
+                <%= @user.pb %>
+              <% end %>
+            </span>
             <span class="m">m</span>
           </div>
-          <div class="introduction"><%= @user.introduction %></div>
+
+          <div class="introduction">
+            <% if @user.sns.blank? %>
+              <p>自己紹介文がまだありません</p>
+            <% else %>
+              <%= @user.introduction %>
+            <% end %>
+          </div>
+
         </div>
       </div>
     </div>
