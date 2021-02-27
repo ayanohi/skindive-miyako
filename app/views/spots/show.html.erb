@@ -71,6 +71,9 @@
         <div class="row">
           <div class="col-md-8 order-md-2">
             <p>口コミ</p>
+            <button type="button" class="btn btn-outline-primary">
+              <%= link_to "コメント投稿", new_spot_comment_path(@spot) %>
+            </button>
           </div>
           <div class="col-md-4 order-md-1">
             <%= image_tag @spot.image.url, class: 'img-fluid rounded', alt: 'Responsive image' %>
