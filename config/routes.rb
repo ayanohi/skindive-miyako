@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
   root "tops#index"
-  resources :spots
+  resources :spots do
+    resources :comments
+  end
   resources :users, only: :show
   resources :areas, only: :index
 end
