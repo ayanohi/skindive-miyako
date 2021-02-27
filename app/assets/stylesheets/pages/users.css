@@ -32,10 +32,11 @@
 }
 
 .mypage .profile .name .myname {
-  font-size: 3rem;
+  font-size: 2.4rem;
   padding-right: 1.6rem;
 }
 
 .mypage .profile .name .pb {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  padding: 0.4rem;
 }

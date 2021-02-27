@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_25_091131) do
+ActiveRecord::Schema.define(version: 2021_02_25_075059) do
 
   create_table "areas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -63,21 +63,23 @@ ActiveRecord::Schema.define(version: 2021_02_25_091131) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name", limit: 30, null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "image"
+    t.text "introduction"
+    t.string "pb", limit: 3
+    t.string "sns", limit: 50
+    t.boolean "admin", default: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name", limit: 30, default: "", null: false
-    t.string "image"
-    t.text "introduction"
-    t.string "pb", limit: 5
-    t.string "sns", limit: 50
-    t.integer "admin", default: 0, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["name"], name: "index_users_on_name", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["sns"], name: "index_users_on_sns", unique: true
   end
 
   add_foreign_key "spot_creatures", "creatures"
