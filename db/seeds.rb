@@ -19,6 +19,15 @@ tides = Tide.create([
   {name: '干潮'}
 ])
 
+winds = Wind.create([
+  {name: '南風'},
+  {name: '北風'},
+  {name: '東風'},
+  {name: '西風'},
+  {name: '強風'},
+  {name: '無風'}
+])
+
 require "csv"
 
 # スポットー生物中間データ投入
