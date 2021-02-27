@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2021_02_27_075659) do
     t.text "content", null: false
     t.date "visit_date"
     t.time "visit_time"
-    t.bigint "spot_id", null: false
-    t.bigint "user_id", null: false
+    t.bigint "spot_id"
+    t.bigint "user_id"
     t.bigint "weather_id"
     t.bigint "tide_id"
     t.bigint "wind_id"
