@@ -10,12 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_27_072756) do
+ActiveRecord::Schema.define(version: 2021_02_27_075659) do
 
   create_table "areas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.text "content", null: false
+    t.date "visit_date"
+    t.time "visit_time"
+    t.bigint "spot_id"
+    t.bigint "user_id"
+    t.bigint "weather_id"
+    t.bigint "tide_id"
+    t.bigint "wind_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["spot_id"], name: "index_comments_on_spot_id"
+    t.index ["tide_id"], name: "index_comments_on_tide_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+    t.index ["weather_id"], name: "index_comments_on_weather_id"
+    t.index ["wind_id"], name: "index_comments_on_wind_id"
   end
 
   create_table "creatures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -100,6 +118,11 @@ ActiveRecord::Schema.define(version: 2021_02_27_072756) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "comments", "spots"
+  add_foreign_key "comments", "tides"
+  add_foreign_key "comments", "users"
+  add_foreign_key "comments", "weathers"
+  add_foreign_key "comments", "winds"
   add_foreign_key "spot_creatures", "creatures"
   add_foreign_key "spot_creatures", "spots"
   add_foreign_key "spot_features", "features"
