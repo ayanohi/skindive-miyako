@@ -3,6 +3,15 @@ users = User.create([
   {name: 'テストちゃん', email: 'test1@example.com', password: 'jjjjjj', password_confirmation: 'jjjjjj', admin: 'false' },
 ])
 
+weathers = Weather.create([
+  {name: '快晴'},
+  {name: '晴れ'},
+  {name: '曇り'},
+  {name: '小雨'},
+  {name: '大雨'},
+  {name: '台風'}
+])
+
 require "csv"
 
 # スポットー生物中間データ投入
