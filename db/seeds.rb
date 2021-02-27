@@ -12,6 +12,13 @@ weathers = Weather.create([
   {name: '台風'}
 ])
 
+tides = Tide.create([
+  {name: '大潮'},
+  {name: '小潮'},
+  {name: '満潮'},
+  {name: '干潮'}
+])
+
 require "csv"
 
 # スポットー生物中間データ投入
