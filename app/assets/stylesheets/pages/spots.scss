@@ -102,16 +102,8 @@
   }
 
   // タブ
-  .nav-tabs {
-    .nav-link {
-      color: #707070;
-      border: 0.5px solid #EFEFEF;
-      border-bottom: none;
-      border-radius: 0;
-    }
-    .nav-link:hover, .nav-link.active {
-      background-color:#EFEFEF;
-    }
+  .nav {
+    margin: 2rem 0;
   }
 
   .tab-content {
