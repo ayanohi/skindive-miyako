@@ -25,5 +25,4 @@ class Spot < ApplicationRecord
       spot_features << feature.name
     end
   end
-
 end
