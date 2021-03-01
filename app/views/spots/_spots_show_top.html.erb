@@ -1,14 +1,14 @@
 <div class="title">
-  <h1><%= @spot.name %></h1>
+  <h1><%= spot.name %></h1>
 </div>
 
 <div class="col-md-5 mx-auto">
   <ul class="nav nav-justified">
     <li class="nav-item nav-left">
-      <%= link_to "特徴", spot_path(@spot) %>
+      <%= link_to "特徴", spot_path(spot) %>
     </li>
     <li class="nav-item nav-center">
-      <%= link_to "口コミ", spot_comments_path(@spot) %>
+      <%= link_to "口コミ", spot_comments_path(spot) %>
     </li>
     <li class="nav-item nav-right">
       <%= link_to "マップ", root_path %>

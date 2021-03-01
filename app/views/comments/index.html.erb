@@ -1,0 +1,31 @@
+<div class="spot-comment">
+  <%= render partial: 'spots/spots_show_top', locals: { spot: @spot } %>
+
+  <div class="tab-content">
+    <div class="container col-md-8 mx-auto">
+      <div class="row">
+        <div class="col-md-8 order-md-2">
+          <% if @comments.present? %>
+            <% @comments.each do |comment| %>
+              <ul>
+                <%= image_tag comment.user.image.url, width: '8%', height: '8%', class: 'rounded-circle' %>
+                <li><%= comment.user.name %></li>
+                <li><%= comment.visit_date %></li>
+                <li><%= comment.visit_time %></li>
+                <li><%= comment.weather.name %></li>
+                <li><%= comment.tide.name %></li>
+                <li><%= comment.wind.name %></li>
+              </ul>
+              <ul><%= comment.content %></ul>
+            <% end %>
+          <% else %>
+            <p>コメントはまだありません</p>
+          <% end %>
+        </div>
+        <div class="col-md-4 order-md-1">
+          <%= image_tag @spot.image.url, class: 'img-fluid rounded', alt: 'Responsive image' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
