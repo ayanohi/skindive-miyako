@@ -19,8 +19,16 @@
                 <li><%= comment.tide.name %></li>
                 <li><%= comment.wind.name %></li>
               </ul>
-              <ul><%= comment.content %></ul>
+              <ul>
+                <%= comment.content %>
+                <% if user_signed_in? && current_user.id == comment.user_id %>
+                  <button button type="button" class="btn btn-outline-info btn-sm mb-3">
+                    <%=link_to "編集", edit_spot_comment_path(comment.spot.id, comment.id), class: 'text-info' %>
+                  </button>
+                <% end %>
+              </ul>
             <% end %>
+
           <% else %>
             <p>コメントはまだありません</p>
           <% end %>
