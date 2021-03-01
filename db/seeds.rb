@@ -9,23 +9,26 @@ weathers = Weather.create([
   {name: '曇り'},
   {name: '小雨'},
   {name: '大雨'},
-  {name: '台風'}
+  {name: '台風'},
+  {name: '不明'}
 ])
 
 tides = Tide.create([
   {name: '大潮'},
   {name: '小潮'},
   {name: '満潮'},
-  {name: '干潮'}
+  {name: '干潮'},
+  {name: '不明'}
 ])
 
 winds = Wind.create([
-  {name: '南風'},
-  {name: '北風'},
-  {name: '東風'},
-  {name: '西風'},
-  {name: '強風'},
-  {name: '無風'}
+  {name: '南'},
+  {name: '北'},
+  {name: '東'},
+  {name: '西'},
+  {name: '強'},
+  {name: '無'},
+  {name: '不明'}
 ])
 
 require "csv"
