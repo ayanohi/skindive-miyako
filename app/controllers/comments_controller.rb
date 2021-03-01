@@ -1,6 +1,10 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
 
+  def index
+    @comments = Comment.all
+  end
+
   def new
     @spot = Spot.find(params[:spot_id])
     @comment = Comment.new
