@@ -5,6 +5,9 @@
     <div class="container col-md-8 mx-auto">
       <div class="row">
         <div class="col-md-8 order-md-2">
+          <button type="button" class="btn btn-outline-info btn-sm mb-3">
+            <%=link_to "コメントを書く", new_spot_comment_path(@spot), class: 'text-info' %>
+          </button>
           <% if @comments.present? %>
             <% @comments.each do |comment| %>
               <ul>
