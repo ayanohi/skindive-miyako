@@ -1,7 +1,7 @@
 class Comment < ApplicationRecord
   belongs_to :spot
   belongs_to :user
-  belongs_to :weather, optional: true
-  belongs_to :tide, optional: true
-  belongs_to :wind, optional: true
+  belongs_to :weather
+  belongs_to :tide
+  belongs_to :wind
 end
