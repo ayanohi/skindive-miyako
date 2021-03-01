@@ -25,6 +25,9 @@
                   <button button type="button" class="btn btn-outline-info btn-sm mb-3">
                     <%=link_to "編集", edit_spot_comment_path(comment.spot.id, comment.id), class: 'text-info' %>
                   </button>
+                  <button button type="button" class="btn btn-outline-danger btn-sm mb-3">
+                    <%=link_to "削除", spot_comment_path(comment.spot.id, comment.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'text-danger' %>
+                  </button>
                 <% end %>
               </ul>
             <% end %>

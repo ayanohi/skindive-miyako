@@ -34,6 +34,15 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment = Comment.find(params[:id])
+    if @comment.destroy
+      redirect_to spot_comments_path
+    else
+      render :index
+    end
+  end
+
   private
   def comment_params
     params.require(:comment).permit(
