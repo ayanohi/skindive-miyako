@@ -20,6 +20,20 @@ class CommentsController < ApplicationController
     end
   end
 
+  def edit
+    @spot = Spot.find_by(id: params[:spot_id])
+    @comment = Comment.find(params[:id])
+  end
+
+  def update
+    @comment = Comment.find(params[:id])
+    if @comment.update(comment_params)
+      redirect_to spot_comments_path
+    else
+      render :edit
+    end
+  end
+
   private
   def comment_params
     params.require(:comment).permit(
