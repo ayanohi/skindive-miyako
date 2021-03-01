@@ -1,8 +1,13 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
+
+  def index
+    @spot = Spot.find_by(id: params[:spot_id])
+    @comments = Comment.where(spot_id: params[:spot_id])
+  end
 
   def new
-    @spot = Spot.find(params[:spot_id])
+    @spot = Spot.find_by(id: params[:spot_id])
     @comment = Comment.new
   end
 
