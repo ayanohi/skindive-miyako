@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_27_075659) do
+ActiveRecord::Schema.define(version: 2021_03_02_061944) do
 
   create_table "areas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -46,6 +46,15 @@ ActiveRecord::Schema.define(version: 2021_02_27_075659) do
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "spot_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["spot_id"], name: "index_histories_on_spot_id"
+    t.index ["user_id"], name: "index_histories_on_user_id"
   end
 
   create_table "spot_creatures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -123,6 +132,8 @@ ActiveRecord::Schema.define(version: 2021_02_27_075659) do
   add_foreign_key "comments", "users"
   add_foreign_key "comments", "weathers"
   add_foreign_key "comments", "winds"
+  add_foreign_key "histories", "spots"
+  add_foreign_key "histories", "users"
   add_foreign_key "spot_creatures", "creatures"
   add_foreign_key "spot_creatures", "spots"
   add_foreign_key "spot_features", "features"
