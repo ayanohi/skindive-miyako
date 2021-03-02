@@ -5,6 +5,11 @@ class HistoriesController < ApplicationController
     @history = History.create(user_id: current_user.id, spot_id: @spot.id)
   end
 
+  def destroy
+    @history = History.find_by(user_id: current_user.id, spot_id: @spot.id)
+    @history.destroy
+  end
+
   private
   def set_spot
     @spot = Spot.find(params[:spot_id])
