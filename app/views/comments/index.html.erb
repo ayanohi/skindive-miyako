@@ -2,6 +2,7 @@
   <%= render partial: 'spots/spots_show_top', locals: { spot: @spot } %>
 
   <div class="tab-content">
+    <p class="flash"><%= flash[:alert] %></p>
     <div class="container col-md-8 mx-auto">
       <div class="row">
         <div class="col-md-8 order-md-2">
@@ -24,6 +25,9 @@
                 <% if user_signed_in? && current_user.id == comment.user_id %>
                   <button button type="button" class="btn btn-outline-info btn-sm mb-3">
                     <%=link_to "編集", edit_spot_comment_path(comment.spot.id, comment.id), class: 'text-info' %>
+                  </button>
+                  <button button type="button" class="btn btn-outline-danger btn-sm mb-3">
+                    <%=link_to "削除", spot_comment_path(comment.spot.id, comment.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'text-danger' %>
                   </button>
                 <% end %>
               </ul>
