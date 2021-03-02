@@ -1,0 +1,16 @@
+<div class="col-lg-4 col-md-6 p-md-4">
+  <div class="card border-0 rounded-0">
+    <%= link_to spot_path(spot.id) do %>
+      <%= image_tag spot.image.url, class: 'card-img-top rounded-0' %>
+    <% end %>
+    <div class="card-body">
+      <h4>
+        <%= link_to spot.name, spot_path(spot.id), class: 'card-link' %>
+        <%= link_to spot.area.name, spots_path(@q, 'q[area_id_eq]': spot.area.id), class: 'card-link card-area' %>
+      </h4>
+      <p class="card-text">
+        <%= safe_join(spot.description.split("\n"), tag(:br)) %>
+      </p>
+    </div>
+  </div>
+</div>

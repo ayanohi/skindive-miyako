@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   root "tops#index"
   resources :spots do
     resources :comments
+    resource :histories, only: %i[create destroy]
   end
-  resources :users, only: :show
+  resources :users, only: :show do
+    get :histories, on: :collection
+  end
+
   resources :areas, only: :index
 end

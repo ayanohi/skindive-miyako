@@ -1,6 +1,7 @@
 .mypage {
   max-width: 992px;
   margin: 0 auto;
+  /* --------------- card-section --------------- */
 }
 
 .mypage h1 {
@@ -39,4 +40,40 @@
 .mypage .profile .name .pb {
   font-size: 1.4rem;
   padding: 0.4rem;
+}
+
+.mypage .index-card {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.mypage .index-card .card {
+  box-shadow: -5px 5px 5px rgba(170, 170, 170, 0.342);
+}
+
+.mypage .index-card .card:hover {
+  box-shadow: -2px 4px 4px rgba(177, 177, 177, 0.205);
+}
+
+.mypage .index-card .card-link {
+  color: #555;
+}
+
+.mypage .index-card .card-link:hover {
+  color: #222;
+  text-shadow: 1px 2px 3px #b3b3b3;
+}
+
+.mypage .index-card .card-area {
+  font-size: 0.8rem;
+}
+
+.mypage .index-card .card-text {
+  font-size: 0.75rem;
+  width: 100%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
