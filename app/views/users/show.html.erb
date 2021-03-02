@@ -61,9 +61,13 @@
 
       <div id="tab2" class="tab-pane">
         <% if @history_list.present? %>
-          <% @history_list.each do |spot| %>
-            <%= spot.name %>
-          <% end %>
+          <section class="index-card">
+            <div class="container">
+              <div class="row">
+                <%= render partial: 'spots/spot', collection: @history_list %>
+              </div>
+            </div>
+          </section>
         <% else %>
           <p>行ったスポットはまだありません</p>
         <% end %>
