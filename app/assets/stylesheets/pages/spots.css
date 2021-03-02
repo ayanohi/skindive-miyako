@@ -123,6 +123,19 @@
   bottom: -3rem;
 }
 
+.spot-show .tab-content .histories-btn {
+  font-size: 0.8rem;
+}
+
+.spot-show .tab-content .histories-spot {
+  color: #c2c2c2;
+}
+
+.spot-show .tab-content .histories-delete {
+  color: #538bb9;
+  font-weight: bold;
+}
+
 .spot-show .tab-content .tag ul {
   list-style: none;
 }
