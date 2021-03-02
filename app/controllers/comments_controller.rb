@@ -37,7 +37,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment = Comment.find(params[:id])
     if @comment.destroy
-      redirect_to spot_comments_path
+      redirect_to spot_comments_path, alert: "削除しました"
     else
       render :index
     end

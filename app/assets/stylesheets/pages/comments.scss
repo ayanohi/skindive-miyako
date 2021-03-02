@@ -29,6 +29,16 @@
 
   .tab-content {
     background-color: #EFEFEF;
+    position: relative;
+    .flash {
+      position: absolute;
+      top: 1rem;
+      left: 42%;
+      transform: translateX(-42%);
+      -webkit-transform: translateX(-42%);
+      -ms-transform: translateX(-42%);
+      color: rgb(221, 106, 106);
+    }
     .container {
       padding: 4rem 0;
       ul {

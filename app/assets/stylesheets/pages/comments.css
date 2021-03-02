@@ -29,6 +29,17 @@
 
 .spot-comment .tab-content {
   background-color: #EFEFEF;
+  position: relative;
+}
+
+.spot-comment .tab-content .flash {
+  position: absolute;
+  top: 1rem;
+  left: 42%;
+  transform: translateX(-42%);
+  -webkit-transform: translateX(-42%);
+  -ms-transform: translateX(-42%);
+  color: #dd6a6a;
 }
 
 .spot-comment .tab-content .container {
