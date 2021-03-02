@@ -29,6 +29,7 @@
                 </div>
               </ul>
             </section>
+            <%= render 'histories/history' %>
 
             <% if user_signed_in? && current_user.admin? %>
               <p class="show-btn">

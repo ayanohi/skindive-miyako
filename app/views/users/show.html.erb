@@ -60,7 +60,13 @@
       </div>
 
       <div id="tab2" class="tab-pane">
-        <p>行ったスポット</p>
+        <% if @history_list.present? %>
+          <% @history_list.each do |spot| %>
+            <%= spot.name %>
+          <% end %>
+        <% else %>
+          <p>行ったスポットはまだありません</p>
+        <% end %>
       </div>
 
       <div id="tab3" class="tab-pane">
