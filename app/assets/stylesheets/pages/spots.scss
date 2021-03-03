@@ -118,14 +118,19 @@
       bottom: -3rem;
     }
 
-    .histories-btn {
+    .histories-btn, .clips-btn {
       font-size: 0.8rem;
     }
-    .histories-spot {
+    .histories-spot, .clips-spot {
       color: #c2c2c2;
     }
     .histories-delete {
       color: #538bb9;
+      font-weight: bold;
+    }
+
+    .clips-delete {
+      color: #53b997;
       font-weight: bold;
     }
 
