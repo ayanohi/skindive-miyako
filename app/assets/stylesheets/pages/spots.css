@@ -123,16 +123,21 @@
   bottom: -3rem;
 }
 
-.spot-show .tab-content .histories-btn {
+.spot-show .tab-content .histories-btn, .spot-show .tab-content .clips-btn {
   font-size: 0.8rem;
 }
 
-.spot-show .tab-content .histories-spot {
+.spot-show .tab-content .histories-spot, .spot-show .tab-content .clips-spot {
   color: #c2c2c2;
 }
 
 .spot-show .tab-content .histories-delete {
   color: #538bb9;
+  font-weight: bold;
+}
+
+.spot-show .tab-content .clips-delete {
+  color: #53b997;
   font-weight: bold;
 }
 

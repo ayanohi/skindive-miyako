@@ -7,9 +7,11 @@ Rails.application.routes.draw do
   resources :spots do
     resources :comments
     resource :histories, only: %i[create destroy]
+    resource :clips, only: %i[create destroy]
   end
   resources :users, only: :show do
     get :histories, on: :collection
+    get :clips, on: :collection
   end
 
   resources :areas, only: :index

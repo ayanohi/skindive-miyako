@@ -74,11 +74,19 @@
       </div>
 
       <div id="tab3" class="tab-pane">
-        <p>行きたいスポット</p>
+        <% if @clip_list.present? %>
+          <section class="index-card">
+            <div class="container">
+              <div class="row">
+                <%= render partial: 'spots/spot', collection: @clip_list %>
+              </div>
+            </div>
+          </section>
+        <% else %>
+          <p>行きたいスポットはまだありません</p>
+        <% end %>
       </div>
+
     </div>
-
-
   </section>
-
 </div>
