@@ -3,6 +3,20 @@ users = User.create([
   {name: 'テストちゃん', email: 'test1@example.com', password: 'jjjjjj', password_confirmation: 'jjjjjj', admin: 'false' },
 ])
 
+areas = Area.create([
+  {name: '宮古島 - 東'},
+  {name: '宮古島 - 南'},
+  {name: '宮古島 - 西'},
+  {name: '伊良部島'},
+  {name: '下地島'},
+  {name: '八重干瀬'},
+  {name: '来間島'},
+  {name: '池間島'},
+  {name: '大神島'},
+  {name: '多良間島'},
+  {name: '水納島'}
+])
+
 weathers = Weather.create([
   {name: '快晴'},
   {name: '晴れ'},
