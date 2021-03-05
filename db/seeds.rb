@@ -28,6 +28,15 @@ features = Feature.create([
   {name: '駐車場'}
 ])
 
+creatures = Creature.create([
+  {name: 'ウミガメ'},
+  {name: 'マンタ'},
+  {name: 'クジラ'},
+  {name: 'イルカ'},
+  {name: 'カマス'},
+  {name: 'クマノミ'}
+])
+
 weathers = Weather.create([
   {name: '快晴'},
   {name: '晴れ'},
