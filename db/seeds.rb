@@ -17,6 +17,17 @@ areas = Area.create([
   {name: '水納島'}
 ])
 
+features = Feature.create([
+  {name: '水中洞窟'},
+  {name: '水中砂地'},
+  {name: 'サンゴ'},
+  {name: 'ダイバー'},
+  {name: 'ビーチ'},
+  {name: '近場に飲食店'},
+  {name: 'サンセット'},
+  {name: '駐車場'}
+])
+
 weathers = Weather.create([
   {name: '快晴'},
   {name: '晴れ'},
