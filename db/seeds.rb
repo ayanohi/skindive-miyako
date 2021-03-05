@@ -65,6 +65,120 @@ winds = Wind.create([
   {name: '不明'}
 ])
 
+spots = Spot.create([
+  {
+    name: '白鳥岬',
+    image: File.open("#{Rails.root}/db/fixtures/img/白鳥岬.jpg"),
+    description: '好条件が揃ったら絶対に行きたいところ。時季と運が良ければマンタに会えると有名です。
+    白鳥岬公園に車を停めて、岩場を５分ほど歩いてエントリーします。
+    上級者向けの洞窟もあり、流れがなければ本当に神秘的なスポットです。
+    もしも条件が悪ければ車で通りかかっても分かるはず、大きな白波が見えるので、別スポットへ行きましょう。',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 4
+  },
+  {
+    name: 'サバウツガー',
+    image: File.open("#{Rails.root}/db/fixtures/img/サバウツガー.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 4
+  },
+  {
+    name: '与那覇前浜',
+    image: File.open("#{Rails.root}/db/fixtures/img/与那覇前浜.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 3
+  },
+  {
+    name: '17END',
+    image: File.open("#{Rails.root}/db/fixtures/img/17END.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 5
+  },
+  {
+    name: 'シギラ',
+    image: File.open("#{Rails.root}/db/fixtures/img/シギラ.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 2
+  },
+  {
+    name: 'イフ',
+    image: File.open("#{Rails.root}/db/fixtures/img/イフ.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 6
+  },
+  {
+    name: '中の島海岸',
+    image: File.open("#{Rails.root}/db/fixtures/img/中の島海岸.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 5
+  },
+  {
+    name: 'ムスヌン浜',
+    image: File.open("#{Rails.root}/db/fixtures/img/ムスヌン浜.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 7
+  },
+  {
+    name: '名無ビーチ',
+    image: File.open("#{Rails.root}/db/fixtures/img/名無ビーチ.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 8
+  },
+  {
+    name: '長間浜',
+    image: File.open("#{Rails.root}/db/fixtures/img/長間浜.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 7
+  },
+  {
+    name: 'シギラ砂地',
+    image: File.open("#{Rails.root}/db/fixtures/img/シギラ砂地.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 2
+  },
+])
+
 require "csv"
 
 # スポットー生物中間データ投入
