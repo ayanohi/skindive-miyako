@@ -70,6 +70,8 @@ class SpotsController < ApplicationController
       :address,
       :image,
       :area_id,
+      :latitude,
+      :longitude,
       creature_ids: [],
       feature_ids: []
     )
