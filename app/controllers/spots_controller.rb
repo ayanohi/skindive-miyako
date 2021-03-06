@@ -61,6 +61,10 @@ class SpotsController < ApplicationController
     redirect_to spots_path
   end
 
+  def map
+    @spot = Spot.find(params[:spot_id])
+  end
+
   private
   def spot_params
     params.require(:spot).permit(
@@ -70,6 +74,8 @@ class SpotsController < ApplicationController
       :address,
       :image,
       :area_id,
+      :latitude,
+      :longitude,
       creature_ids: [],
       feature_ids: []
     )
