@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_03_150012) do
+ActiveRecord::Schema.define(version: 2021_03_06_135232) do
 
   create_table "areas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
@@ -95,6 +95,8 @@ ActiveRecord::Schema.define(version: 2021_03_03_150012) do
     t.bigint "area_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["area_id"], name: "index_spots_on_area_id"
   end
 
