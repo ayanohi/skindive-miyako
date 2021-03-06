@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   }
   root "tops#index"
   resources :spots do
+    get 'map'
     resources :comments
     resource :histories, only: %i[create destroy]
     resource :clips, only: %i[create destroy]
