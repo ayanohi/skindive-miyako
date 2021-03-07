@@ -72,12 +72,12 @@ class SpotsController < ApplicationController
       :description,
       :postal_code,
       :address,
-      :image,
       :area_id,
       :latitude,
       :longitude,
       creature_ids: [],
-      feature_ids: []
+      feature_ids: [],
+      images: []
     )
   end
 
