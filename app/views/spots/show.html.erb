@@ -45,41 +45,15 @@
         </div>
 
         <div class="col-md-4 order-md-1">
-          <%= image_tag @spot.image.url, class: 'img-fluid rounded', alt: 'Responsive image' %>
+          <%= image_tag @spot.image.url, class: 'img-fluid rounded mb-3', alt: 'Responsive image' %><br>
+          <% if @spot.images.attached? %>
+            <% @spot.images.each do |image| %>
+              <%= image_tag image, class: 'img-fluid rounded mb-3', alt: 'Responsive image' %> <br>
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
 
-<%
-=begin
-%>
-    <div id="tab2" class="tab-pane">
-      <div class="container col-md-8 mx-auto">
-        <div class="row">
-          <div class="col-md-8 order-md-2">
-            <p>口コミ</p>
-          </div>
-          <div class="col-md-4 order-md-1">
-            <%= image_tag @spot.image.url, class: 'img-fluid rounded', alt: 'Responsive image' %>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="tab3" class="tab-pane">
-      <div class="container col-md-8 mx-auto">
-        <div class="row">
-          <div class="col-md-8 order-md-2">
-            <p>マップ</p>
-          </div>
-          <div class="col-md-4 order-md-1">
-            <%= image_tag @spot.image.url, class: 'img-fluid rounded', alt: 'Responsive image' %>
-          </div>
-        </div>
-      </div>
-    </div>
-<%
-=end
-%>
   </div>
 </section>
