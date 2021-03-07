@@ -5,8 +5,13 @@
     <div class="container col-md-8 mx-auto">
       <div class="row">
         <div class="col-md-8 order-md-2 p-0">
-
-          <div id='map'></div>
+          <% if @spot.latitude.nil? && @spot.longitude.nil? %>
+            <div class="pl-3">
+              <%= 'マップが登録されていません' %>
+            </div>
+          <% else %>
+            <div id='map'></div>
+          <% end %>
 
           <style>
           #map {
