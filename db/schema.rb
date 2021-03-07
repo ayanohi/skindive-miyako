@@ -95,8 +95,8 @@ ActiveRecord::Schema.define(version: 2021_03_06_135232) do
     t.bigint "area_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.float "latitude"
-    t.float "longitude"
+    t.decimal "latitude", precision: 16, scale: 14
+    t.decimal "longitude", precision: 17, scale: 14
     t.index ["area_id"], name: "index_spots_on_area_id"
   end
 
