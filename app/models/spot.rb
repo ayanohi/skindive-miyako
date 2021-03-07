@@ -7,6 +7,7 @@ class Spot < ApplicationRecord
   has_many :comments
   has_many :histories, dependent: :destroy
   has_many :clips, dependent: :destroy
+  has_many_attached :images
   mount_uploader :image, ImageUploader
 
   with_options presence: true do
