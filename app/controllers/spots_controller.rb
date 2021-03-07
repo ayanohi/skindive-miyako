@@ -48,7 +48,14 @@ class SpotsController < ApplicationController
 
   def update
     @spot = Spot.find(params[:id])
-    if @spot.update(spot_params)
+    if params[:spot][:image_ids]
+      params[:spot][:image_ids].each do |image_id|
+        image = @spot.images.find(image_id)
+        image.purge
+      end
+    end
+    if @spot.update_attributes(spot_params)
+      flash[:success] = "編集しました"
       redirect_to spot_path(@spot.id)
     else
       render :edit
@@ -72,12 +79,12 @@ class SpotsController < ApplicationController
       :description,
       :postal_code,
       :address,
-      :image,
       :area_id,
       :latitude,
       :longitude,
       creature_ids: [],
-      feature_ids: []
+      feature_ids: [],
+      images: []
     )
   end
 
