@@ -183,3 +183,9 @@
 .spot-show .tab-content .tag ul li .feature, .map .tab-content .tag ul li .feature {
   background-color: #d7d7e8;
 }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
