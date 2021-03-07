@@ -43,7 +43,7 @@
           <p>住所<%= f.text_field :address, class: "form-control" %></p>
         </div>
         <div class="form-group">
-          <p>写真<%= f.file_field :image, accept: "image/png,image/jpeg,image/gif", class: "form-control-file" %></p>
+          <p>写真<%= f.file_field :images, accept: "image/png,image/jpeg,image/gif", class: "form-control-file", multiple: true %></p>
         </div>
 
         <%= f.submit "送信", class: "btn btn-info btn-lg my-3" %>
