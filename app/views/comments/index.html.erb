@@ -12,25 +12,24 @@
           <% if @comments.present? %>
             <% @comments.each do |comment| %>
               <ul>
-                <%= image_tag comment.user.image.url, width: '8%', height: '8%', class: 'rounded-circle' %>
-                <li><%= comment.user.name %></li>
+                <%= image_tag comment.user.image.url, width: '6%', height: '6%', class: 'rounded-circle user-pic' %>
+                <li class="user-name" ><%= comment.user.name %></li>
                 <li><%= l comment.visit_date %></li>
                 <li><%= l comment.visit_time %></li>
                 <li><%= comment.weather.name %></li>
                 <li><%= comment.tide.name %></li>
-                <li><%= comment.wind.name %></li>
+                <li><%= comment.wind.name %></li><br>
+                <li class="comment-content">
+                  <%= comment.content %>
+                  <% if user_signed_in? && current_user.id == comment.user_id %>
+                    <span class="comment-btn">
+                      <%=link_to "編集", edit_spot_comment_path(comment.spot.id, comment.id), class: 'text-info' %>
+                      <%=link_to "削除", spot_comment_path(comment.spot.id, comment.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'text-danger' %>
+                    </span>
+                  <% end %>
+                </li>
               </ul>
-              <ul>
-                <%= comment.content %>
-                <% if user_signed_in? && current_user.id == comment.user_id %>
-                  <button button type="button" class="btn btn-outline-info btn-sm mb-3">
-                    <%=link_to "編集", edit_spot_comment_path(comment.spot.id, comment.id), class: 'text-info' %>
-                  </button>
-                  <button button type="button" class="btn btn-outline-danger btn-sm mb-3">
-                    <%=link_to "削除", spot_comment_path(comment.spot.id, comment.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'text-danger' %>
-                  </button>
-                <% end %>
-              </ul>
+              <hr>
             <% end %>
 
           <% else %>

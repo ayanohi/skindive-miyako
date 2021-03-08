@@ -48,8 +48,38 @@
 
 .spot-comment .tab-content .container ul {
   list-style-type: none;
+  margin-bottom: 0;
+  margin-left: 2rem;
+  position: relative;
+}
+
+.spot-comment .tab-content .container ul .user-pic {
+  position: absolute;
+  top: 0.1rem;
+  left: -2.6rem;
+}
+
+.spot-comment .tab-content .container ul .user-name {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.spot-comment .tab-content .container ul .comment-btn {
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+.spot-comment .tab-content .container ul .comment-content {
+  width: 100%;
 }
 
 .spot-comment .tab-content .container li {
   display: inline-block;
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+}
+
+.spot-comment .tab-content hr {
+  margin: 0 0 0.8rem 0;
 }

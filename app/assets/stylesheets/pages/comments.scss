@@ -43,10 +43,39 @@
       padding: 4rem 0;
       ul {
         list-style-type: none;
+        margin-bottom: 0;
+        margin-left: 2rem;
+        position: relative;
+        .user-pic {
+          position: absolute;
+          top: 0.1rem;
+          left: -2.6rem;
+        }
+        .user-name {
+          font-size: 1rem;
+          margin-right: 1rem;
+        }
+        .comment-btn {
+          // margin-bottom: 2rem;
+          // position: absolute;
+          // bottom: 0;
+          // right: 0;
+          display: inline-block;
+          width: 100%;
+          text-align: right;
+        }
+        .comment-content {
+          width: 100%;
+        }
       }
       li {
         display: inline-block;
+        font-size: 0.8rem;
+        margin-right: 0.3rem;
       }
+    }
+    hr {
+      margin: 0 0 0.8rem 0;
     }
   }
 }
