@@ -42,6 +42,28 @@
   padding: 0.4rem;
 }
 
+.mypage #tab1, .mypage #tab2, .mypage #tab3 {
+  padding: 2rem 0;
+}
+
+.mypage #tab1 ul {
+  list-style-type: none;
+}
+
+.mypage #tab1 li {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding-right: 0.5rem;
+}
+
+.mypage #tab1 .comment-content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .mypage .index-card {
   padding-top: 2rem;
   padding-bottom: 4rem;

@@ -46,6 +46,15 @@
     }
     li {
       display: inline-block;
+      font-size: 0.8rem;
+      padding-right: 0.5rem;
+    }
+    .comment-content {
+      display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 

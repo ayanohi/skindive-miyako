@@ -59,13 +59,19 @@
         <% if @user.comments.present? %>
           <% @user.comments.each do |comment| %>
             <ul>
-              <li><%= link_to comment.spot.name, spot_path(comment.spot) %></li>
-              <li><%= l comment.visit_date %></li>
-              <li><%= l comment.visit_time %></li>
-              <li><%= comment.weather.name %></li>
-              <li><%= comment.tide.name %></li>
-              <li><%= comment.wind.name %></li>
-              <li><%= comment.content %></li>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <li><%= l comment.visit_date %></li>
+                    <li><%= l comment.visit_time %></li>
+                    <li><%= link_to comment.spot.name, spot_path(comment.spot) %></li>
+                    <li><%= link_to comment.spot.area.name, spots_path(@q, 'q[area_id_eq]': comment.spot.area.id) %></li>
+                  </div>
+                  <div class="col-md-8">
+                    <li class="comment-content"><%= comment.content %></li>
+                  </div>
+                </div>
+              </div>
             </ul>
           <% end %>
         <% else %>
