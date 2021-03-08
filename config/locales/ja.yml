@@ -4,4 +4,4 @@ ja:
       default: "%H時"      # timeのデフォルトの書式をH時にする
   date:
     formats:
-      default: "%Y/%m/%d"      # dateのデフォルトの書式を年/月/日にする
+      default: "%Y.%m.%d"      # dateのデフォルトの書式を年.月.日にする
