@@ -14,8 +14,8 @@
               <ul>
                 <%= image_tag comment.user.image.url, width: '8%', height: '8%', class: 'rounded-circle' %>
                 <li><%= comment.user.name %></li>
-                <li><%= comment.visit_date %></li>
-                <li><%= comment.visit_time %></li>
+                <li><%= l comment.visit_date %></li>
+                <li><%= l comment.visit_time %></li>
                 <li><%= comment.weather.name %></li>
                 <li><%= comment.tide.name %></li>
                 <li><%= comment.wind.name %></li>

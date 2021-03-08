@@ -60,8 +60,8 @@
           <% @user.comments.each do |comment| %>
             <ul>
               <li><%= link_to comment.spot.name, spot_path(comment.spot) %></li>
-              <li><%= comment.visit_date %></li>
-              <li><%= comment.visit_time %></li>
+              <li><%= l comment.visit_date %></li>
+              <li><%= l comment.visit_time %></li>
               <li><%= comment.weather.name %></li>
               <li><%= comment.tide.name %></li>
               <li><%= comment.wind.name %></li>
