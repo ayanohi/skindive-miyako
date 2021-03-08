@@ -40,7 +40,7 @@
       color: rgb(221, 106, 106);
     }
     .container {
-      padding: 4rem 0;
+      padding: 5rem 0;
       ul {
         list-style-type: none;
         margin-bottom: 0;
@@ -72,6 +72,23 @@
         display: inline-block;
         font-size: 0.8rem;
         margin-right: 0.3rem;
+      }
+      .parent {
+        position: relative;
+        .child {
+          position: absolute;
+          top: -3.6rem;
+          left: 0;
+          a {
+            display: block;
+            text-decoration: none;
+            background-color: #b9d6df;
+            color: #fff !important;
+            padding: 0.5rem 1.8rem;
+            border-radius: 75% 25% 74% 26% / 39% 35% 65% 61%;
+            font-size: 0.9rem;
+          }
+        }
       }
     }
     hr {

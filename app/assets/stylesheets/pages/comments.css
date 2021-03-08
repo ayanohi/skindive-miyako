@@ -43,7 +43,7 @@
 }
 
 .spot-comment .tab-content .container {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 .spot-comment .tab-content .container ul {
@@ -78,6 +78,26 @@
   display: inline-block;
   font-size: 0.8rem;
   margin-right: 0.3rem;
+}
+
+.spot-comment .tab-content .container .parent {
+  position: relative;
+}
+
+.spot-comment .tab-content .container .parent .child {
+  position: absolute;
+  top: -3.6rem;
+  left: 0;
+}
+
+.spot-comment .tab-content .container .parent .child a {
+  display: block;
+  text-decoration: none;
+  background-color: #b9d6df;
+  color: #fff !important;
+  padding: 0.5rem 1.8rem;
+  border-radius: 75% 25% 74% 26% / 39% 35% 65% 61%;
+  font-size: 0.9rem;
 }
 
 .spot-comment .tab-content hr {
