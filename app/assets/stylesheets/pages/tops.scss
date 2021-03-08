@@ -52,6 +52,7 @@ img {
   padding: 3rem 0 3rem 0;
   li {
     list-style: none;
+    margin-bottom: 1rem;
   }
   .search-icon {
     text-align: center;
@@ -62,12 +63,12 @@ img {
       display: inline-block;
       height: 30px;
       line-height: 30px;
-      padding: 0 1em 0 .75em;
+      padding: 0 1.25em 0 1em;
       background-color: #e1d9e8;
       border-radius: 30px;
       color: #555;
       font-size: 0.8rem;
-      margin: 0.5rem 0.4rem 0 0;
+      margin-right: 0.4rem;
       text-decoration: none;
       -webkit-transition: .2s;
       transition: .2s;
@@ -77,6 +78,7 @@ img {
     overflow: hidden;
     color: #333;
     font-size: 0.9rem;
+    padding-top: 0.5rem;
   }
   .tag-name:after {
     position: absolute;
@@ -114,9 +116,11 @@ img {
     margin-bottom: 5rem;
     a {
       background-color: #c7d9e9;
+      margin-bottom: 1rem;
     }
   }
   .feature a {
     background-color: #d7d7e8;
+    margin-bottom: 1rem;
   }
 }
