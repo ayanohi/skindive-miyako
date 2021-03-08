@@ -74,6 +74,15 @@
   width: 100%;
 }
 
+.spot-comment .tab-content .container ul .comment-content .edit {
+  color: #9ab7d8;
+  margin-right: 0.4rem;
+}
+
+.spot-comment .tab-content .container ul .comment-content .delete {
+  color: #bb9ad8;
+}
+
 .spot-comment .tab-content .container li {
   display: inline-block;
   font-size: 0.8rem;

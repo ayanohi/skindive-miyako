@@ -66,6 +66,13 @@
         }
         .comment-content {
           width: 100%;
+          .edit {
+            color: #9ab7d8;
+            margin-right: 0.4rem;
+          }
+          .delete {
+            color: #bb9ad8;
+          }
         }
       }
       li {
