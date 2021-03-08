@@ -55,6 +55,36 @@
         -webkit-line-clamp: 1;
       overflow: hidden;
       text-overflow: ellipsis;
+      position: relative;
+    }
+    .fukidashi {
+      display: none;
+      position: absolute;
+      bottom: 30px;
+      left: 20px;
+      width: 20rem;
+      padding: 1rem;
+      border-radius: 5px;
+      background: #92adc3;
+      color: #fff;
+      opacity: 0.9;
+    }
+    .fukidashi:after {
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 0;
+      bottom: -19px;
+      margin-left: 10px;
+      border: solid transparent;
+      border-color: rgba(51, 204, 153, 0);
+      border-top-color: #92adc3;
+      border-width: 10px;
+      pointer-events: none;
+      content: " ";
+    }
+    .comment-content:hover + .fukidashi {
+      display: block;
     }
   }
 

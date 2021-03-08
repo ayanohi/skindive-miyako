@@ -67,8 +67,9 @@
                     <li><%= link_to comment.spot.name, spot_path(comment.spot) %></li>
                     <li><%= link_to comment.spot.area.name, spots_path(@q, 'q[area_id_eq]': comment.spot.area.id) %></li>
                   </div>
-                  <div class="col-md-8">
+                  <div class="col-md-8 css-fukidashi">
                     <li class="comment-content"><%= comment.content %></li>
+                    <li class="fukidashi"><%= comment.content %></li>
                   </div>
                 </div>
               </div>
