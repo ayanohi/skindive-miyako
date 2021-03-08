@@ -65,9 +65,7 @@
 }
 
 .spot-comment .tab-content .container ul .comment-btn {
-  display: inline-block;
-  width: 100%;
-  text-align: right;
+  float: right;
 }
 
 .spot-comment .tab-content .container ul .comment-content {
