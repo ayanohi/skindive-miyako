@@ -56,6 +56,24 @@
   padding-right: 0.5rem;
 }
 
+.mypage #tab1 li .spot-name {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 1em 0 .75em;
+  background-color: #e1d9e8;
+  border-radius: 30px;
+  color: #555;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.mypage #tab1 li .area-name {
+  text-decoration: none;
+  color: #bb9ad8;
+}
+
 .mypage #tab1 .comment-content {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -63,6 +81,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   position: relative;
+  padding-top: 0.2rem;
 }
 
 .mypage #tab1 .fukidashi {
