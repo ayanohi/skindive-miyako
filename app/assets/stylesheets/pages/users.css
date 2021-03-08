@@ -42,6 +42,80 @@
   padding: 0.4rem;
 }
 
+.mypage #tab1, .mypage #tab2, .mypage #tab3 {
+  padding: 2rem 0;
+}
+
+.mypage #tab1 ul {
+  list-style-type: none;
+}
+
+.mypage #tab1 li {
+  display: inline-block;
+  font-size: 0.8rem;
+  padding-right: 0.5rem;
+}
+
+.mypage #tab1 li .spot-name {
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 1em 0 .75em;
+  background-color: #e1d9e8;
+  border-radius: 30px;
+  color: #555;
+  text-decoration: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.mypage #tab1 li .area-name {
+  text-decoration: none;
+  color: #bb9ad8;
+}
+
+.mypage #tab1 .comment-content {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  padding-top: 0.2rem;
+}
+
+.mypage #tab1 .fukidashi {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 5px;
+  background: #92adc3;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.mypage #tab1 .fukidashi:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  bottom: -19px;
+  margin-left: 10px;
+  border: solid transparent;
+  border-color: rgba(51, 204, 153, 0);
+  border-top-color: #92adc3;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+.mypage #tab1 .comment-content:hover + .fukidashi {
+  display: block;
+}
+
 .mypage .index-card {
   padding-top: 2rem;
   padding-bottom: 4rem;
