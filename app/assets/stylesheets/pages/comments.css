@@ -60,8 +60,8 @@
 }
 
 .spot-comment .tab-content .container ul .user-name {
-  font-size: 1rem;
-  margin-right: 1rem;
+  font-size: 0.9rem;
+  color: #77a1ad;
 }
 
 .spot-comment .tab-content .container ul .comment-btn {
