@@ -57,7 +57,7 @@
     <div class="tab-content">
       <div id="tab1" class="tab-pane active">
         <% if @user.comments.present? %>
-          <% @user.comments.each do |comment| %>
+          <% @user.comments.order(visit_date: :desc).each do |comment| %>
             <ul>
               <div class="container">
                 <div class="row">
