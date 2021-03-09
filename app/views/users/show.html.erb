@@ -25,7 +25,6 @@
             </span>
             <span class="m">m</span>
           </div>
-
           <div class="introduction">
             <% if @user.sns.blank? %>
               <p>自己紹介文がまだありません</p>
@@ -39,75 +38,61 @@
     </div>
   </section>
 
-  <section class="tab">
-    <div class="col-md-7 mx-auto">
-      <ul class="nav nav-tabs nav-justified">
-        <li class="nav-item">
-          <a href="#tab1" class="nav-link active" data-toggle="tab">口コミ</a>
-        </li>
-        <li class="nav-item">
-          <a href="#tab2" class="nav-link" data-toggle="tab">行ったスポット</a>
-        </li>
-        <li class="nav-item">
-          <a href="#tab3" class="nav-link" data-toggle="tab">行きたいスポット</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="tab-content">
-      <div id="tab1" class="tab-pane active">
+  <section class="tabs">
+    <div class="tab-wrap">
+      <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">口コミ</label>
+      <div class="tab-content">
         <% if @user.comments.present? %>
-          <% @user.comments.order(visit_date: :desc).each do |comment| %>
-            <ul>
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-4">
-                    <li><%= l comment.visit_date %></li>
-                    <li><%= l comment.visit_time %></li>
-                    <li><%= link_to comment.spot.name, spot_path(comment.spot), class: 'spot-name' %></li>
-                    <li><%= link_to comment.spot.area.name, spots_path(@q, 'q[area_id_eq]': comment.spot.area.id), class: 'area-name'  %></li>
-                  </div>
-                  <div class="col-md-8 css-fukidashi">
-                    <li class="comment-content"><%= comment.content %></li>
-                    <li class="fukidashi"><%= comment.content %></li>
+            <% @user.comments.order(visit_date: :desc).each do |comment| %>
+              <ul>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-4 p-0">
+                      <li><%= l comment.visit_date %></li>
+                      <li><%= l comment.visit_time %></li>
+                      <li><%= link_to comment.spot.name, spot_path(comment.spot), class: 'spot-name' %></li>
+                      <li><%= link_to comment.spot.area.name, spots_path(@q, 'q[area_id_eq]': comment.spot.area.id), class: 'area-name'  %></li>
+                    </div>
+                    <div class="col-md-8 css-fukidashi">
+                      <li class="comment-content"><%= comment.content %></li>
+                      <li class="fukidashi"><%= comment.content %></li>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </ul>
+              </ul>
+            <% end %>
+          <% else %>
+            <p>まだ口コミを書いてないよ💬</p>
           <% end %>
-        <% else %>
-          <p>まだ口コミを書いてないよ💬</p>
-        <% end %>
       </div>
-
-      <div id="tab2" class="tab-pane">
+      <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">行ったスポット</label>
+      <div class="tab-content">
         <% if @history_list.present? %>
-          <section class="index-card">
-            <div class="container">
-              <div class="row">
-                <%= render partial: 'spots/spot', collection: @history_list %>
+            <section class="index-card">
+              <div class="container">
+                <div class="row">
+                  <%= render partial: 'spots/spot', collection: @history_list %>
+                </div>
               </div>
-            </div>
-          </section>
-        <% else %>
-          <p>行ったスポットはまだありません</p>
-        <% end %>
+            </section>
+          <% else %>
+            <p>行ったスポットはまだありません</p>
+          <% end %>
       </div>
-
-      <div id="tab3" class="tab-pane">
+      <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">行きたいスポット</label>
+      <div class="tab-content">
         <% if @clip_list.present? %>
-          <section class="index-card">
-            <div class="container">
-              <div class="row">
-                <%= render partial: 'spots/spot', collection: @clip_list %>
+            <section class="index-card">
+              <div class="container">
+                <div class="row">
+                  <%= render partial: 'spots/spot', collection: @clip_list %>
+                </div>
               </div>
-            </div>
-          </section>
-        <% else %>
-          <p>行きたいスポットはまだありません</p>
-        <% end %>
+            </section>
+          <% else %>
+            <p>行きたいスポットはまだありません</p>
+          <% end %>
       </div>
-
     </div>
   </section>
 </div>
