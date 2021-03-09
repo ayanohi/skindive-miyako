@@ -1,18 +1,11 @@
 .mypage {
   max-width: 992px;
   margin:0 auto;
-  h1 {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  section {
-    margin-bottom: 4rem !important;
-  }
 
   // プロフィール
   .profile {
     max-width: 576px;
-    margin:0 auto !important;
+    margin:1rem auto !important;
     .pic {
       border-radius: 1rem;
       box-shadow:-5px 5px 5px rgba(170, 170, 170, 0.342);
