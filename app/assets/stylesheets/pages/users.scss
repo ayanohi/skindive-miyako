@@ -125,6 +125,9 @@
       ul:first-child {
         margin-top: 2rem;
       }
+      ul:last-child {
+        margin-bottom: 4rem;
+      }
       li {
         display: inline-block;
         font-size: 0.8rem;
