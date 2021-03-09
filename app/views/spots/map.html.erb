@@ -1,5 +1,21 @@
 <section class="map">
-<%= render partial: "spots_show_top", locals: { spot: @spot } %>
+  <div class="title">
+    <h1><%= @spot.name %></h1>
+  </div>
+
+  <div class="col-md-5 mx-auto">
+    <ul class="nav nav-justified spot-nav">
+      <li class="nav-item">
+        <%= link_to "特徴", spot_path(@spot) %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "口コミ", spot_comments_path(@spot) %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "マップ", spot_map_path(@spot), 'data-turbolinks': false, class: 'nav-active' %><hr>
+      </li>
+    </ul>
+  </div>
 
   <div class="tab-content">
     <div class="container col-md-8 mx-auto">
