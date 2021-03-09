@@ -47,23 +47,25 @@
     .tab-label {
       margin: 0 5rem;
       color: #222;
-      font-weight: lighter;
       cursor: pointer;
       flex: 1;
       order: -1;
-      padding: 2rem 2rem;
+      padding: 2rem 2rem 0.4rem 2rem;
       position: relative;
       text-align: center;
       transition: cubic-bezier(0.4, 0, 0.2, 1) .2s;
       user-select: none;
       white-space: nowrap;
       -webkit-tap-highlight-color: transparent;
+      p {
+        font-size: 0.9rem;
+        padding-top: 0.2rem;
+      }
     }
     .tab-label:hover {
       font-weight: bold;
     }
     .tab-switch:checked + .tab-label {
-      font-weight: bold;
       color: #7ebbcc;
     }
     .tab-label::after {

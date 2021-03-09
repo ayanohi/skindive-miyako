@@ -40,7 +40,7 @@
 
   <section class="tabs">
     <div class="tab-wrap">
-      <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">口コミ</label>
+      <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">口コミ<p><%= @user.comments.count %></p></label>
       <div class="tab-content">
         <% if @user.comments.present? %>
             <% @user.comments.order(visit_date: :desc).each do |comment| %>
@@ -65,7 +65,7 @@
             <p>まだ口コミを書いてないよ💬</p>
           <% end %>
       </div>
-      <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">行ったスポット</label>
+      <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">行ったスポット<p><%= @history_list.count %></p></label>
       <div class="tab-content">
         <% if @history_list.present? %>
             <section class="index-card">
@@ -79,7 +79,7 @@
             <p>行ったスポットはまだありません</p>
           <% end %>
       </div>
-      <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">行きたいスポット</label>
+      <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">行きたいスポット<p><%= @clip_list.count %></p></label>
       <div class="tab-content">
         <% if @clip_list.present? %>
             <section class="index-card">
