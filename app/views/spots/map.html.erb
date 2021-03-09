@@ -70,9 +70,9 @@
           <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API_KEY']%>&callback=initMap" async defer></script>
 
         </div>
-        <div class="col-md-4 order-md-1">
-          <%= image_tag @spot.image.url, class: 'img-fluid rounded', alt: 'Responsive image' %>
-        </div>
+
+        <%= render 'show_img' %>
+
       </div>
     </div>
   </div>

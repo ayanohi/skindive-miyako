@@ -113,20 +113,28 @@
       bottom: -3rem;
     }
 
-    .histories-btn, .clips-btn {
-      font-size: 0.8rem;
-    }
-    .histories-spot, .clips-spot {
-      color: #c2c2c2;
-    }
-    .histories-delete {
-      color: #538bb9;
-      font-weight: bold;
-    }
-
-    .clips-delete {
-      color: #53b997;
-      font-weight: bold;
+    // 行った、行きたいリストボタン
+    .show-img {
+      position: relative;
+      .click {
+        position: absolute;
+        top: -3.6rem;
+        left: 1rem;
+        .histories-btn, .clips-btn {
+          font-size: 0.8rem;
+        }
+        .histories-spot, .clips-spot {
+          color: #c2c2c2;
+        }
+        .histories-delete {
+          color: #538bb9;
+          font-weight: bold;
+        }
+        .clips-delete {
+          color: #53b997;
+          font-weight: bold;
+        }
+      }
     }
 
 

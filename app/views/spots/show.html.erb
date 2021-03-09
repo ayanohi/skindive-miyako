@@ -45,8 +45,6 @@
                 </div>
               </ul>
             </section>
-            <%= render 'histories/history' %>
-            <%= render 'clips/clip' %>
 
             <% if user_signed_in? && current_user.admin? %>
               <p class="show-btn">
@@ -60,14 +58,8 @@
             <% end %>
         </div>
 
-        <div class="col-md-4 order-md-1">
-          <%= image_tag @spot.image.url, class: 'img-fluid rounded mb-3', alt: 'Responsive image' %><br>
-          <% if @spot.images.attached? %>
-            <% @spot.images.each do |image| %>
-              <%= image_tag image, class: 'img-fluid rounded mb-3', alt: 'Responsive image' %> <br>
-            <% end %>
-          <% end %>
-        </div>
+        <%= render 'show_img' %>
+
       </div>
     </div>
 

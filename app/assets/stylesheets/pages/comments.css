@@ -106,3 +106,31 @@
 .spot-comment .tab-content hr {
   margin: 0 0 0.8rem 0;
 }
+
+.spot-comment .tab-content .show-img {
+  position: relative;
+}
+
+.spot-comment .tab-content .show-img .click {
+  position: absolute;
+  top: -3.6rem;
+  left: 1rem;
+}
+
+.spot-comment .tab-content .show-img .click .histories-btn, .spot-comment .tab-content .show-img .click .clips-btn {
+  font-size: 0.8rem;
+}
+
+.spot-comment .tab-content .show-img .click .histories-spot, .spot-comment .tab-content .show-img .click .clips-spot {
+  color: #c2c2c2;
+}
+
+.spot-comment .tab-content .show-img .click .histories-delete {
+  color: #538bb9;
+  font-weight: bold;
+}
+
+.spot-comment .tab-content .show-img .click .clips-delete {
+  color: #53b997;
+  font-weight: bold;
+}
