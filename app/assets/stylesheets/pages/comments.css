@@ -32,6 +32,17 @@
   margin-top: 2rem;
 }
 
+.form .radio .form-group .radio1 {
+  margin: 0 0.5rem;
+}
+
+.form .radio .form-group .radio-menu {
+  color: #fff;
+  background-color: #aac2dd;
+  border-radius: 3rem;
+  padding: 0.5rem 1rem;
+}
+
 .spot-comment .tab-content, form .tab-content {
   background-color: #EFEFEF;
   position: relative;
