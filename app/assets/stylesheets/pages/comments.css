@@ -1,15 +1,15 @@
-.spot-comment .title {
+.spot-comment .title, .form .title {
   text-align: center;
 }
 
-.spot-comment .title h1 {
+.spot-comment .title h1, .form .title h1 {
   text-align: center;
   position: relative;
   display: inline-block;
   margin-bottom: 3rem;
 }
 
-.spot-comment .title h1:before {
+.spot-comment .title h1:before, .form .title h1:before {
   content: '';
   position: absolute;
   bottom: -15px;
@@ -23,12 +23,21 @@
   border-radius: 2px;
 }
 
-.spot-comment .tab-content {
+.form .tab-content {
+  margin-top: 4.2rem;
+}
+
+.form .info {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.spot-comment .tab-content, form .tab-content {
   background-color: #EFEFEF;
   position: relative;
 }
 
-.spot-comment .tab-content .flash {
+.spot-comment .tab-content .flash, form .tab-content .flash {
   position: absolute;
   top: 1rem;
   left: 42%;
@@ -38,62 +47,62 @@
   color: #dd6a6a;
 }
 
-.spot-comment .tab-content .container {
+.spot-comment .tab-content .container, form .tab-content .container {
   padding: 5rem 0;
 }
 
-.spot-comment .tab-content .container ul {
+.spot-comment .tab-content .container ul, form .tab-content .container ul {
   list-style-type: none;
   margin-bottom: 0;
   margin-left: 2rem;
   position: relative;
 }
 
-.spot-comment .tab-content .container ul .user-pic {
+.spot-comment .tab-content .container ul .user-pic, form .tab-content .container ul .user-pic {
   position: absolute;
   top: 0.1rem;
   left: -2.6rem;
 }
 
-.spot-comment .tab-content .container ul .user-name {
+.spot-comment .tab-content .container ul .user-name, form .tab-content .container ul .user-name {
   font-size: 0.9rem;
   color: #77a1ad;
 }
 
-.spot-comment .tab-content .container ul .comment-btn {
+.spot-comment .tab-content .container ul .comment-btn, form .tab-content .container ul .comment-btn {
   float: right;
 }
 
-.spot-comment .tab-content .container ul .comment-content {
+.spot-comment .tab-content .container ul .comment-content, form .tab-content .container ul .comment-content {
   width: 100%;
 }
 
-.spot-comment .tab-content .container ul .comment-content .edit {
+.spot-comment .tab-content .container ul .comment-content .edit, form .tab-content .container ul .comment-content .edit {
   color: #9ab7d8;
   margin-right: 0.4rem;
 }
 
-.spot-comment .tab-content .container ul .comment-content .delete {
+.spot-comment .tab-content .container ul .comment-content .delete, form .tab-content .container ul .comment-content .delete {
   color: #bb9ad8;
 }
 
-.spot-comment .tab-content .container li {
+.spot-comment .tab-content .container li, form .tab-content .container li {
   display: inline-block;
   font-size: 0.8rem;
   margin-right: 0.3rem;
 }
 
-.spot-comment .tab-content .container .parent {
+.spot-comment .tab-content .container .parent, form .tab-content .container .parent {
   position: relative;
 }
 
-.spot-comment .tab-content .container .parent .child {
+.spot-comment .tab-content .container .parent .child, form .tab-content .container .parent .child {
   position: absolute;
   top: -3.6rem;
-  left: 0;
+  right: 15rem;
 }
 
-.spot-comment .tab-content .container .parent .child a {
+.spot-comment .tab-content .container .parent .child a, form .tab-content .container .parent .child a {
   display: block;
   text-decoration: none;
   background-color: #b9d6df;
@@ -103,34 +112,34 @@
   font-size: 0.9rem;
 }
 
-.spot-comment .tab-content hr {
+.spot-comment .tab-content hr, form .tab-content hr {
   margin: 0 0 0.8rem 0;
 }
 
-.spot-comment .tab-content .show-img {
+.spot-comment .tab-content .show-img, form .tab-content .show-img {
   position: relative;
 }
 
-.spot-comment .tab-content .show-img .click {
+.spot-comment .tab-content .show-img .click, form .tab-content .show-img .click {
   position: absolute;
   top: -3.6rem;
   left: 1rem;
 }
 
-.spot-comment .tab-content .show-img .click .histories-btn, .spot-comment .tab-content .show-img .click .clips-btn {
+.spot-comment .tab-content .show-img .click .histories-btn, .spot-comment .tab-content .show-img .click .clips-btn, form .tab-content .show-img .click .histories-btn, form .tab-content .show-img .click .clips-btn {
   font-size: 0.8rem;
 }
 
-.spot-comment .tab-content .show-img .click .histories-spot, .spot-comment .tab-content .show-img .click .clips-spot {
+.spot-comment .tab-content .show-img .click .histories-spot, .spot-comment .tab-content .show-img .click .clips-spot, form .tab-content .show-img .click .histories-spot, form .tab-content .show-img .click .clips-spot {
   color: #c2c2c2;
 }
 
-.spot-comment .tab-content .show-img .click .histories-delete {
+.spot-comment .tab-content .show-img .click .histories-delete, form .tab-content .show-img .click .histories-delete {
   color: #538bb9;
   font-weight: bold;
 }
 
-.spot-comment .tab-content .show-img .click .clips-delete {
+.spot-comment .tab-content .show-img .click .clips-delete, form .tab-content .show-img .click .clips-delete {
   color: #53b997;
   font-weight: bold;
 }

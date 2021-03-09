@@ -1,5 +1,5 @@
 // タイトル
-.spot-comment {
+.spot-comment, .form {
   .title {
     text-align: center;
     h1 {
@@ -22,7 +22,19 @@
       border-radius: 2px;
     }
   }
+}
 
+.form {
+  .tab-content {
+    margin-top: 4.2rem;
+  }
+  .info {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+.spot-comment, form {
   .tab-content {
     background-color: #EFEFEF;
     position: relative;
@@ -75,7 +87,7 @@
         .child {
           position: absolute;
           top: -3.6rem;
-          left: 0;
+          right: 15rem;
           a {
             display: block;
             text-decoration: none;
