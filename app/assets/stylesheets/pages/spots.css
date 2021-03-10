@@ -119,34 +119,6 @@
   bottom: -3rem;
 }
 
-.spot-show .tab-content .show-img, .map .tab-content .show-img {
-  position: relative;
-}
-
-.spot-show .tab-content .show-img .click, .map .tab-content .show-img .click {
-  position: absolute;
-  top: -3.6rem;
-  left: 1rem;
-}
-
-.spot-show .tab-content .show-img .click .histories-btn, .spot-show .tab-content .show-img .click .clips-btn, .map .tab-content .show-img .click .histories-btn, .map .tab-content .show-img .click .clips-btn {
-  font-size: 0.8rem;
-}
-
-.spot-show .tab-content .show-img .click .histories-spot, .spot-show .tab-content .show-img .click .clips-spot, .map .tab-content .show-img .click .histories-spot, .map .tab-content .show-img .click .clips-spot {
-  color: #c2c2c2;
-}
-
-.spot-show .tab-content .show-img .click .histories-delete, .map .tab-content .show-img .click .histories-delete {
-  color: #538bb9;
-  font-weight: bold;
-}
-
-.spot-show .tab-content .show-img .click .clips-delete, .map .tab-content .show-img .click .clips-delete {
-  color: #53b997;
-  font-weight: bold;
-}
-
 .spot-show .tab-content .tag ul, .map .tab-content .tag ul {
   list-style: none;
 }
@@ -194,4 +166,41 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.show-img {
+  position: relative;
+}
+
+.show-img .history-clip {
+  position: absolute;
+  top: -3.6rem;
+  left: 1rem;
+}
+
+.show-img .history-clip .histories-btn, .show-img .history-clip .clips-btn {
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.show-img .history-clip .histories-spot, .show-img .history-clip .clips-spot {
+  color: #868686;
+}
+
+.show-img .history-clip .histories-spot:hover, .show-img .history-clip .clips-spot:hover {
+  color: #333;
+  font-weight: bold;
+}
+
+.show-img .history-clip .histories-delete, .show-img .history-clip .clips-delete {
+  font-weight: bold;
+  margin-right: 0.4rem;
+}
+
+.show-img .history-clip .histories-delete {
+  color: #538bb9;
+}
+
+.show-img .history-clip .clips-delete {
+  color: #53b997;
 }

@@ -1,4 +1,11 @@
+
 <div class="col-md-4 order-md-1 show-img">
+
+  <span class='history-clip'>
+    <%= render 'histories/history' %>
+    <%= render 'clips/clip' %>
+  </span>
+
   <div id="carouselImages" class="carousel slide" data-ride="carousel">
     <% if @spot.images.attached? %>
       <ol class="carousel-indicators">

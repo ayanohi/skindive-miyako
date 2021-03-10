@@ -113,31 +113,6 @@
       bottom: -3rem;
     }
 
-    // 行った、行きたいリストボタン
-    .show-img {
-      position: relative;
-      .click {
-        position: absolute;
-        top: -3.6rem;
-        left: 1rem;
-        .histories-btn, .clips-btn {
-          font-size: 0.8rem;
-        }
-        .histories-spot, .clips-spot {
-          color: #c2c2c2;
-        }
-        .histories-delete {
-          color: #538bb9;
-          font-weight: bold;
-        }
-        .clips-delete {
-          color: #53b997;
-          font-weight: bold;
-        }
-      }
-    }
-
-
     // タグ - 特徴
     .tag {
       ul {
@@ -184,4 +159,35 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+ // 行った、行きたいリストボタン
+.show-img {
+  position: relative;
+  .history-clip {
+    position: absolute;
+    top: -3.6rem;
+    left: 1rem;
+    .histories-btn, .clips-btn {
+      font-size: 0.8rem;
+      text-decoration: none;
+    }
+    .histories-spot, .clips-spot {
+      color: #868686;
+    }
+    .histories-spot:hover, .clips-spot:hover {
+      color: #333;
+      font-weight: bold;
+    }
+    .histories-delete, .clips-delete {
+      font-weight: bold;
+      margin-right: 0.4rem;
+    }
+    .histories-delete {
+      color: #538bb9;
+    }
+    .clips-delete {
+      color: #53b997;
+    }
+  }
 }
