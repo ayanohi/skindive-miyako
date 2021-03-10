@@ -35,7 +35,8 @@
 
   <div class="field">
     <%= f.label :image, "プロフィール画像" %><br />
-    <%= f.file_field :image, accept: "image/png,image/jpeg,image/gif", autofocus: true %>
+    <%= f.file_field :image, accept: "image/png,image/jpeg,image/gif", autofocus: true, class: 'px-0' %>
+    <%= image_tag @user.image.url, size:"100x100", class: 'mb-3' %>
   </div>
 
   <div class="field">
