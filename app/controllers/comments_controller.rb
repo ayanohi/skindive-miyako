@@ -13,11 +13,12 @@ class CommentsController < ApplicationController
   end
 
   def create
+    @spot = Spot.find_by(id: params[:spot_id])
     @comment = Comment.new(comment_params)
-    if @comment.save!
+    if @comment.save
       redirect_to spot_comments_path
     else
-      render :news
+      render :new
     end
   end
 
@@ -28,6 +29,7 @@ class CommentsController < ApplicationController
   end
 
   def update
+    @spot = Spot.find_by(id: params[:spot_id])
     @comment = Comment.find(params[:id])
     if @comment.update(comment_params)
       redirect_to spot_comments_path

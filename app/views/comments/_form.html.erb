@@ -9,6 +9,10 @@
       <div class="container col-md-8 mx-auto">
         <form action="＃" method="get" class="row">
           <div class=".col-md-2 .col-md-offset-5">
+            <% if @comment.errors.any? %>
+              <p class="error">全項目の入力をしてください</p>
+            <% end %>
+
             <div class="form-sgroup">
               <p>口コミ<%= f.text_area :content, size: "10x4", class: "form-control" %></p>
             </div>
