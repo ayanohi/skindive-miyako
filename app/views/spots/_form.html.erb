@@ -2,6 +2,9 @@
   <div class="container">
     <form action="＃" method="get" class="row">
       <div class=".col-md-2 .col-md-offset-5">
+        <% if @spot.errors.any? %>
+          <p class="error">スポット名、エリア名、緯度、経度、説明欄を必ず入力してください</p>
+        <% end %>
         <div class="form-group col-md-3 p-0">
           <p>スポット名<%= f.text_field :name, class: "form-control" %></p>
         </div>

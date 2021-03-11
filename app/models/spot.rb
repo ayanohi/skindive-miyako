@@ -13,6 +13,9 @@ class Spot < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :area_id
+    validates :latitude
+    validates :longitude
+    validates :description
   end
 
   def get_creatures

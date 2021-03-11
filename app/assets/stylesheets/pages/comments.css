@@ -45,6 +45,10 @@
   margin-bottom: 0;
 }
 
+.form .error {
+  color: red;
+}
+
 .spot-comment .tab-content, form .tab-content {
   background-color: #EFEFEF;
   position: relative;

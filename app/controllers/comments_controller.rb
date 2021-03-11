@@ -1,28 +1,26 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: %i[index]
+  before_action :set_comment, only: %i[index new create edit update]
 
   def index
-    @spot = Spot.find_by(id: params[:spot_id])
     @comments = Comment.where(spot_id: params[:spot_id])
   end
 
   def new
-    @spot = Spot.find_by(id: params[:spot_id])
     @comment = Comment.new
     @info = "口コミを書く"
   end
 
   def create
     @comment = Comment.new(comment_params)
-    if @comment.save!
+    if @comment.save
       redirect_to spot_comments_path
     else
-      render :news
+      render :new
     end
   end
 
   def edit
-    @spot = Spot.find_by(id: params[:spot_id])
     @comment = Comment.find(params[:id])
     @info = "口コミを編集する"
   end
@@ -46,6 +44,10 @@ class CommentsController < ApplicationController
   end
 
   private
+  def set_comment
+    @spot = Spot.find_by(id: params[:spot_id])
+  end
+
   def comment_params
     params.require(:comment).permit(
       :content,
