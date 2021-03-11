@@ -117,3 +117,23 @@
     }
   }
 }
+
+/* ---------------  --------------- */
+@media not all and (min-width: 768px) {
+  /* 768pxを含まずそれより小さい場合 */
+  .spot-comment {
+    .tab-content .container {
+      padding-bottom: 0;
+    }
+    .show-img {
+      img {
+        margin-top: 5rem;
+      }
+      .history-clip {
+        position: absolute;
+        top: 1rem;
+        left: 2rem;
+      }
+    }
+  }
+}
