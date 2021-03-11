@@ -143,4 +143,7 @@
     top: 1rem;
     left: 2rem;
   }
+  .form .container {
+    padding: 1rem !important;
+  }
 }
