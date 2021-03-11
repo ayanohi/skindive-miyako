@@ -6,7 +6,7 @@
   .profile {
     max-width: 576px;
     margin:1rem auto !important;
-    .to-login-page {
+    .to-login-page a {
       display: inline-block;
       text-decoration: none;
       margin-bottom: 2rem;
@@ -16,7 +16,7 @@
       border-radius: 3rem;
       padding: 0.4rem 1rem;
     }
-    .to-login-page:hover {
+    .to-login-page a:hover {
       background-color: #777;
       color: #bbe2ec;
     }

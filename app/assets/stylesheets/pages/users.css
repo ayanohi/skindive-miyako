@@ -10,7 +10,7 @@
   margin: 1rem auto !important;
 }
 
-.mypage .profile .to-login-page {
+.mypage .profile .to-login-page a {
   display: inline-block;
   text-decoration: none;
   margin-bottom: 2rem;
@@ -21,7 +21,7 @@
   padding: 0.4rem 1rem;
 }
 
-.mypage .profile .to-login-page:hover {
+.mypage .profile .to-login-page a:hover {
   background-color: #777;
   color: #bbe2ec;
 }
