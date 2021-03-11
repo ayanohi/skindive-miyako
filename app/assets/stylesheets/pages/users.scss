@@ -1,28 +1,27 @@
 .mypage {
   max-width: 992px;
   margin:0 auto;
-  h1 {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  section {
-    margin-bottom: 4rem !important;
-  }
 
   // プロフィール
   .profile {
     max-width: 576px;
-    margin:0 auto;
+    margin:1rem auto !important;
     .pic {
-      border-radius: 10rem;
+      border-radius: 1rem;
       box-shadow:-5px 5px 5px rgba(170, 170, 170, 0.342);
     }
     .ig {
       text-align: center;
       padding-top: 0.8rem;
+      a {
+        color: #bb9ad8;
+      }
     }
     .name {
       margin-bottom: 1rem;
+      span {
+      color: #222;
+      }
       .myname {
         font-size: 2.4rem;
         padding-right: 1.6rem;
@@ -36,84 +35,167 @@
 
   // タブタイトル
 
-  // タブー口コミ
-  #tab1, #tab2, #tab3 {
-    padding: 2rem 0;
-  }
-  #tab1 {
-    ul {
-      list-style-type: none;
-    }
-    li {
-      display: inline-block;
-      font-size: 0.8rem;
-      padding-right: 0.5rem;
-      .spot-name {
-        display: inline-block;
-        height: 24px;
-        line-height: 24px;
-        padding: 0 1em 0 .75em;
-        background-color: #e1d9e8;
-        border-radius: 30px;
-        color: #555;
-        text-decoration: none;
-        -webkit-transition: .2s;
-        transition: .2s;
-      }
-      .area-name {
-        // display: inline-block;
-        text-decoration: none;
-        color: #bb9ad8;
-      }
-    }
-    .comment-content {
-      display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 1;
-      overflow: hidden;
-      text-overflow: ellipsis;
+  // タブ
+  .tab-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    .tab-label {
+      margin: 0 5rem;
+      color: #222;
+      cursor: pointer;
+      flex: 1;
+      order: -1;
+      padding: 2rem 2rem 0.4rem 2rem;
       position: relative;
-      padding-top: 0.2rem;
+      text-align: center;
+      transition: cubic-bezier(0.4, 0, 0.2, 1) .2s;
+      user-select: none;
+      white-space: nowrap;
+      -webkit-tap-highlight-color: transparent;
+      p {
+        font-size: 0.9rem;
+        padding-top: 0.2rem;
+      }
     }
-    .fukidashi {
-      display: none;
-      position: absolute;
-      bottom: 30px;
-      left: 20px;
-      width: 20rem;
-      padding: 1rem;
-      border-radius: 5px;
-      background: #92adc3;
-      color: #fff;
-      opacity: 0.9;
+    .tab-label:hover {
+      font-weight: bold;
     }
-    .fukidashi:after {
-      position: absolute;
-      width: 0;
-      height: 0;
-      left: 0;
-      bottom: -19px;
-      margin-left: 10px;
-      border: solid transparent;
-      border-color: rgba(51, 204, 153, 0);
-      border-top-color: #92adc3;
-      border-width: 10px;
-      pointer-events: none;
-      content: " ";
+    .tab-switch:checked + .tab-label {
+      color: #7ebbcc;
     }
-    .comment-content:hover + .fukidashi {
+    .tab-label::after {
+      background: #7ebbcc;
+      bottom: 0;
+      content: '';
       display: block;
+      height: 3px;
+      left: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      transform: translateX(100%);
+      transition: cubic-bezier(0.4, 0, 0.2, 1) .2s 80ms;
+      width: 100%;
+      z-index: 1;
+    }
+    .tab-switch:checked ~ .tab-label::after {
+      transform: translateX(-100%);
+    }
+    .tab-switch:checked + .tab-label::after {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .tab-content {
+      height:0;
+      opacity:0;
+      padding: 0 20px;
+      pointer-events:none;
+      transform: translateX(-30%);
+      transition: transform .3s 80ms, opacity .3s 80ms;
+      width: 100%;
+    }
+    .tab-switch:checked ~ .tab-content {
+      transform: translateX(30%);
+    }
+    .tab-switch:checked + .tab-label + .tab-content {
+      height: auto;
+      opacity: 1;
+      order: 1;
+      pointer-events:auto;
+      transform: translateX(0);
+    }
+    .tab-wrap::after {
+      content: '';
+      height: 20px;
+      order: -1;
+      width: 100%;
+    }
+    .tab-switch {
+      display: none;
+    }
+
+    // タブー口コミ
+    .tab-content {
+      ul {
+        list-style-type: none;
+        padding-top: 1.2rem;
+        margin-bottom: 0;
+      }
+      ul:first-child {
+        margin-top: 2rem;
+      }
+      ul:last-child {
+        margin-bottom: 4rem;
+      }
+      li {
+        display: inline-block;
+        font-size: 0.8rem;
+        padding-right: 0.5rem;
+        .spot-name {
+          display: inline-block;
+          height: 24px;
+          line-height: 24px;
+          padding: 0 .75em 0 .75em;
+          background-color: #e1d9e8;
+          border-radius: 30px;
+          color: #555;
+          text-decoration: none;
+          -webkit-transition: .2s;
+          transition: .2s;
+        }
+        .area-name {
+          // display: inline-block;
+          text-decoration: none;
+          color: #bb9ad8;
+        }
+      }
+      .comment-content {
+        display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: relative;
+        padding-top: 0.2rem;
+      }
+      .fukidashi {
+        display: none;
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+        width: 20rem;
+        padding: 1rem;
+        border-radius: 5px;
+        background: #92adc3;
+        color: #fff;
+        opacity: 0.9;
+      }
+      .fukidashi:after {
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 0;
+        bottom: -19px;
+        margin-left: 10px;
+        border: solid transparent;
+        border-color: rgba(51, 204, 153, 0);
+        border-top-color: #92adc3;
+        border-width: 10px;
+        pointer-events: none;
+        content: " ";
+      }
+      .comment-content:hover + .fukidashi {
+        display: block;
+      }
     }
   }
-
 
   // タブー行ったリスト
   //スポット一覧
 /* --------------- card-section --------------- */
-
   .index-card{
     padding-top: 2rem;
-    padding-bottom: 4rem;
     .card {
       box-shadow:-5px 5px 5px rgba(170, 170, 170, 0.342);
     }
@@ -139,5 +221,13 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
+  }
+}
+
+/* ---------------  --------------- */
+@media not all and (min-width: 768px) {
+  /* 768pxを含まずそれより小さい場合 */
+  .css-fukidashi {
+    padding: 0 !important;
   }
 }

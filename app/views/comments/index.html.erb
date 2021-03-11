@@ -1,45 +1,61 @@
 <div class="spot-comment">
-  <%= render partial: 'spots/spots_show_top', locals: { spot: @spot } %>
+  <div class="title">
+    <h1><%= @spot.name %></h1>
+  </div>
+
+  <div class="col-md-5 mx-auto">
+    <ul class="nav nav-justified spot-nav">
+      <li class="nav-item">
+        <%= link_to "特徴", spot_path(@spot) %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "口コミ", spot_comments_path(@spot), class: 'nav-active' %><hr>
+      </li>
+      <li class="nav-item">
+        <%= link_to "マップ", spot_map_path(@spot), 'data-turbolinks': false %>
+      </li>
+    </ul>
+  </div>
 
   <div class="tab-content">
     <p class="flash"><%= flash[:alert] %></p>
     <div class="container col-md-8 mx-auto">
       <div class="row">
-        <div class="col-md-8 order-md-2">
-          <button type="button" class="btn btn-outline-info btn-sm mb-3">
-            <%=link_to "コメントを書く", new_spot_comment_path(@spot), class: 'text-info' %>
-          </button>
+        <div class="col-md-8 order-md-2 parent">
+          <div class="child">
+            <%=link_to "口コミを書く", new_spot_comment_path(@spot), class: 'text-info' %>
+          </div>
           <% if @comments.present? %>
             <% @comments.each do |comment| %>
               <ul>
-                <%= image_tag comment.user.image.url, width: '8%', height: '8%', class: 'rounded-circle' %>
-                <li><%= comment.user.name %></li>
+                <%= image_tag comment.user.image.url, width: '6%', height: '6%', class: 'rounded-circle user-pic' %>
                 <li><%= l comment.visit_date %></li>
                 <li><%= l comment.visit_time %></li>
                 <li><%= comment.weather.name %></li>
                 <li><%= comment.tide.name %></li>
-                <li><%= comment.wind.name %></li>
+                <li><%= comment.wind.name %></li><br>
+                <li class="comment-content">
+                  <%= link_to comment.user.name, user_path(comment.user), class: 'user-name' %>
+                  <%= comment.content %>
+                  <% if user_signed_in? && current_user.id == comment.user_id %>
+                    <span class="comment-btn">
+                      <%=link_to "編集", edit_spot_comment_path(comment.spot.id, comment.id), class: 'edit' %>
+                      <%=link_to "削除", spot_comment_path(comment.spot.id, comment.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'delete' %>
+                    </span>
+                  <% end %>
+                </li>
               </ul>
-              <ul>
-                <%= comment.content %>
-                <% if user_signed_in? && current_user.id == comment.user_id %>
-                  <button button type="button" class="btn btn-outline-info btn-sm mb-3">
-                    <%=link_to "編集", edit_spot_comment_path(comment.spot.id, comment.id), class: 'text-info' %>
-                  </button>
-                  <button button type="button" class="btn btn-outline-danger btn-sm mb-3">
-                    <%=link_to "削除", spot_comment_path(comment.spot.id, comment.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'text-danger' %>
-                  </button>
-                <% end %>
-              </ul>
+              <hr>
+
             <% end %>
 
           <% else %>
             <p>コメントはまだありません</p>
           <% end %>
         </div>
-        <div class="col-md-4 order-md-1">
-          <%= image_tag @spot.image.url, class: 'img-fluid rounded', alt: 'Responsive image' %>
-        </div>
+
+        <%= render 'spots/show_img' %>
+
       </div>
     </div>
   </div>

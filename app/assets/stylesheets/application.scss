@@ -21,6 +21,7 @@
 @import "pages/spots";
 @import "pages/tops";
 @import "pages/devise";
+@import "pages/spot_show_tab";
 
 
 * {
@@ -32,8 +33,36 @@
 
 body {
   background-color: #F8F8F8;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
 }
 
 h1 {
   color: #313131;
+}
+
+// タブ
+.spot-nav {
+  margin: 2rem 0;
+  a {
+    color: #222;
+    text-decoration: none;
+  }
+  a:hover {
+    font-weight: bold;
+  }
+  .nav-active {
+    color: #7ebbcc;
+    font-weight: bold;
+  }
+  hr {
+    width: 6rem;
+    margin: 1rem auto;
+    border-top: 3px solid #7ebbcc;
+  }
 }

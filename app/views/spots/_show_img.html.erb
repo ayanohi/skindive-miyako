@@ -1,0 +1,41 @@
+
+<div class="col-md-4 order-md-1 show-img">
+
+  <span class='history-clip'>
+    <%= render 'histories/history' %>
+    <%= render 'clips/clip' %>
+  </span>
+
+  <div id="carouselImages" class="carousel slide" data-ride="carousel">
+    <% if @spot.images.attached? %>
+      <ol class="carousel-indicators">
+        <li data-target="#carouselImages" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselImages" data-slide-to="1"></li>
+        <li data-target="#carouselImages" data-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <%= image_tag @spot.image.url, class: 'd-block w-100 rounded', alt: 'スポットの写真' %>
+        </div>
+
+        <% @spot.images.each do |image| %>
+          <div class="carousel-item">
+            <%= image_tag image, class: 'd-block w-100 rounded', alt: 'スポットの写真' %>
+          </div>
+        <% end %>
+      </div>
+
+      <a class="carousel-control-prev" href="#carouselImages" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselImages" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    <% else %>
+      <%= image_tag @spot.image.url, class: 'd-block w-100 rounded', alt: 'スポットの写真' %>
+    <% end %>
+  </div>
+</div>

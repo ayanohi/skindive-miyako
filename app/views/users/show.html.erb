@@ -1,5 +1,4 @@
 <div class="mypage">
-  <h1 class="title">マイページ</h1>
 
   <section class="profile">
     <div class="conatainer">
@@ -25,7 +24,6 @@
             </span>
             <span class="m">m</span>
           </div>
-
           <div class="introduction">
             <% if @user.sns.blank? %>
               <p>自己紹介文がまだありません</p>
@@ -39,29 +37,16 @@
     </div>
   </section>
 
-  <section class="tab">
-    <div class="col-md-7 mx-auto">
-      <ul class="nav nav-tabs nav-justified">
-        <li class="nav-item">
-          <a href="#tab1" class="nav-link active" data-toggle="tab">口コミ</a>
-        </li>
-        <li class="nav-item">
-          <a href="#tab2" class="nav-link" data-toggle="tab">行ったスポット</a>
-        </li>
-        <li class="nav-item">
-          <a href="#tab3" class="nav-link" data-toggle="tab">行きたいスポット</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="tab-content">
-      <div id="tab1" class="tab-pane active">
+  <section class="tabs">
+    <div class="tab-wrap">
+      <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">口コミ<p><%= @user.comments.count %></p></label>
+      <div class="tab-content">
         <% if @user.comments.present? %>
           <% @user.comments.order(visit_date: :desc).each do |comment| %>
             <ul>
               <div class="container">
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-4 p-0">
                     <li><%= l comment.visit_date %></li>
                     <li><%= l comment.visit_time %></li>
                     <li><%= link_to comment.spot.name, spot_path(comment.spot), class: 'spot-name' %></li>
@@ -76,11 +61,11 @@
             </ul>
           <% end %>
         <% else %>
-          <p>まだ口コミを書いてないよ💬</p>
+          <p class='mt-5'>まだ口コミを書いてないよ💬</p>
         <% end %>
       </div>
-
-      <div id="tab2" class="tab-pane">
+      <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">行ったスポット<p><%= @history_list.count %></p></label>
+      <div class="tab-content">
         <% if @history_list.present? %>
           <section class="index-card">
             <div class="container">
@@ -90,11 +75,11 @@
             </div>
           </section>
         <% else %>
-          <p>行ったスポットはまだありません</p>
+          <p class='mt-5'>行ったスポットはまだありません</p>
         <% end %>
       </div>
-
-      <div id="tab3" class="tab-pane">
+      <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">行きたいスポット<p><%= @clip_list.count %></p></label>
+      <div class="tab-content">
         <% if @clip_list.present? %>
           <section class="index-card">
             <div class="container">
@@ -104,10 +89,9 @@
             </div>
           </section>
         <% else %>
-          <p>行きたいスポットはまだありません</p>
+          <p class='mt-5'>行きたいスポットはまだありません</p>
         <% end %>
       </div>
-
     </div>
   </section>
 </div>

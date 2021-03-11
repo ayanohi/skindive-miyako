@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
   def new
     @spot = Spot.find_by(id: params[:spot_id])
     @comment = Comment.new
+    @info = "口コミを書く"
   end
 
   def create
@@ -23,6 +24,7 @@ class CommentsController < ApplicationController
   def edit
     @spot = Spot.find_by(id: params[:spot_id])
     @comment = Comment.find(params[:id])
+    @info = "口コミを編集する"
   end
 
   def update

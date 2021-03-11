@@ -1,42 +1,53 @@
-<%= form_with model: [@spot, @comment], local: true do |f| %>
-  <div class="container">
-    <form action="＃" method="get" class="row">
-      <div class=".col-md-2 .col-md-offset-5">
-        <div class="form-sgroup">
-          <p>コメント<%= f.text_field :content, class: "form-control" %></p>
-        </div>
-        <div class="form-group col-md-3 p-0">
-          <p>訪問日<%= f.date_field :visit_date, class: "form-control" %></p>
-          <p>訪問時刻<%= f.time_select :visit_time, {discard_minute: true, start_hour: 5, end_hour: 20 }, class: "form-control" %>
-          </p>
-        </div>
-
-        <div class="form-group mt-5">
-          <p class="m-0"><%= f.label :weather, '天気' %></p>
-          <%= f.collection_radio_buttons(:weather_id, Weather.all, :id, :name) do |b| %>
-            <span class="m-2"><%= b.label { b.radio_button + b.text } %></span>
-          <% end %>
-        </div>
-
-        <div class="form-group mt-3">
-          <p class="m-0"><%= f.label :tide, '潮' %></p>
-          <%= f.collection_radio_buttons(:tide_id, Tide.all, :id, :name) do |b| %>
-            <span class="m-2"><%= b.label { b.radio_button + b.text } %></span>
-          <% end %>
-        </div>
-
-        <div class="form-group mt-3">
-          <p class="m-0"><%= f.label :wind, '風' %></p>
-          <%= f.collection_radio_buttons(:wind_id, Wind.all, :id, :name) do |b| %>
-            <span class="m-2"><%= b.label { b.radio_button + b.text } %></span>
-          <% end %>
-        </div>
-
-        <%= f.hidden_field :user_id, value:current_user.id %>
-        <%= f.hidden_field :spot_id, value:@spot.id %>
-
-        <%= f.submit "送信", class: "btn btn-info btn-lg my-3" %>
-      </div>
-    </form>
+<div class="form">
+  <div class="title">
+    <h1><%= @spot.name %></h1>
   </div>
-<% end %>
+  <p class="info"><%= @info %></p>
+
+  <%= form_with model: [@spot, @comment], local: true do |f| %>
+    <div class="tab-content">
+      <div class="container col-md-8 mx-auto">
+        <form action="＃" method="get" class="row">
+          <div class=".col-md-2 .col-md-offset-5">
+            <div class="form-sgroup">
+              <p>口コミ<%= f.text_area :content, size: "10x4", class: "form-control" %></p>
+            </div>
+            <div class="form-group col-md-3 p-0">
+              <p>訪問日<%= f.date_field :visit_date, class: "form-control" %></p>
+              <p>訪問時刻<%= f.time_select :visit_time, {discard_minute: true, start_hour: 5, end_hour: 20 }, class: "form-control" %>
+              </p>
+            </div>
+
+            <div class="radio">
+              <div class="form-group mt-5">
+                <%= f.label :weather, '天気', class: 'radio-menu' %>
+                <%= f.collection_radio_buttons(:weather_id, Weather.all, :id, :name) do |b| %>
+                  <span class="m-2"><%= b.label { b.radio_button + b.text } %></span>
+                <% end %>
+              </div>
+
+              <div class="form-group mt-3">
+                <%= f.label :tide, '潮', class: 'radio-menu radio1' %>
+                <%= f.collection_radio_buttons(:tide_id, Tide.all, :id, :name) do |b| %>
+                  <span class="m-2"><%= b.label { b.radio_button + b.text } %></span>
+                <% end %>
+              </div>
+
+              <div class="form-group mt-3">
+                <%= f.label :wind, '風', class: 'radio-menu radio1' %>
+                <%= f.collection_radio_buttons(:wind_id, Wind.all, :id, :name) do |b| %>
+                  <span class="m-2"><%= b.label { b.radio_button + b.text } %></span>
+                <% end %>
+              </div>
+            </div>
+
+            <%= f.hidden_field :user_id, value:current_user.id %>
+            <%= f.hidden_field :spot_id, value:@spot.id %>
+
+            <%= f.submit "送信", class: "btn btn-info btn-lg mt-5" %>
+          </div>
+        </form>
+      </div>
+    </div>
+  <% end %>
+</div>

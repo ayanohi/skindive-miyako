@@ -92,3 +92,17 @@ header {
 .back-link {
 	color: #4487be;
 }
+
+
+
+/* ---------------  --------------- */
+@media not all and (min-width: 768px) {
+  /* 768pxを含まずそれより小さい場合 */
+	.sign-in-new, .sign-up-new, .sign-in-edit {
+		width: 100%;
+		padding: 0;
+		.container {
+			padding: 1rem;
+		}
+	}
+}

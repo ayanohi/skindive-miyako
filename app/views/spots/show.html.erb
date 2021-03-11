@@ -1,5 +1,21 @@
 <section class="spot-show">
-  <%= render partial: "spots_show_top", locals: { spot: @spot } %>
+  <div class="title">
+    <h1><%= @spot.name %></h1>
+  </div>
+
+  <div class="col-md-5 mx-auto">
+    <ul class="nav nav-justified spot-nav">
+      <li class="nav-item">
+        <%= link_to "特徴", spot_path(@spot), class: 'nav-active' %><hr>
+      </li>
+      <li class="nav-item">
+        <%= link_to "口コミ", spot_comments_path(@spot) %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "マップ", spot_map_path(@spot), 'data-turbolinks': false %>
+      </li>
+    </ul>
+  </div>
 
   <div class="tab-content">
     <div class="container col-md-8 mx-auto">
@@ -29,8 +45,6 @@
                 </div>
               </ul>
             </section>
-            <%= render 'histories/history' %>
-            <%= render 'clips/clip' %>
 
             <% if user_signed_in? && current_user.admin? %>
               <p class="show-btn">
@@ -44,14 +58,8 @@
             <% end %>
         </div>
 
-        <div class="col-md-4 order-md-1">
-          <%= image_tag @spot.image.url, class: 'img-fluid rounded mb-3', alt: 'Responsive image' %><br>
-          <% if @spot.images.attached? %>
-            <% @spot.images.each do |image| %>
-              <%= image_tag image, class: 'img-fluid rounded mb-3', alt: 'Responsive image' %> <br>
-            <% end %>
-          <% end %>
-        </div>
+        <%= render 'show_img' %>
+
       </div>
     </div>
 

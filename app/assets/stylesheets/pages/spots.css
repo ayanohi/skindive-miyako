@@ -60,24 +60,6 @@
   text-overflow: ellipsis;
 }
 
-/* ---------------  --------------- */
-@media not all and (min-width: 768px) {
-  /* 768pxを含まずそれより小さい場合 */
-  .index-card .col-lg-4 {
-    padding: 2rem;
-  }
-  .tab-content .col-md-8 {
-    padding: 2rem;
-  }
-}
-
-@media not all and (min-width: 576px) {
-  /* 576pxを含まずそれより小さい場合 */
-  .index-card .col-lg-4 {
-    padding: 3rem 0;
-  }
-}
-
 /* --------------- spot-show --------------- */
 .spot-show .title, .map .title {
   text-align: center;
@@ -104,16 +86,12 @@
   border-radius: 2px;
 }
 
-.spot-show .nav, .map .nav {
-  margin: 2rem 0;
-}
-
 .spot-show .tab-content, .map .tab-content {
   background-color: #EFEFEF;
 }
 
 .spot-show .tab-content .container, .map .tab-content .container {
-  padding: 4rem 0;
+  padding: 5rem 0;
   position: relative;
 }
 
@@ -121,24 +99,6 @@
   position: absolute;
   right: 1rem;
   bottom: -3rem;
-}
-
-.spot-show .tab-content .histories-btn, .spot-show .tab-content .clips-btn, .map .tab-content .histories-btn, .map .tab-content .clips-btn {
-  font-size: 0.8rem;
-}
-
-.spot-show .tab-content .histories-spot, .spot-show .tab-content .clips-spot, .map .tab-content .histories-spot, .map .tab-content .clips-spot {
-  color: #c2c2c2;
-}
-
-.spot-show .tab-content .histories-delete, .map .tab-content .histories-delete {
-  color: #538bb9;
-  font-weight: bold;
-}
-
-.spot-show .tab-content .clips-delete, .map .tab-content .clips-delete {
-  color: #53b997;
-  font-weight: bold;
 }
 
 .spot-show .tab-content .tag ul, .map .tab-content .tag ul {
@@ -188,4 +148,70 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.show-img {
+  position: relative;
+}
+
+.show-img .history-clip {
+  position: absolute;
+  top: -3.6rem;
+  left: 1rem;
+}
+
+.show-img .history-clip .histories-btn, .show-img .history-clip .clips-btn {
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+
+.show-img .history-clip .histories-spot, .show-img .history-clip .clips-spot {
+  color: #868686;
+}
+
+.show-img .history-clip .histories-spot:hover, .show-img .history-clip .clips-spot:hover {
+  color: #333;
+  font-weight: bold;
+}
+
+.show-img .history-clip .histories-delete, .show-img .history-clip .clips-delete {
+  font-weight: bold;
+  margin-right: 0.4rem;
+}
+
+.show-img .history-clip .histories-delete {
+  color: #538bb9;
+}
+
+.show-img .history-clip .clips-delete {
+  color: #53b997;
+}
+
+/* ---------------  --------------- */
+@media not all and (min-width: 768px) {
+  /* 768pxを含まずそれより小さい場合 */
+  .index-card .col-lg-4 {
+    padding: 2rem;
+  }
+  .tab-content .col-md-8 {
+    padding: 2rem;
+  }
+  .spot-show .tab-content .container, .map .tab-content .container {
+    padding: 0;
+  }
+  .spot-show .tab-content .container img, .map .tab-content .container img {
+    margin-top: 5rem;
+  }
+  .spot-show .show-img .history-clip, .map .show-img .history-clip {
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+  }
+}
+
+@media not all and (min-width: 576px) {
+  /* 576pxを含まずそれより小さい場合 */
+  .index-card .col-lg-4 {
+    padding: 3rem 0;
+  }
 }

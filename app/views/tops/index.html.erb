@@ -27,7 +27,6 @@
       <%= image_tag 'glass-icon.png', width: 32, height: 32, alt: '', class: 'mx-2' %>
       <span>エリアで探す</span>
     </div>
-
     <div class="row">
       <div class="col-md-6">
         <% @areas.each do |area| %>
@@ -39,7 +38,6 @@
           </li>
         <% end %>
       </div>
-
       <div class="col-md-6">
         <%= image_tag 'map.png' %>
       </div>
@@ -47,20 +45,14 @@
   </div>
 </section>
 
-
 <section class="search-condition">
   <div class="container">
     <div class="search-icon">
       <%= image_tag 'glass-icon.png', width: 32, height: 32, alt: '', class: 'mx-2'%>
       <span>条件で探す</span>
     </div>
-
     <div class="row">
-      <div class="col-md-6">
-        <%= image_tag 'turtle-illustration.png' %>
-      </div>
-
-      <div class="col-md-6">
+      <div class="col-md-6 order-md-2">
         <div class="creature">
           <p>会える生き物</p>
           <li class="ml-4">
@@ -69,7 +61,6 @@
             <% end %>
           </li>
         </div>
-
         <div class="feature">
           <p>その他の特徴</p>
           <li class="ml-4">
@@ -79,7 +70,9 @@
           </li>
         </div>
       </div>
-
+      <div class="col-md-6 order-md-1">
+        <%= image_tag 'turtle-illustration.png' %>
+      </div>
     </div>
   </div>
 </section>

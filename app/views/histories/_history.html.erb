@@ -1,12 +1,12 @@
 <div id="history-<%= @spot.id %>">
   <% if !History.exists?(user: current_user, spot_id: @spot.id)%>
     <%= link_to spot_histories_path(@spot), method: :post, class: "histories-btn histories-spot", remote: true, 'data-turbolinks':false do %>
-    <span class="histories-spot">行ったリストに入れる</span>
+    <span class="histories-spot">行った！</span>
       <%= @spot.histories.length %>
     <% end %>
   <% else %>
     <%= link_to spot_histories_path(@spot), method: :delete, class: "histories-btn histories-delete", remote: true, 'data-turbolinks':false do %>
-    <span class="histories-delete">行った！</span>
+    <span class="histories-delete">行ったリストから外す</span>
       <%= @spot.histories.length %>
     <% end %>
   <% end %>
