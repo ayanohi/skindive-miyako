@@ -31,7 +31,7 @@ class SpotsController < ApplicationController
 
   def create
     @spot = Spot.new(spot_params)
-    if @spot.save
+    if @spot.save!
       redirect_to spots_path
     else
       render :new
