@@ -1,6 +1,9 @@
 <div class="mypage">
 
   <section class="profile">
+      <% if !user_signed_in? %>
+        <%= link_to "ログインしてマイページ機能を使う", new_user_session_path, class: 'to-login-page' %>
+      <% end %>
     <div class="conatainer">
       <div class="row">
         <div class="col-4">
