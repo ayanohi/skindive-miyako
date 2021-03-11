@@ -1,6 +1,14 @@
 <div class="mypage">
 
   <section class="profile">
+    <div class="to-login-page">
+      <% if !user_signed_in? %>
+        <%= link_to "ログインしてマイページ機能を使う", new_user_session_path %>
+      <% elsif @user.id != current_user.id %>
+        <%= link_to "マイページへ", user_path(current_user.id) %>
+      <% end %>
+    </div>
+
     <div class="conatainer">
       <div class="row">
         <div class="col-4">
