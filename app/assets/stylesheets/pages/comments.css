@@ -41,6 +41,7 @@
   background-color: #aac2dd;
   border-radius: 3rem;
   padding: 0.5rem 1rem;
+  margin-bottom: 0;
 }
 
 .spot-comment .tab-content, form .tab-content {
