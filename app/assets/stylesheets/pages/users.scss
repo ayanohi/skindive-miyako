@@ -223,3 +223,11 @@
     }
   }
 }
+
+/* ---------------  --------------- */
+@media not all and (min-width: 768px) {
+  /* 768pxを含まずそれより小さい場合 */
+  .css-fukidashi {
+    padding: 0 !important;
+  }
+}
