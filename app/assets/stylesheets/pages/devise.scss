@@ -37,20 +37,27 @@ header {
 		display: inline-block;
 	}
 	.sign-up-link {
-		font-size: 1.2rem;
 		color: #4487be;
+		text-decoration: none;
 	}
-	.forgot-your-password-link {
-		font-size: 0.8rem;
-		color: #5f7688;
-		margin-top: 1rem;
-	}
-	#user_remember_me {
-		width: 1rem;
+	.sign-up-link:hover {
+		color: #de695e;
 	}
 	.pic {
 		display: flex;
 		align-items: center;
+	}
+	.guest-login {
+		margin-top: 1rem;
+		font-size: 0.8rem;
+		.click {
+			color: #4487be;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.click:hover {
+			color: #de695e;
+		}
 	}
 }
 
@@ -61,6 +68,10 @@ header {
 	}
 	.sign-in-link {
 		color: #4487be;
+		text-decoration: none;
+	}
+	.sign-in-link:hover {
+		color: #de695e;
 	}
 }
 
@@ -96,8 +107,8 @@ header {
 
 
 /* ---------------  --------------- */
-@media not all and (min-width: 768px) {
-  /* 768pxを含まずそれより小さい場合 */
+@media not all and (min-width: 1400px) {
+  /* 1400pxを含まずそれより小さい場合 */
 	.sign-in-new, .sign-up-new, .sign-in-edit {
 		width: 100%;
 		padding: 0;
