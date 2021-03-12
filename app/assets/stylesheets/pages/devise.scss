@@ -52,6 +52,18 @@ header {
 		display: flex;
 		align-items: center;
 	}
+	.guest-login {
+		margin-top: 1rem;
+		font-size: 0.8rem;
+		.click {
+			color: #4487be;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		.click:hover {
+			color: #de695e;
+		}
+	}
 }
 
 /* --------------- 新規登録 --------------- */

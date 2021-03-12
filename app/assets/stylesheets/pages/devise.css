@@ -66,6 +66,21 @@ header {
   align-items: center;
 }
 
+.sign-in-new .guest-login, .sign-up-new .guest-login, .sign-in-edit .guest-login {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.sign-in-new .guest-login .click, .sign-up-new .guest-login .click, .sign-in-edit .guest-login .click {
+  color: #4487be;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sign-in-new .guest-login .click:hover, .sign-up-new .guest-login .click:hover, .sign-in-edit .guest-login .click:hover {
+  color: #de695e;
+}
+
 /* --------------- 新規登録 --------------- */
 .sign-up-new .login-link {
   font-size: 0.8rem;
