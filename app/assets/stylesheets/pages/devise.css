@@ -47,8 +47,12 @@ header {
 }
 
 .sign-in-new .sign-up-link, .sign-up-new .sign-up-link, .sign-in-edit .sign-up-link {
-  font-size: 1.2rem;
   color: #4487be;
+  text-decoration: none;
+}
+
+.sign-in-new .sign-up-link:hover, .sign-up-new .sign-up-link:hover, .sign-in-edit .sign-up-link:hover {
+  color: #de695e;
 }
 
 .sign-in-new #user_remember_me, .sign-up-new #user_remember_me, .sign-in-edit #user_remember_me {

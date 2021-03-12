@@ -37,8 +37,11 @@ header {
 		display: inline-block;
 	}
 	.sign-up-link {
-		font-size: 1.2rem;
 		color: #4487be;
+		text-decoration: none;
+	}
+	.sign-up-link:hover {
+		color: #de695e;
 	}
 	#user_remember_me {
 		width: 1rem;
