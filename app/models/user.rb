@@ -7,4 +7,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  # ゲストユーザーを探す or 作成する機能
+  def self.guest
+    find_or_create_by!(name: 'ゲスト', email: 'guest@example.com') do |user|
+      user.password = SecureRandom.urlsafe_base64
+      # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+    end
+  end
 end
