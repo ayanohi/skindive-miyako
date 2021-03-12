@@ -71,6 +71,10 @@ header {
 	}
 	.sign-in-link {
 		color: #4487be;
+		text-decoration: none;
+	}
+	.sign-in-link:hover {
+		color: #de695e;
 	}
 }
 

@@ -86,6 +86,11 @@ header {
 
 .sign-up-new .sign-in-link {
   color: #4487be;
+  text-decoration: none;
+}
+
+.sign-up-new .sign-in-link:hover {
+  color: #de695e;
 }
 
 /* --------------- アカウント編集 --------------- */
