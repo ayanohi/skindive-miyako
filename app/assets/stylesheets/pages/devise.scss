@@ -106,8 +106,8 @@ header {
 
 
 /* ---------------  --------------- */
-@media not all and (min-width: 768px) {
-  /* 768pxを含まずそれより小さい場合 */
+@media not all and (min-width: 1400px) {
+  /* 1400pxを含まずそれより小さい場合 */
 	.sign-in-new, .sign-up-new, .sign-in-edit {
 		width: 100%;
 		padding: 0;
