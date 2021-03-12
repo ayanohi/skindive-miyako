@@ -51,12 +51,6 @@ header {
   color: #4487be;
 }
 
-.sign-in-new .forgot-your-password-link, .sign-up-new .forgot-your-password-link, .sign-in-edit .forgot-your-password-link {
-  font-size: 0.8rem;
-  color: #5f7688;
-  margin-top: 1rem;
-}
-
 .sign-in-new #user_remember_me, .sign-up-new #user_remember_me, .sign-in-edit #user_remember_me {
   width: 1rem;
 }
