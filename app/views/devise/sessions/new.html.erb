@@ -27,6 +27,7 @@
           </div>
         <% end %>
 
+        <p>登録せずに機能を試したい方は<%= link_to 'こちら', users_guest_sign_in_path, method: :post %></p>
         <%= render "devise/shared/links" %>
       </div>
 
