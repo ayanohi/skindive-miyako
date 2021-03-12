@@ -40,6 +40,7 @@
 <% end %>
 
 <span class="login-link">アカウントをお持ちの方は</span><%= render "devise/shared/links" %>
+<p class="guest-login">※登録せずに機能を試したい方は<%= link_to 'こちら', users_guest_sign_in_path, method: :post, class: 'click' %></p>
 </div>
 
 <div class="col-12 col-md-6 pic">
