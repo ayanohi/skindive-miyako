@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: miyako_production
-  username: miyako
+  username: root
   password: <%= ENV['MIYAKO_DATABASE_PASSWORD'] %>
+  host: <%= ENV['MIYAKO_DATABASE_HOSTNAME'] %>
