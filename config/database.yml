@@ -51,5 +51,5 @@ production:
   <<: *default
   database: miyako_production
   username: root
-  password: <%= ENV['MIYAKO_DATABASE_PASSWORD'] %>
-  host: <%= ENV['MIYAKO_DATABASE_HOSTNAME'] %>
+  password: <%= Rails.application.credentials.db[:password] %>
+  host: <%= Rails.application.credentials.db[:hostname] %>
