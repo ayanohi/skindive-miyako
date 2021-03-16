@@ -1,3 +1,11 @@
+server "54.150.97.65", user: "ayanohi1", roles: %w{app db web}
+
+set :ssh_options, {
+  keys: %w(~/.ssh/miyako.pem),
+  forward_agent: true,
+  auth_methods: %w(publickey),
+}
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
