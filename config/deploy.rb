@@ -15,6 +15,9 @@ append :linked_files, "config/master.key"
 # 共有ディレクトリの設定
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "node_modules"
 
+# ブランチを指定する
+set :branch, "main"
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
