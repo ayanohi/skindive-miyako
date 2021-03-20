@@ -81,7 +81,7 @@ spots = Spot.create([
   },
   {
     name: 'サバウツガー',
-    image: File.open('#{Rails.root}/db/fixtures/img/サバウツガー.jpg'),
+    image: File.open('#{Rails.root}/../../db/fixtures/img/サバウツガー.jpg'),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -93,7 +93,7 @@ spots = Spot.create([
   },
   {
     name: '与那覇前浜',
-    image: File.open('#{Rails.root}/db/fixtures/img/与那覇前浜.jpg'),
+    image: File.open('#{Rails.root}/../../db/fixtures/img/与那覇前浜.jpg'),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -105,7 +105,7 @@ spots = Spot.create([
   },
   {
     name: '17END',
-    image: File.open('#{Rails.root}/db/fixtures/img/17END.jpg'),
+    image: File.open('#{Rails.root}/../../db/fixtures/img/17END.jpg'),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -117,7 +117,7 @@ spots = Spot.create([
   },
   {
     name: 'シギラ',
-    image: File.open('#{Rails.root}/db/fixtures/img/シギラ.jpg'),
+    image: File.open('#{Rails.root}/../../db/fixtures/img/シギラ.jpg'),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -129,7 +129,7 @@ spots = Spot.create([
   },
   {
     name: 'イフ',
-    image: File.open('#{Rails.root}/db/fixtures/img/イフ.jpg'),
+    image: File.open('#{Rails.root}/../../db/fixtures/img/イフ.jpg'),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -141,7 +141,7 @@ spots = Spot.create([
   },
   {
     name: '中の島海岸',
-    image: File.open('#{Rails.root}/db/fixtures/img/中の島海岸.jpg'),
+    image: File.open('#{Rails.root}/../../db/fixtures/img/中の島海岸.jpg'),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -153,7 +153,7 @@ spots = Spot.create([
   },
   {
     name: 'ムスヌン浜',
-    image: File.open('#{Rails.root}/db/fixtures/img/ムスヌン浜.jpg'),
+    image: File.open('#{Rails.root}/../../db/fixtures/img/ムスヌン浜.jpg'),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -165,7 +165,7 @@ spots = Spot.create([
   },
   {
     name: '名無ビーチ',
-    image: File.open('#{Rails.root}/db/fixtures/img/名無ビーチ.jpg'),
+    image: File.open('#{Rails.root}/../../db/fixtures/img/名無ビーチ.jpg'),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -177,7 +177,7 @@ spots = Spot.create([
   },
   {
     name: '長間浜',
-    image: File.open('#{Rails.root}/db/fixtures/img/長間浜.jpg'),
+    image: File.open('#{Rails.root}/../../db/fixtures/img/長間浜.jpg'),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -189,7 +189,7 @@ spots = Spot.create([
   },
   {
     name: 'シギラ砂地',
-    image: File.open('#{Rails.root}/db/fixtures/img/シギラ砂地.jpg'),
+    image: File.open('#{Rails.root}/../../db/fixtures/img/シギラ砂地.jpg'),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
