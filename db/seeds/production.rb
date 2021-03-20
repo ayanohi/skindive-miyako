@@ -68,7 +68,7 @@ winds = Wind.create([
 spots = Spot.create([
   {
     name: '白鳥岬',
-    image: File.open("#{Rails.root}/db/fixtures/img/白鳥岬.jpg"),
+    image: File.open("#{Rails.root}/db/fixtures/img/17END.jpg"),
     description: '好条件が揃ったら絶対に行きたいところ。時季と運が良ければマンタに会えると有名です。
     白鳥岬公園に車を停めて、岩場を５分ほど歩いてエントリーします。
     上級者向けの洞窟もあり、流れがなければ本当に神秘的なスポットです。
@@ -79,126 +79,126 @@ spots = Spot.create([
     latitude: 24.86315273676422,
     longitude: 125.16265601373505
   },
-  {
-    name: 'サバウツガー',
-    image: File.open("#{Rails.root}/db/fixtures/img/サバウツガー.jpg"),
-    description: '行きたい
-    行きたい行きたい
-    行きたい行きたい行きたい',
-    postal_code: '906-0000',
-    address: '沖縄県宮古島市',
-    area_id: 4,
-    latitude: 24.847267633507474,
-    longitude: 125.20580653965264
-  },
-  {
-    name: '与那覇前浜',
-    image: File.open("#{Rails.root}/db/fixtures/img/与那覇前浜.jpg"),
-    description: '行きたい
-    行きたい行きたい
-    行きたい行きたい行きたい',
-    postal_code: '906-0000',
-    address: '沖縄県宮古島市',
-    area_id: 3,
-    latitude: 24.73551763652275,
-    longitude: 125.26280279838262
-  },
-  {
-    name: '17END',
-    image: File.open("#{Rails.root}/db/fixtures/img/17END.jpg"),
-    description: '行きたい
-    行きたい行きたい
-    行きたい行きたい行きたい',
-    postal_code: '906-0000',
-    address: '沖縄県宮古島市',
-    area_id: 5,
-    latitude: 24.841414296148443,
-    longitude: 125.13962267007398
-  },
-  {
-    name: 'シギラ',
-    image: File.open("#{Rails.root}/db/fixtures/img/シギラ.jpg"),
-    description: '行きたい
-    行きたい行きたい
-    行きたい行きたい行きたい',
-    postal_code: '906-0000',
-    address: '沖縄県宮古島市',
-    area_id: 2,
-    latitude: 24.720810501146957,
-    longitude: 125.34080374439873
-  },
-  {
-    name: 'イフ',
-    image: File.open("#{Rails.root}/db/fixtures/img/イフ.jpg"),
-    description: '行きたい
-    行きたい行きたい
-    行きたい行きたい行きたい',
-    postal_code: '906-0000',
-    address: '沖縄県宮古島市',
-    area_id: 6,
-    latitude: 24.997270494472506,
-    longitude: 125.25767161029522
-  },
-  {
-    name: '中の島海岸',
-    image: File.open("#{Rails.root}/db/fixtures/img/中の島海岸.jpg"),
-    description: '行きたい
-    行きたい行きたい
-    行きたい行きたい行きたい',
-    postal_code: '906-0000',
-    address: '沖縄県宮古島市',
-    area_id: 5,
-    latitude: 24.813874773302924,
-    longitude: 125.1452035715875
-  },
-  {
-    name: 'ムスヌン浜',
-    image: File.open("#{Rails.root}/db/fixtures/img/ムスヌン浜.jpg"),
-    description: '行きたい
-    行きたい行きたい
-    行きたい行きたい行きたい',
-    postal_code: '906-0000',
-    address: '沖縄県宮古島市',
-    area_id: 7,
-    latitude: 24.717951006213717,
-    longitude: 125.24009674042526
-  },
-  {
-    name: '名無ビーチ',
-    image: File.open("#{Rails.root}/db/fixtures/img/名無ビーチ.jpg"),
-    description: '行きたい
-    行きたい行きたい
-    行きたい行きたい行きたい',
-    postal_code: '906-0000',
-    address: '沖縄県宮古島市',
-    area_id: 8,
-    latitude: 24.89394811817826,
-    longitude: 125.27020961585875
-  },
-  {
-    name: '長間浜',
-    image: File.open("#{Rails.root}/db/fixtures/img/長間浜.jpg"),
-    description: '行きたい
-    行きたい行きたい
-    行きたい行きたい行きたい',
-    postal_code: '906-0000',
-    address: '沖縄県宮古島市',
-    area_id: 7,
-    latitude: 24.72618237838645,
-    longitude: 125.23984891266089
-  },
-  {
-    name: 'シギラ砂地',
-    image: File.open("#{Rails.root}/db/fixtures/img/シギラ砂地.jpg"),
-    description: '行きたい
-    行きたい行きたい
-    行きたい行きたい行きたい',
-    postal_code: '906-0000',
-    address: '沖縄県宮古島市',
-    area_id: 2,
-    latitude: 24.721918700880483,
-    longitude: 125.35288352625905
-  },
+  # {
+  #   name: 'サバウツガー',
+  #   image: File.open("#{Rails.root}/db/fixtures/img/サバウツガー.jpg"),
+  #   description: '行きたい
+  #   行きたい行きたい
+  #   行きたい行きたい行きたい',
+  #   postal_code: '906-0000',
+  #   address: '沖縄県宮古島市',
+  #   area_id: 4,
+  #   latitude: 24.847267633507474,
+  #   longitude: 125.20580653965264
+  # },
+  # {
+  #   name: '与那覇前浜',
+  #   image: File.open("#{Rails.root}/db/fixtures/img/与那覇前浜.jpg"),
+  #   description: '行きたい
+  #   行きたい行きたい
+  #   行きたい行きたい行きたい',
+  #   postal_code: '906-0000',
+  #   address: '沖縄県宮古島市',
+  #   area_id: 3,
+  #   latitude: 24.73551763652275,
+  #   longitude: 125.26280279838262
+  # },
+  # {
+  #   name: '17END',
+  #   image: File.open("#{Rails.root}/db/fixtures/img/17END.jpg"),
+  #   description: '行きたい
+  #   行きたい行きたい
+  #   行きたい行きたい行きたい',
+  #   postal_code: '906-0000',
+  #   address: '沖縄県宮古島市',
+  #   area_id: 5,
+  #   latitude: 24.841414296148443,
+  #   longitude: 125.13962267007398
+  # },
+  # {
+  #   name: 'シギラ',
+  #   image: File.open("#{Rails.root}/db/fixtures/img/シギラ.jpg"),
+  #   description: '行きたい
+  #   行きたい行きたい
+  #   行きたい行きたい行きたい',
+  #   postal_code: '906-0000',
+  #   address: '沖縄県宮古島市',
+  #   area_id: 2,
+  #   latitude: 24.720810501146957,
+  #   longitude: 125.34080374439873
+  # },
+  # {
+  #   name: 'イフ',
+  #   image: File.open("#{Rails.root}/db/fixtures/img/イフ.jpg"),
+  #   description: '行きたい
+  #   行きたい行きたい
+  #   行きたい行きたい行きたい',
+  #   postal_code: '906-0000',
+  #   address: '沖縄県宮古島市',
+  #   area_id: 6,
+  #   latitude: 24.997270494472506,
+  #   longitude: 125.25767161029522
+  # },
+  # {
+  #   name: '中の島海岸',
+  #   image: File.open("#{Rails.root}/db/fixtures/img/中の島海岸.jpg"),
+  #   description: '行きたい
+  #   行きたい行きたい
+  #   行きたい行きたい行きたい',
+  #   postal_code: '906-0000',
+  #   address: '沖縄県宮古島市',
+  #   area_id: 5,
+  #   latitude: 24.813874773302924,
+  #   longitude: 125.1452035715875
+  # },
+  # {
+  #   name: 'ムスヌン浜',
+  #   image: File.open("#{Rails.root}/db/fixtures/img/ムスヌン浜.jpg"),
+  #   description: '行きたい
+  #   行きたい行きたい
+  #   行きたい行きたい行きたい',
+  #   postal_code: '906-0000',
+  #   address: '沖縄県宮古島市',
+  #   area_id: 7,
+  #   latitude: 24.717951006213717,
+  #   longitude: 125.24009674042526
+  # },
+  # {
+  #   name: '名無ビーチ',
+  #   image: File.open("#{Rails.root}/db/fixtures/img/名無ビーチ.jpg"),
+  #   description: '行きたい
+  #   行きたい行きたい
+  #   行きたい行きたい行きたい',
+  #   postal_code: '906-0000',
+  #   address: '沖縄県宮古島市',
+  #   area_id: 8,
+  #   latitude: 24.89394811817826,
+  #   longitude: 125.27020961585875
+  # },
+  # {
+  #   name: '長間浜',
+  #   image: File.open("#{Rails.root}/db/fixtures/img/長間浜.jpg"),
+  #   description: '行きたい
+  #   行きたい行きたい
+  #   行きたい行きたい行きたい',
+  #   postal_code: '906-0000',
+  #   address: '沖縄県宮古島市',
+  #   area_id: 7,
+  #   latitude: 24.72618237838645,
+  #   longitude: 125.23984891266089
+  # },
+  # {
+  #   name: 'シギラ砂地',
+  #   image: File.open("#{Rails.root}/db/fixtures/img/シギラ砂地.jpg"),
+  #   description: '行きたい
+  #   行きたい行きたい
+  #   行きたい行きたい行きたい',
+  #   postal_code: '906-0000',
+  #   address: '沖縄県宮古島市',
+  #   area_id: 2,
+  #   latitude: 24.721918700880483,
+  #   longitude: 125.35288352625905
+  # },
 ])
 
 require "csv"
