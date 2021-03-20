@@ -64,7 +64,7 @@ winds = Wind.create([
   {name: '無'},
   {name: '不明'}
 ])
-/miyako/db/fixtures/img/
+
 spots = Spot.create([
   {
     name: '白鳥岬',
