@@ -1,12 +1,17 @@
 <div id="clip-<%= @spot.id %>">
-  <% if !Clip.exists?(user: current_user, spot_id: @spot.id)%>
+  <% if user_signed_in? && !Clip.exists?(user: current_user, spot_id: @spot.id) %>
     <%= link_to spot_clips_path(@spot), method: :post, class: "clips-btn clips-spot", remote: true, 'data-turbolinks':false do %>
-    <span class="clips-spot">行きたい！</span>
+      <span class="clips-spot">行きたい！</span>
+      <%= @spot.clips.length %>
+    <% end %>
+  <% elsif user_signed_in? && Clip.exists?(user: current_user, spot_id: @spot.id) %>
+    <%= link_to spot_clips_path(@spot), method: :delete, class: "clips-btn clips-delete", remote: true, 'data-turbolinks':false do %>
+      <span class="clips-delete">行きたいリストから外す</span>
       <%= @spot.clips.length %>
     <% end %>
   <% else %>
-    <%= link_to spot_clips_path(@spot), method: :delete, class: "clips-btn clips-delete", remote: true, 'data-turbolinks':false do %>
-    <span class="clips-delete">行きたいリストから外す</span>
+    <%= link_to new_user_session_path, class: "clips-btn clips-spot" do %>
+      <span class="clips-spot">行きたい！</span>
       <%= @spot.clips.length %>
     <% end %>
   <% end %>
