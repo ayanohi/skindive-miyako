@@ -24,26 +24,26 @@
           <%= safe_join(@spot.description.split("\n"), tag(:br)) %>
 
             <section class="row tag">
-              <ul class="mt-4 mb-0">
-                <div class="col-lg">
+              <div class="col-12 mt-4">
+                <ul>
                   <li>
                     <span>会える生き物</span>
                     <% @spot.get_creatures.each do |creature| %>
                       <%= link_to creature.name, spots_path(@q, 'q[creatures_id_eq]': creature.id) %>
                     <% end %>
                   </li>
-                </div>
-              </ul>
-              <ul>
-                <div class="col-lg">
+                </ul>
+              </div>
+              <div class="col-12">
+                <ul>
                   <li>
                     <span>その他の特徴</span>
                     <% @spot.get_features.each do |feature| %>
                       <%= link_to feature.name, spots_path(@q, 'q[features_id_eq]': feature.id), class: 'feature' %>
                     <% end %>
                   </li>
-                </div>
-              </ul>
+                </ul>
+              </div>
             </section>
 
             <% if user_signed_in? && current_user.admin? %>
