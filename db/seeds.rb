@@ -67,8 +67,8 @@ winds = Wind.create([
 
 spots = Spot.create([
   {
-    name: '白鳥岬',
-    image: File.open("#{Rails.root}/db/fixtures/img/白鳥岬.jpg"),
+    name: '白鳥崎',
+    image: File.open("#{Rails.root}/db/fixtures/img/白鳥崎.jpg"),
     description: '好条件が揃ったら絶対に行きたいところ。時季と運が良ければマンタに会えると有名です。
     白鳥岬公園に車を停めて、岩場を５分ほど歩いてエントリーします。
     上級者向けの洞窟もあり、流れがなければ本当に神秘的なスポットです。
@@ -188,16 +188,40 @@ spots = Spot.create([
     longitude: 125.23984891266089
   },
   {
-    name: 'シギラ砂地',
-    image: File.open("#{Rails.root}/db/fixtures/img/シギラ砂地.jpg"),
+    name: 'ゴルフ場裏',
+    image: File.open("#{Rails.root}/db/fixtures/img/ゴルフ場裏.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
     postal_code: '906-0000',
     address: '沖縄県宮古島市',
     area_id: 2,
-    latitude: 24.721918700880483,
-    longitude: 125.35288352625905
+    latitude: 24.72410002230413,
+    longitude: 125.28735272617293
+  },
+  {
+    name: 'ゼロ',
+    image: File.open("#{Rails.root}/db/fixtures/img/ゼロ.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 5,
+    latitude: 24.81024482664304,
+    longitude: 125.14671965110108
+  },
+  {
+    name: '一ノ瀬',
+    image: File.open("#{Rails.root}/db/fixtures/img/一ノ瀬.jpg"),
+    description: '行きたい
+    行きたい行きたい
+    行きたい行きたい行きたい',
+    postal_code: '906-0000',
+    address: '沖縄県宮古島市',
+    area_id: 5,
+    latitude: 24.81024482664304,
+    longitude: 125.14671965110108
   },
 ])
 
