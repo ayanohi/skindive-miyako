@@ -25,7 +25,8 @@ features = Feature.create([
   {name: 'ビーチあり'},
   {name: '近場に飲食店あり'},
   {name: 'サンセットあり'},
-  {name: '駐車場あり'}
+  {name: '駐車場あり'},
+  {name: '星空'}
 ])
 
 creatures = Creature.create([
