@@ -1,6 +1,6 @@
 users = User.create([
   {name: 'あや', email: 'test@example.com', password: 'ffffff', password_confirmation: 'ffffff', admin: 'true' },
-  {name: 'テストちゃん', email: 'test1@example.com', password: 'jjjjjj', password_confirmation: 'jjjjjj', admin: 'false' },
+  {name: 'テストユーザ', email: 'test1@example.com', password: 'jjjjjj', password_confirmation: 'jjjjjj', admin: 'false' },
 ])
 
 areas = Area.create([
@@ -21,11 +21,11 @@ features = Feature.create([
   {name: '水中洞窟'},
   {name: '水中砂地'},
   {name: 'サンゴ'},
-  {name: 'ダイバー'},
-  {name: 'ビーチ'},
-  {name: '近場に飲食店'},
-  {name: 'サンセット'},
-  {name: '駐車場'}
+  {name: 'ダイバーがいる'},
+  {name: 'ビーチあり'},
+  {name: '近場に飲食店あり'},
+  {name: 'サンセットあり'},
+  {name: '駐車場あり'}
 ])
 
 creatures = Creature.create([
