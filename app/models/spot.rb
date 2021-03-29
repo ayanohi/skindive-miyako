@@ -4,7 +4,7 @@ class Spot < ApplicationRecord
   has_many :spot_features, dependent: :destroy
   has_many :creatures, through: :spot_creatures
   has_many :features, through: :spot_features
-  has_many :comments
+  has_many :comments, dependent: :destroy
   has_many :histories, dependent: :destroy
   has_many :clips, dependent: :destroy
   has_many_attached :images
