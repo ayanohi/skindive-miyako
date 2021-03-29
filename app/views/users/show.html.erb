@@ -13,7 +13,11 @@
     <div class="conatainer">
       <div class="row">
         <div class="col-4">
-          <%= image_tag @user.image.url, class: 'pic', alt: 'Responsive image' %>
+          <% if @user.image? %>
+            <%= image_tag @user.image.url, class: 'pic' %>
+          <% else %>
+            <%= image_tag 'default.png', class: 'pic' %>
+          <% end %>
           <% if @user.sns.blank? %>
             <p class="ig">INSTAGRAM 未登録</p>
           <% else %>

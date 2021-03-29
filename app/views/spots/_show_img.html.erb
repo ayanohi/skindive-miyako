@@ -9,18 +9,23 @@
   <div id="carouselImages" class="carousel slide" data-ride="carousel">
     <% if @spot.images.attached? %>
       <ol class="carousel-indicators">
-        <li data-target="#carouselImages" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselImages" data-slide-to="1"></li>
-        <li data-target="#carouselImages" data-slide-to="2"></li>
+        <% @spot.images.count.times do |i| %>
+          <% if i == 0 %>
+            <li data-target="#carouselImages" data-slide-to='#{i}' class="active"></li>
+          <% else %>
+            <li data-target="#carouselImages" data-slide-to='#{i}'></li>
+          <% end %>
+        <% end %>
       </ol>
 
       <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <%= image_tag @spot.image.url, class: 'd-block w-100 rounded', alt: 'スポットの写真' %>
-        </div>
 
-        <% @spot.images.each do |image| %>
-          <div class="carousel-item">
+        <% @spot.images.each_with_index do |image, i| %>
+          <% if i == 0 %>
+            <div class="carousel-item active">
+          <% else %>
+            <div class="carousel-item">
+          <% end %>
             <%= image_tag image, class: 'd-block w-100 rounded', alt: 'スポットの写真' %>
           </div>
         <% end %>
@@ -35,7 +40,7 @@
         <span class="sr-only">Next</span>
       </a>
     <% else %>
-      <%= image_tag @spot.image.url, class: 'd-block w-100 rounded', alt: 'スポットの写真' %>
+      <%= image_tag 'default.png', class: 'd-block w-100 rounded' %>
     <% end %>
   </div>
 </div>
