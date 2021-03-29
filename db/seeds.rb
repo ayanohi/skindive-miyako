@@ -213,32 +213,26 @@ spots = Spot.create([
   },
 ])
 
-spot = Spot.find(1)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/白鳥崎.jpg"), filename: '白鳥崎.jpg')
-spot = Spot.find(2)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/サバウツガー.jpg"), filename: 'サバウツガー.jpg')
-spot = Spot.find(3)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/与那覇前浜.jpg"), filename: '与那覇前浜.jpg')
-spot = Spot.find(4)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/17END.jpg"), filename: '17END.jpg')
-spot = Spot.find(5)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/シギラ.jpg"), filename: 'シギラ.jpg')
-spot = Spot.find(6)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/イフ.jpg"), filename: 'イフ.jpg')
-spot = Spot.find(7)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/中の島海岸.jpg"), filename: '中の島海岸.jpg')
-spot = Spot.find(8)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/ムスヌン浜.jpg"), filename: 'ムスヌン浜.jpg')
-spot = Spot.find(9)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/名無ビーチ.jpg"), filename: '名無ビーチ.jpg')
-spot = Spot.find(10)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/長間浜.jpg"), filename: '長間浜.jpg')
-spot = Spot.find(11)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/ゴルフ場裏.jpg"), filename: 'ゴルフ場裏.jpg')
-spot = Spot.find(12)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/ゼロ.jpg"), filename: 'ゼロ.jpg')
-spot = Spot.find(13)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/一ノ瀬.jpg"), filename: '一ノ瀬.jpg')
+filenames = [
+  ['白鳥崎.jpg', '白鳥崎2.jpg'],
+  ['サバウツガー.jpg', 'サバウツガー2.jpg'],
+  ['与那覇前浜.jpg', '与那覇前浜2.jpg'],
+  ['17END.jpg', '17END2.jpg'],
+  ['シギラ.jpg', 'シギラ2.jpg'],
+  ['イフ.jpg', 'イフ2.jpg'],
+  ['中の島海岸.jpg', '中の島海岸2.jpg'],
+  ['ムスヌン浜.jpg', 'ムスヌン浜2.jpg'],
+  ['名無ビーチ.jpg', '名無ビーチ2.jpg'],
+  ['長間浜.jpg', '長間浜2.jpg'],
+  ['ゴルフ場裏.jpg', 'ゴルフ場裏2.jpg'],
+  ['ゼロ.jpg', 'ゼロ2.jpg'],
+  ['一ノ瀬.jpg', '一ノ瀬2.jpg'],
+]
+filenames.each.with_index(1) do |fn, i|
+  spot = Spot.find(i)
+  spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/#{fn[0]}"), filename: "#{fn[0]}")
+  spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/#{fn[1]}"), filename: "#{fn[1]}")
+end
 
 require "csv"
 
