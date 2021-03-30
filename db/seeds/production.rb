@@ -69,7 +69,7 @@ winds = Wind.create([
 spots = Spot.create([
   {
     name: '白鳥崎',
-    image: File.open("#{Rails.root}/db/fixtures/img/白鳥岬.jpg"),
+    image: File.open("#{Rails.root}/db/fixtures/img/白鳥崎.jpg"),
     description: '好条件が揃ったら絶対に行きたいところ。時季と運が良ければマンタに会えると有名です。
     白鳥岬公園に車を停めて、岩場を５分ほど歩いてエントリーします。
     上級者向けの洞窟もあり、流れがなければ本当に神秘的なスポットです。
