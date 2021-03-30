@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AACE,oBADkB,CAChB,EAAE,CAAC;EACH,aAAa,EAAE,GAAG;EAClB,MAAM,EAAE,OAAO;EACf,MAAM,EANkB,GAAG;EAO3B,SAAS,EAPe,GAAG;CAQ5B",
+    "sources": [
+        "spot_show_tab.scss"
+    ],
+    "names": [],
+    "file": "spot_show_tab.css"
+}
