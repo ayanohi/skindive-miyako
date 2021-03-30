@@ -216,7 +216,7 @@ spots = Spot.create([
 spot = Spot.find(1)
 spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/白鳥崎.jpg"), filename: '白鳥崎.jpg')
 spot = Spot.find(2)
-spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/サバウツガー.jpg"), filename: 'サバウツガー.jpg')
+spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/サバウツガー2.jpg"), filename: 'サバウツガー2.jpg')
 spot = Spot.find(3)
 spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/与那覇前浜.jpg"), filename: '与那覇前浜.jpg')
 spot = Spot.find(4)
