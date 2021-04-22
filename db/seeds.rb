@@ -69,6 +69,7 @@ winds = Wind.create([
 spots = Spot.create([
   {
     name: '白鳥崎',
+    image: File.open("#{Rails.root}/db/fixtures/img/白鳥崎.jpg"),
     description: '好条件が揃ったら絶対に行きたいところ。時季と運が良ければマンタに会えると有名です。
     白鳥岬公園に車を停めて、岩場を５分ほど歩いてエントリーします。
     上級者向けの洞窟もあり、流れがなければ本当に神秘的なスポットです。
@@ -81,6 +82,7 @@ spots = Spot.create([
   },
   {
     name: 'サバウツガー',
+    image: File.open("#{Rails.root}/db/fixtures/img/サバウツガー.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -92,6 +94,7 @@ spots = Spot.create([
   },
   {
     name: '与那覇前浜',
+    image: File.open("#{Rails.root}/db/fixtures/img/与那覇前浜.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -103,6 +106,7 @@ spots = Spot.create([
   },
   {
     name: '17END',
+    image: File.open("#{Rails.root}/db/fixtures/img/17END.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -114,6 +118,7 @@ spots = Spot.create([
   },
   {
     name: 'シギラ',
+    image: File.open("#{Rails.root}/db/fixtures/img/シギラ.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -125,6 +130,7 @@ spots = Spot.create([
   },
   {
     name: 'イフ',
+    image: File.open("#{Rails.root}/db/fixtures/img/イフ.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -136,6 +142,7 @@ spots = Spot.create([
   },
   {
     name: '中の島海岸',
+    image: File.open("#{Rails.root}/db/fixtures/img/中の島海岸.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -147,6 +154,7 @@ spots = Spot.create([
   },
   {
     name: 'ムスヌン浜',
+    image: File.open("#{Rails.root}/db/fixtures/img/ムスヌン浜.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -158,6 +166,7 @@ spots = Spot.create([
   },
   {
     name: '名無ビーチ',
+    image: File.open("#{Rails.root}/db/fixtures/img/名無ビーチ.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -169,6 +178,7 @@ spots = Spot.create([
   },
   {
     name: '長間浜',
+    image: File.open("#{Rails.root}/db/fixtures/img/長間浜.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -180,6 +190,7 @@ spots = Spot.create([
   },
   {
     name: 'ゴルフ場裏',
+    image: File.open("#{Rails.root}/db/fixtures/img/ゴルフ場裏.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -191,6 +202,7 @@ spots = Spot.create([
   },
   {
     name: 'ゼロ',
+    image: File.open("#{Rails.root}/db/fixtures/img/ゼロ.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -202,6 +214,7 @@ spots = Spot.create([
   },
   {
     name: '一ノ瀬',
+    image: File.open("#{Rails.root}/db/fixtures/img/一ノ瀬.jpg"),
     description: '行きたい
     行きたい行きたい
     行きたい行きたい行きたい',
@@ -212,27 +225,6 @@ spots = Spot.create([
     longitude: 125.14671965110108
   },
 ])
-
-filenames = [
-  ['白鳥崎.jpg', '白鳥崎2.jpg'],
-  ['サバウツガー.jpg', 'サバウツガー2.jpg'],
-  ['与那覇前浜.jpg', '与那覇前浜2.jpg'],
-  ['17END.jpg', '17END2.jpg'],
-  ['シギラ.jpg', 'シギラ2.jpg'],
-  ['イフ.jpg', 'イフ2.jpg'],
-  ['中の島海岸.jpg', '中の島海岸2.jpg'],
-  ['ムスヌン浜.jpg', 'ムスヌン浜2.jpg'],
-  ['名無ビーチ.jpg', '名無ビーチ2.jpg'],
-  ['長間浜.jpg', '長間浜2.jpg'],
-  ['ゴルフ場裏.jpg', 'ゴルフ場裏2.jpg'],
-  ['ゼロ.jpg', 'ゼロ2.jpg'],
-  ['一ノ瀬.jpg', '一ノ瀬2.jpg'],
-]
-filenames.each.with_index(1) do |fn, i|
-  spot = Spot.find(i)
-  spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/#{fn[0]}"), filename: "#{fn[0]}")
-  spot.images.attach(io: File.open("#{Rails.root}/db/fixtures/img/#{fn[1]}"), filename: "#{fn[1]}")
-end
 
 require "csv"
 
