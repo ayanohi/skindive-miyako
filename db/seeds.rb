@@ -215,7 +215,7 @@ spots = Spot.create([
 
 filenames = [
   ['白鳥崎.jpg', '白鳥崎2.jpg'],
-  ['サバウツガー.jpg', 'サバウツガー2.jpg'],
+  # ['サバウツガー.jpg', 'サバウツガー2.jpg'],
   ['与那覇前浜.jpg', '与那覇前浜2.jpg'],
   ['17END.jpg', '17END2.jpg'],
   ['シギラ.jpg', 'シギラ2.jpg'],
