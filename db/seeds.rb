@@ -214,19 +214,19 @@ spots = Spot.create([
 ])
 
 filenames = [
-  ['白鳥崎.jpg', '白鳥崎2.jpg'],
-  ['サバウツガー.jpg', 'サバウツガー2.jpg'],
-  ['与那覇前浜.jpg', '与那覇前浜2.jpg'],
-  ['17END.jpg', '17END2.jpg'],
-  ['シギラ.jpg', 'シギラ2.jpg'],
-  ['イフ.jpg', 'イフ2.jpg'],
-  ['中の島海岸.jpg', '中の島海岸2.jpg'],
-  ['ムスヌン浜.jpg', 'ムスヌン浜2.jpg'],
-  ['名無ビーチ.jpg', '名無ビーチ2.jpg'],
-  ['長間浜.jpg', '長間浜2.jpg'],
-  ['ゴルフ場裏.jpg', 'ゴルフ場裏2.jpg'],
-  ['ゼロ.jpg', 'ゼロ2.jpg'],
-  ['一ノ瀬.jpg', '一ノ瀬2.jpg'],
+  ['shiratori.jpg', 'shiratori2.jpg'],
+  ['saba.jpg', 'saba2.jpg'],
+  ['maehama.jpg', 'maehama2.jpg'],
+  ['17end.jpg', '17end2.jpg'],
+  ['shigira.jpg', 'shigira2.jpg'],
+  ['if.jpg', 'if2.jpg'],
+  ['nakanoshima.jpg', 'nakanoshima2.jpg'],
+  ['musunun.jpg', 'musunun2.jpg'],
+  ['noname.jpg', 'noname2.jpg'],
+  ['nagama.jpg', 'nagama2.jpg'],
+  ['golf-ura.jpg', 'golf-ura2.jpg'],
+  ['zero.jpg', 'zero2.jpg'],
+  ['ichinose.jpg', 'ichinose2.jpg'],
 ]
 filenames.each.with_index(1) do |(first, second), i|
   spot = Spot.find(i)
