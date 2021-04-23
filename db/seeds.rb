@@ -228,10 +228,10 @@ filenames = [
   ['ゼロ.jpg', 'ゼロ2.jpg'],
   ['一ノ瀬.jpg', '一ノ瀬2.jpg'],
 ]
-filenames.each.with_index(1) do |fn, i|
+filenames.each.with_index(1) do |(first, second), i|
   spot = Spot.find(i)
-  spot.images.attach(io: File.open(Rails.root.join("db/fixtures/img/#{fn[0]}")), filename: "#{fn[0]}")
-  spot.images.attach(io: File.open(Rails.root.join("db/fixtures/img/#{fn[1]}")), filename: "#{fn[1]}")
+  spot.images.attach(io: File.open(Rails.root.join("db/fixtures/img/#{first}")), filename: "#{first}")
+  spot.images.attach(io: File.open(Rails.root.join("db/fixtures/img/#{second}")), filename: "#{second}")
 end
 
 require "csv"
