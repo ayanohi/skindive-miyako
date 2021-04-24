@@ -20,4 +20,5 @@ Rails.application.routes.draw do
   end
 
   resources :areas, only: :index
+  get '/comments', to: 'comments#all'
 end
