@@ -15,9 +15,7 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            エリアで探す
-          </a>
+          <%= link_to "エリアで探す", root_path, class: 'nav-link dropdown-toggle', id: 'navbarDropdownMenuLink', role: 'button', 'data-toggle': :dropdown, 'aria-haspopup': :'true', 'aria-expanded': :'false' %>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <%= link_to "すべて表示", spots_path, class: 'dropdown-item', style: 'color:#999' %>
             <% @areas.each do |area| %>
@@ -27,9 +25,7 @@
         </li>
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            条件で探す
-          </a>
+          <%= link_to "条件で探す", root_path, class: 'nav-link dropdown-toggle', id: 'navbarDropdownMenuLink', role: 'button', 'data-toggle': :dropdown, 'aria-haspopup': :'true', 'aria-expanded': :'false' %>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <%= link_to "すべて表示", spots_path, class: 'dropdown-item', style: 'color:#999' %>
             <% @creatures.each do |creature| %>
@@ -45,9 +41,7 @@
         <% if user_signed_in? %>
           <!-- ログイン時 -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= current_user.name %>
-            </a>
+            <%= link_to current_user.name, root_path, class: 'nav-link dropdown-toggle', id: 'navbarDropdownMenuLink', role: 'button', 'data-toggle': :dropdown, 'aria-haspopup': :'true', 'aria-expanded': :'false' %>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <%= link_to "マイページ", user_path(current_user), class: 'dropdown-item' %>
               <%= link_to "アカウント編集", edit_user_registration_path, class: 'dropdown-item' %>
