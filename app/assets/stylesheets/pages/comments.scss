@@ -1,6 +1,15 @@
 // 口コミソートビュー
 @import "all_comments";
 
+.search {
+  margin-left: 12vw;
+  .btn {
+    background-color: #92adc3;
+    color: #fff;
+    margin-left: 1rem;
+  }
+}
+
 // タイトル
 .spot-comment, .form {
   .title {
