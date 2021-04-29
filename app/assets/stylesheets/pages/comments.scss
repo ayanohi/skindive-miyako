@@ -1,15 +1,6 @@
 // 口コミソートビュー
 @import "all_comments";
 
-.search {
-  margin-left: 12vw;
-  .btn {
-    background-color: #92adc3;
-    color: #fff;
-    margin-left: 1rem;
-  }
-}
-
 // タイトル
 .spot-comment, .form {
   .title {
@@ -153,5 +144,89 @@
   }
   .form .container {
     padding: 1rem !important;
+  }
+}
+
+
+
+// // 口コミソートタブ
+.tab-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: hidden;
+  .tab-label {
+    margin: 0 5rem;
+    color: #222;
+    cursor: pointer;
+    // flex: 1;
+    order: -1;
+    padding: 2rem 2rem 0.4rem 2rem;
+    position: relative;
+    text-align: center;
+    transition: cubic-bezier(0.4, 0, 0.2, 1) .2s;
+    user-select: none;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: transparent;
+    p {
+      font-size: 0.9rem;
+      padding-top: 0.2rem;
+    }
+  }
+  .tab-label:hover {
+    font-weight: bold;
+  }
+  .tab-switch:checked + .tab-label {
+    color: #7ebbcc;
+  }
+  .tab-label::after {
+    background: #7ebbcc;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(100%);
+    transition: cubic-bezier(0.4, 0, 0.2, 1) .2s 80ms;
+    width: 100%;
+    z-index: 1;
+  }
+  .tab-switch:checked ~ .tab-label::after {
+    transform: translateX(-100%);
+  }
+  .tab-switch:checked + .tab-label::after {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .tab-content {
+    height:0;
+    opacity:0;
+    padding: 0 20px;
+    pointer-events:none;
+    transform: translateX(-30%);
+    transition: transform .3s 80ms, opacity .3s 80ms;
+    width: 100%;
+  }
+  .tab-switch:checked ~ .tab-content {
+    transform: translateX(30%);
+  }
+  .tab-switch:checked + .tab-label + .tab-content {
+    height: auto;
+    opacity: 1;
+    order: 1;
+    pointer-events:auto;
+    transform: translateX(0);
+  }
+  .tab-wrap::after {
+    content: '';
+    height: 20px;
+    order: -1;
+    width: 100%;
+  }
+  .tab-switch {
+    display: none;
   }
 }
