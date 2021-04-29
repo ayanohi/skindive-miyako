@@ -4,6 +4,8 @@ class CommentsController < ApplicationController
 
   def all
     @allcomments = Comment.all
+    @q = Comment.ransack(params[:q])
+    @comments = @q.result
   end
 
   def index
