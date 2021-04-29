@@ -3,7 +3,6 @@ class CommentsController < ApplicationController
   before_action :set_comment, only: %i[index new create edit update]
 
   def all
-    @allcomments = Comment.all
     @q = Comment.ransack(params[:q])
     @comments = @q.result
   end
