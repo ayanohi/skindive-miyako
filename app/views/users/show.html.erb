@@ -56,22 +56,7 @@
       <div class="tab-content">
         <% if @user.comments.present? %>
           <% @user.comments.order(visit_date: :desc).each do |comment| %>
-            <ul>
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-4 p-0">
-                    <li><%= l comment.visit_date %></li>
-                    <li><%= l comment.visit_time %></li>
-                    <li><%= link_to comment.spot.name, spot_path(comment.spot), class: 'spot-name' %></li>
-                    <li><%= link_to comment.spot.area.name, spots_path(@q, 'q[area_id_eq]': comment.spot.area.id), class: 'area-name'  %></li>
-                  </div>
-                  <div class="col-md-8 css-fukidashi">
-                    <li class="comment-content"><%= comment.content %></li>
-                    <li class="fukidashi"><%= comment.content %></li>
-                  </div>
-                </div>
-              </div>
-            </ul>
+            <%= render partial: "comments/allcomments", locals: { comment: comment } %>
           <% end %>
         <% else %>
           <p class='mt-5'>まだ口コミを書いてないよ💬</p>

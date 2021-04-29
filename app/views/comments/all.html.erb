@@ -11,24 +11,18 @@
   </p>
 <% end %>
 
+<div class="search_sort">
+  <%= search_form_for @q do |f| %>
+    <%= f.select( :sorts, {
+      '並び替え': 'id desc',
+      '訪問日の新しい順': 'visit_date desc',
+      '投稿日の新しい順': 'updated_at desc'
+      } ,
+      { onchange: 'this.form.submit()'} ) %>
+    <%= f.submit "検索" %>
 
-<%= search_form_for @q do |f| %>
-  <div class="search_sort">
-    <%= f.select( :sorts, { '並び替え': 'id desc', '訪問日の新しい順': 'visit_date desc', '投稿日の新しい順': 'updated_at desc' } , { onchange: 'this.form.submit()'} ) %>
-  </div>
-  <%= f.submit "検索" %>
-
-  <% @comments.each do |comment| %>
-    <p>
-      <%= comment.content %>
-      <%= comment.spot.name %>
-      <%= comment.spot.area.name %>
-      <%= comment.weather.name %>
-      <%= comment.tide.name %>
-      <%= comment.wind.name %>
-      <%= l comment.visit_date %>
-      <%= l comment.visit_time %>
-      <%= comment.user.name %>
-    </p>
+    <% @comments.each do |comment| %>
+      <%= render partial: "comments/allcomments", locals: { comment: comment } %>
+    <% end %>
   <% end %>
-<% end %>
+</div>
