@@ -1,3 +1,71 @@
+<form>
+  <%# <div class="search-box">
+    <span class="search-box_label">種類:</span>
+    <input type="radio" name="kind" value="">ALL
+    <input type="radio" name="kind" value="野菜">野菜
+    <input type="radio" name="kind" value="果物">果物
+  </div> %>
+
+  <div class="search-box">
+    <p>
+      <span class="search-box_label">訪問年:</span>
+      <% @list_of_years.each do |year| %>
+        <label><input type="checkbox" name="date" value="<%= year %>"><span><%= year %></span></label>
+      <% end %>
+    </p>
+  </div>
+
+  <div class="search-box">
+    <p>
+      <span class="search-box_label">天気:</span>
+      <% Weather.find_each do |weather| %>
+        <label><input type="checkbox" name="weather" value="<%= weather.name %>"><span><%= weather.name %></span></label>
+      <% end %>
+    </p>
+  </div>
+
+  <div class="search-box">
+    <p>
+      <span class="search-box_label">潮:</span>
+      <% Tide.find_each do |tide| %>
+        <label><input type="checkbox" name="tide" value="<%= tide.name %>"><span><%= tide.name %></span></label>
+      <% end %>
+    </p>
+  </div>
+
+  <div class="search-box">
+    <p>
+      <span class="search-box_label">風:</span>
+      <% Wind.find_each do |wind| %>
+        <label><input type="checkbox" name="wind" value="<%= wind.name %>"><span><%= wind.name %></span></label>
+      <% end %>
+    </p>
+  </div>
+</form>
+
+<ul class="list">
+  <% @comments.order(visit_date: :desc).each do |comment| %>
+    <div class="list_item"
+    data-date="<%= comment.visit_date.year %>"
+    data-weather="<%= comment.weather.name %>"
+    data-tide="<%= comment.tide.name %>"
+    data-wind="<%= comment.wind.name %>"
+    >
+
+      <%= render partial: "comments/allcomments", locals: { comment: comment } %>
+
+    </div>
+  <% end %>
+</ul>
+
+<%= javascript_pack_tag 'comments/all' %>
+
+
+
+<%
+=begin
+%>
+
 <section class="tabs">
   <div class="tab-wrap">
 
@@ -17,3 +85,7 @@
 
   </div>
 </section>
+
+<%
+=end
+%>

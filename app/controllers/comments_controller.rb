@@ -5,6 +5,8 @@ class CommentsController < ApplicationController
   def all
     @q = Comment.ransack(params[:q])
     @comments = @q.result
+    # @list_of_years = @comments.pluck(:visit_date).map{|y| y.year}.uniq.sort
+    @list_of_years = ["2019", "2020", "2021"]
   end
 
   def index
