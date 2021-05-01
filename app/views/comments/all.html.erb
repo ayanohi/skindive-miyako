@@ -10,7 +10,16 @@
     <p>
       <span class="search-box_label">訪問年:</span>
       <% @list_of_years.each do |year| %>
-        <label><input type="checkbox" name="date" value="<%= year %>"><span><%= year %></span></label>
+        <label><input type="checkbox" name="year" value="<%= year %>"><span><%= year %></span></label>
+      <% end %>
+    </p>
+  </div>
+
+  <div class="search-box">
+    <p>
+      <span class="search-box_label">訪問月:</span>
+      <% @list_of_months.each do |month| %>
+        <label><input type="checkbox" name="month" value="<%= month %>"><span><%= month %></span></label>
       <% end %>
     </p>
   </div>
@@ -46,12 +55,12 @@
 <ul class="list">
   <% @comments.order(visit_date: :desc).each do |comment| %>
     <div class="list_item"
-    data-date="<%= comment.visit_date.year %>"
+    data-year="<%= comment.visit_date.year %>"
+    data-month="<%= comment.visit_date.month %>"
     data-weather="<%= comment.weather.name %>"
     data-tide="<%= comment.tide.name %>"
     data-wind="<%= comment.wind.name %>"
     >
-
       <%= render partial: "comments/allcomments", locals: { comment: comment } %>
 
     </div>
