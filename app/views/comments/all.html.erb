@@ -3,11 +3,10 @@
     <p>
       <span class="search-box_label">訪問年:</span>
       <% @list_of_years.each do |year| %>
-        <label><input type="checkbox" name="year" value="<%= year %>"><span><%= year %></span></label>
+        <label><input type="checkbox" name="year" value="<%= year %>" checked="true"><span><%= year %></span></label>
       <% end %>
     </p>
   </div>
-
   <div class="search-box">
     <p>
       <span class="search-box_label">訪問月:</span>
@@ -16,7 +15,6 @@
       <% end %>
     </p>
   </div>
-
   <div class="search-box">
     <p>
       <span class="search-box_label">天気:</span>
@@ -25,7 +23,6 @@
       <% end %>
     </p>
   </div>
-
   <div class="search-box">
     <p>
       <span class="search-box_label">潮:</span>
@@ -34,7 +31,6 @@
       <% end %>
     </p>
   </div>
-
   <div class="search-box">
     <p>
       <span class="search-box_label">風:</span>
@@ -44,7 +40,6 @@
     </p>
   </div>
 </form>
-
 <ul class="list">
   <% @comments.order(visit_date: :desc).each do |comment| %>
     <div class="list_item"
@@ -55,39 +50,7 @@
     data-wind="<%= comment.wind.name %>"
     >
       <%= render partial: "comments/allcomments", locals: { comment: comment } %>
-
     </div>
   <% end %>
 </ul>
-
 <%= javascript_pack_tag 'comments/all' %>
-
-
-
-<%
-=begin
-%>
-
-<section class="tabs">
-  <div class="tab-wrap">
-
-    <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">訪問日順<p><%= @comments.count %></p></label>
-    <div class="tab-content">
-      <% @comments.order(visit_date: :desc).each do |comment| %>
-        <%= render partial: "comments/allcomments", locals: { comment: comment } %>
-      <% end %>
-    </div>
-
-    <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">投稿日順<p><%= @comments.count %></p></label>
-    <div class="tab-content">
-      <% @comments.order(updated_at: :desc).each do |comment| %>
-        <%= render partial: "comments/allcomments", locals: { comment: comment } %>
-      <% end %>
-    </div>
-
-  </div>
-</section>
-
-<%
-=end
-%>
