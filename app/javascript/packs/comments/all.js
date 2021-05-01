@@ -26,7 +26,7 @@ function search_filter() {
     // リスト内の各アイテムをチェック
     for (var j = 0; j < $(listItem).length; j++) {
       // アイテムに設定している項目を取得
-      var itemData = $(listItem).eq(j).data(name);
+      var itemData = $(listItem).eq(j).data(name).toString();
       // 絞り込み対象かどうかを調べる
       if(searchData.indexOf(itemData) === -1) {
         $(listItem).eq(j).addClass(hideClass);
