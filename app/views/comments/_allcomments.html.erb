@@ -1,0 +1,19 @@
+<ul>
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-5 p-0">
+        <li><%= l comment.visit_date %></li>
+        <li><%= l comment.visit_time %></li>
+        <li><%= link_to comment.spot.name, spot_path(comment.spot), class: 'spot-name' %></li>
+        <li><%= link_to comment.spot.area.name, spots_path(@q, 'q[area_id_eq]': comment.spot.area.id), class: 'area-name'  %></li>
+        <li><%= comment.weather.name %></li>
+        <li><%= comment.tide.name %></li>
+        <li><%= comment.wind.name %></li>
+      </div>
+      <div class="col-md-7 css-fukidashi">
+        <li class="comment-content"><%= comment.content %></li>
+        <li class="fukidashi"><%= comment.content %></li>
+      </div>
+    </div>
+  </div>
+</ul>

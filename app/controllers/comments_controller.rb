@@ -2,6 +2,14 @@ class CommentsController < ApplicationController
   before_action :authenticate_user!, except: %i[index]
   before_action :set_comment, only: %i[index new create edit update]
 
+  def all
+    @q = Comment.ransack(params[:q])
+    @comments = @q.result
+    @list = @comments.pluck(:visit_date)
+    @list_of_years = @list.map{|y| y.year}.uniq.sort
+    @list_of_months = @list.map{|m| m.month}.uniq.sort
+  end
+
   def index
     @comments = Comment.where(spot_id: params[:spot_id])
   end
