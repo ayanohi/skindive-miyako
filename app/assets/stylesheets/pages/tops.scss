@@ -13,7 +13,7 @@ img {
   width: 100%;
   .home-header-top {
     margin-left: 12vw;
-    margin-top: 12vw;
+    margin-top: 6vw;
     background-image: image-url("top.jpeg");
     height: 40vw;
     background-size: cover;
@@ -51,6 +51,7 @@ img {
 .search-area, .search-condition {
   padding: 3rem 0 3rem 0;
   li {
+    display: list-item;
     list-style: none;
     margin-bottom: 1rem;
   }
