@@ -19,7 +19,7 @@ module ApplicationHelper
         description: :description,
         type: 'website',
         url: request.original_url,
-        image: image_url('top.jpeg'),
+        image: 'https://res.cloudinary.com/du0xq3uls/image/upload/v1620049406/top_gpqs2g.jpg',
         locale: 'ja_JP',
       },
       twitter: {
