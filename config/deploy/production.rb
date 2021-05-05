@@ -1,4 +1,4 @@
-server "54.150.97.65", user: "ayanohi1", roles: %w{app db web}
+server "52.192.101.15", user: "ayanohi1", roles: %w{app db web}
 
 set :ssh_options, {
   keys: %w(~/.ssh/miyako.pem),
