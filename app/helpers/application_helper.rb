@@ -28,4 +28,17 @@ module ApplicationHelper
       }
     }
   end
+
+  def twitter_text
+    @title = "宮古ブルー"
+    if @spot
+      text_spot = "宮古島で潜るなら「#{@title}」でスポットを探そう｜スキンダイビングスポット「#{@spot.name}」を知っていますか？"
+    else
+      text = "宮古島のスキンダイビングスポットを探すなら「#{@title}」"
+    end
+  end
+
+  def twitter_hashtags
+    hashtags = "宮古島,スキンダイビング"
+  end
 end
