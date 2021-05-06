@@ -1,12 +1,14 @@
 <div class="col-lg-4 col-md-6 p-md-4">
   <div class="card border-0 rounded-0">
-    <%= link_to spot_path(spot.id) do %>
-      <% if spot.images.attached? %>
-        <%= image_tag spot.images[0], class: 'card-img-top rounded-0' %>
-      <% else %>
-        <%= image_tag 'default.png' %>
+    <div class="card-img-top">
+      <%= link_to spot_path(spot.id) do %>
+        <% if spot.images.attached? %>
+          <%= image_tag spot.images[0] %>
+        <% else %>
+          <%= image_tag 'default.png' %>
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
     <div class="card-body">
       <h4>
         <%= link_to spot.name, spot_path(spot.id), class: 'card-link' %>
