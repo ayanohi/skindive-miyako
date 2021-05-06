@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!, except: %i[index]
+  before_action :authenticate_user!, except: %i[index all]
   before_action :set_comment, only: %i[index new create edit update]
 
   def all
