@@ -72,5 +72,14 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:password]).to include "は6文字以上で入力してください"
       end
     end
+
+    context "nameがすでに存在するとき" do
+      before { create(:user, name: "shark") }
+      it "エラーが発生する" do
+        user = build(:user, name: "shark")
+        expect(user.valid?).to eq false
+        expect(user.errors.messages[:name]).to include "はすでに存在します"
+      end
+    end
   end
 end
