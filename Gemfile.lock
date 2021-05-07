@@ -124,6 +124,11 @@ GEM
     diff-lcs (1.4.4)
     erubi (1.10.0)
     excon (0.81.0)
+    factory_bot (6.1.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.1.0)
+      factory_bot (~> 6.1.0)
+      railties (>= 5.0.0)
     ffi (1.15.0)
     fog-aws (3.10.0)
       fog-core (~> 2.1)
@@ -323,6 +328,7 @@ DEPENDENCIES
   carrierwave (~> 2.0)
   devise
   devise-i18n
+  factory_bot_rails
   fog-aws
   jbuilder (~> 2.7)
   listen (~> 3.2)
