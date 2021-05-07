@@ -11,7 +11,12 @@ class User < ApplicationRecord
             presence: true,
             uniqueness: true,
             length: { maximum: 30 }
-
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i.freeze
+  validates :email,
+            presence: true,
+            uniqueness: true,
+            length: { maximum: 255 },
+            format: { with: VALID_EMAIL_REGEX }
 
   # ゲストユーザーを探す or 作成する機能
   def self.guest
