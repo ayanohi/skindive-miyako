@@ -32,5 +32,13 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:email]).to include "を入力してください"
       end
     end
+
+    context "passwordが空であるとき" do
+      it "エラーが発生する" do
+        user = build(:user, password: "")
+        expect(user.valid?).to eq false
+        expect(user.errors.messages[:password]).to include "を入力してください"
+      end
+    end
   end
 end
