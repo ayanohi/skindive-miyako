@@ -40,5 +40,13 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:password]).to include "を入力してください"
       end
     end
+
+    context "passwordが存在しても、password_confirmationが空であるとき" do
+      it "エラーが発生する" do
+        user = build(:user, password_confirmation: "")
+        expect(user.valid?).to eq false
+        expect(user.errors.messages[:password_confirmation]).to include "とパスワードの入力が一致しません"
+      end
+    end
   end
 end
