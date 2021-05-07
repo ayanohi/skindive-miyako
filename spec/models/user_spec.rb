@@ -56,5 +56,13 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:name]).to include "は30文字以内で入力してください"
       end
     end
+
+    context "emailが256文字以上であるとき" do
+      it "エラーが発生する" do
+        user = build(:user, email: "a" * 256)
+        expect(user.valid?).to eq false
+        expect(user.errors.messages[:email]).to include "は255文字以内で入力してください"
+      end
+    end
   end
 end
