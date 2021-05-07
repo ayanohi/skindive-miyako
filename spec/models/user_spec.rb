@@ -90,5 +90,13 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:email]).to include "はすでに存在します"
       end
     end
+
+    context "emailに日本語文字列が含まれるとき" do
+      it "エラーが発生する" do
+        user = build(:user, email: "あ@example.com")
+        expect(user.valid?).to eq false
+        expect(user.errors.messages[:email]).to include "は不正な値です"
+      end
+    end
   end
 end
