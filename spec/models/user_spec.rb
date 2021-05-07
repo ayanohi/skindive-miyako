@@ -98,5 +98,13 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:email]).to include "は不正な値です"
       end
     end
+
+    context "emailがアルファベット･英数字のみであるとき" do
+      it "エラーが発生する" do
+        user = build(:user, email: Faker::Lorem.characters(number: 16))
+        expect(user.valid?).to eq false
+        expect(user.errors.messages[:email]).to include "は不正な値です"
+      end
+    end
   end
 end
