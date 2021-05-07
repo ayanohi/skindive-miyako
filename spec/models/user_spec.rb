@@ -48,5 +48,13 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:password_confirmation]).to include "とパスワードの入力が一致しません"
       end
     end
+
+    context "nameが31文字以上であるとき" do
+      it "エラーが発生する" do
+        user = build(:user, name: "a" * 31)
+        expect(user.valid?).to eq false
+        expect(user.errors.messages[:name]).to include "は30文字以内で入力してください"
+      end
+    end
   end
 end
