@@ -16,5 +16,13 @@ RSpec.describe User, type: :model do
         expect(user.valid?).to eq true
       end
     end
+
+    context "nameが空であるとき" do
+      it "エラーが発生する" do
+        user = build(:user, name: "")
+        expect(user.valid?).to eq false
+        expect(user.errors.messages[:name]).to include "を入力してください"
+      end
+    end
   end
 end
