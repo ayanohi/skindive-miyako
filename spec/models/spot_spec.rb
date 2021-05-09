@@ -17,5 +17,13 @@ RSpec.describe Spot, type: :model do
         expect(spot.errors.messages[:name]).to include "を入力してください"
       end
     end
+
+    context "area_idが空であるとき" do
+      it "エラーが発生する" do
+        spot = build(:spot, area_id: "")
+        spot.valid?
+        expect(spot.errors.messages[:area_id]).to include "を入力してください"
+      end
+    end
   end
 end
