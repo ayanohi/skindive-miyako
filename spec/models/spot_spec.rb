@@ -25,5 +25,13 @@ RSpec.describe Spot, type: :model do
         expect(spot.errors.messages[:area_id]).to include "を入力してください"
       end
     end
+
+    context "latitudeが空であるとき" do
+      it "エラーが発生する" do
+        spot = build(:spot, latitude: "")
+        spot.valid?
+        expect(spot.errors.messages[:latitude]).to include "を入力してください"
+      end
+    end
   end
 end
