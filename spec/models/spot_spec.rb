@@ -9,5 +9,13 @@ RSpec.describe Spot, type: :model do
         expect(spot).to be_valid
       end
     end
+
+    context "nameが空であるとき" do
+      it "エラーが発生する" do
+        spot = build(:spot, name: "")
+        spot.valid?
+        expect(spot.errors.messages[:name]).to include "を入力してください"
+      end
+    end
   end
 end
