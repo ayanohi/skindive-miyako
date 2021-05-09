@@ -48,5 +48,13 @@ RSpec.describe Comment, type: :model do
         expect(comment.errors.messages[:visit_date]).to include "を入力してください"
       end
     end
+
+    context "visit_timeが空であるとき" do
+      it "エラーが発生する" do
+        comment = build(:comment, visit_time: "")
+        comment.valid?
+        expect(comment.errors.messages[:visit_time]).to include "を入力してください"
+      end
+    end
   end
 end
