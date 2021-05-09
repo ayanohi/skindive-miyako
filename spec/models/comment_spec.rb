@@ -32,5 +32,13 @@ RSpec.describe Comment, type: :model do
         expect(comment.errors.messages[:wind_id]).to include "を入力してください"
       end
     end
+
+    context "contentが空であるとき" do
+      it "エラーが発生する" do
+        comment = build(:comment, content: "")
+        comment.valid?
+        expect(comment.errors.messages[:content]).to include "を入力してください"
+      end
+    end
   end
 end
