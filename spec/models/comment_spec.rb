@@ -8,5 +8,13 @@ RSpec.describe Comment, type: :model do
         expect(comment).to be_valid
       end
     end
+
+    context "weather_idが空であるとき" do
+      it "エラーが発生する" do
+        comment = build(:comment, weather_id: "")
+        comment.valid?
+        expect(comment.errors.messages[:weather_id]).to include "を入力してください"
+      end
+    end
   end
 end
