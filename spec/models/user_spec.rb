@@ -106,5 +106,14 @@ RSpec.describe User, type: :model do
         expect(user.errors.messages[:email]).to include "は不正な値です"
       end
     end
+
+    context "ユーザーが削除されたとき" do
+      it "そのユーザーに紐づく口コミも削除される" do
+        user = create(:user)
+        create_list(:comment, 2, user: user)
+        create(:comment)
+        expect{ user.destroy }.to change { user.comments.count }.by(-2)
+      end
+    end
   end
 end
