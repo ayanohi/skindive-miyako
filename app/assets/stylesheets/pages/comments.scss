@@ -166,14 +166,20 @@ li {
     background-color: #e1d9e8;
     border-radius: 30px;
     color: #555;
-    text-decoration: none;
     -webkit-transition: .2s;
     transition: .2s;
   }
-  .area-name {
-    // display: inline-block;
+  .spot-name:hover {
     text-decoration: none;
+    background-color: #555;
+    color: #fff;
+  }
+  .area-name {
     color: #bb9ad8;
+  }
+  .area-name:hover {
+    text-decoration: none;
+    color: #333;
   }
 }
 .comment-content {
