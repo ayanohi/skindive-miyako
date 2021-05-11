@@ -268,3 +268,12 @@ li {
     }
   }
 }
+
+@media not all and (max-width: 1400px) {
+  /* 1400pxを含まずそれより大きい場合 */
+  .spot-show, .spot-comment, .map {
+    .tab-content .container {
+      width: 1040px;
+    }
+  }
+}
