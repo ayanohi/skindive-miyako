@@ -27,32 +27,32 @@
           </div>
           <% if @comments.present? %>
             <% @comments.each do |comment| %>
-              <ul>
+              <div class="comment-items">
                 <% if comment.user.image? %>
-                  <%= image_tag comment.user.image.url, width: '6%', height: '6%', class: 'rounded-circle user-pic' %>
+                  <%= image_tag comment.user.image.url, class: 'rounded-circle user-pic' %>
                 <% else %>
-                  <%= image_tag 'default.png', width: '6%', height: '6%', class: 'rounded-circle user-pic' %>
+                  <%= image_tag 'default.png', class: 'rounded-circle user-pic' %>
                 <% end %>
-                <li><%= l comment.visit_date %></li>
-                <li><%= l comment.visit_time %></li>
-                <li><%= comment.weather.name %></li>
-                <li><%= comment.tide.name %></li>
-                <li><%= comment.wind.name %></li><br>
-                <li class="comment-content">
-                  <%= link_to comment.user.name, user_path(comment.user), class: 'user-name' %>
-                  <%= comment.content %>
-                  <% if user_signed_in? && current_user.id == comment.user_id %>
-                    <span class="comment-btn">
-                      <%=link_to "編集", edit_spot_comment_path(comment.spot.id, comment.id), class: 'edit' %>
-                      <%=link_to "削除", spot_comment_path(comment.spot.id, comment.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'delete' %>
-                    </span>
-                  <% end %>
-                </li>
-              </ul>
+                <div class="comment-item">
+                  <li><%= l comment.visit_date %></li>
+                  <li><%= l comment.visit_time %></li>
+                  <li><%= comment.weather.name %></li>
+                  <li><%= comment.tide.name %></li>
+                  <li><%= comment.wind.name %></li><br>
+                  <li class="comment-content comment-index">
+                    <%= link_to comment.user.name, user_path(comment.user), class: 'user-name' %>
+                    <%= comment.content %>
+                    <% if user_signed_in? && current_user.id == comment.user_id %>
+                      <span class="comment-btn">
+                        <%=link_to "編集", edit_spot_comment_path(comment.spot.id, comment.id), class: 'edit' %>
+                        <%=link_to "削除", spot_comment_path(comment.spot.id, comment.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'delete' %>
+                      </span>
+                    <% end %>
+                  </li>
+                </div>
+              </div>
               <hr>
-
             <% end %>
-
           <% else %>
             <p>コメントはまだありません</p>
           <% end %>

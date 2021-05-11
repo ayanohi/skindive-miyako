@@ -71,38 +71,36 @@
     }
     .container {
       padding: 5rem 0;
-      ul {
-        list-style-type: none;
-        margin-bottom: 0;
-        margin-left: 2rem;
-        position: relative;
+      .comment-items {
+        display: flex;
         .user-pic {
-          position: absolute;
-          top: 0.1rem;
-          left: -2.6rem;
+          width: 2.6rem;
+          height: 2.6rem;
+          margin-right: 1rem;
         }
-        .user-name {
-          font-size: 0.9rem;
-          color: #77a1ad;
-        }
-        .comment-btn {
-          float: right;
-        }
-        .comment-content {
+        .comment-item {
           width: 100%;
-          .edit {
-            color: #9ab7d8;
-            margin-right: 0.4rem;
+          .user-name {
+            font-size: 0.9rem;
+            color: #77a1ad;
           }
-          .delete {
-            color: #bb9ad8;
+          .comment-btn {
+            float: right;
+          }
+          .comment-content {
+            width: 100%;
+            .edit {
+              color: #9ab7d8;
+              margin-right: 0.4rem;
+            }
+            .delete {
+              color: #bb9ad8;
+            }
+          }
+          .comment-index {
+            display: initial;
           }
         }
-      }
-      li {
-        display: inline-block;
-        font-size: 0.8rem;
-        margin-right: 0.3rem;
       }
       .parent {
         position: relative;
@@ -123,7 +121,7 @@
       }
     }
     hr {
-      margin: 0 0 0.8rem 0;
+      margin: 0.4rem 0 0.8rem 0;
     }
   }
 }
@@ -159,7 +157,7 @@ ul {
 li {
   display: inline-block;
   font-size: 0.8rem;
-  padding-right: 0.5rem;
+  padding-right: 0.8rem;
   .spot-name {
     display: inline-block;
     height: 24px;
@@ -168,14 +166,20 @@ li {
     background-color: #e1d9e8;
     border-radius: 30px;
     color: #555;
-    text-decoration: none;
     -webkit-transition: .2s;
     transition: .2s;
   }
-  .area-name {
-    // display: inline-block;
+  .spot-name:hover {
     text-decoration: none;
+    background-color: #555;
+    color: #fff;
+  }
+  .area-name {
     color: #bb9ad8;
+  }
+  .area-name:hover {
+    text-decoration: none;
+    color: #333;
   }
 }
 .comment-content {
@@ -213,7 +217,7 @@ li {
   pointer-events: none;
   content: " ";
 }
-.comment-content:hover  .fukidashi {
+.comment-content:hover + .fukidashi {
   display: block;
 }
 
@@ -261,6 +265,15 @@ li {
       width: 5rem;
       text-align: right;
       margin-right: 0.4rem;
+    }
+  }
+}
+
+@media not all and (max-width: 1400px) {
+  /* 1400pxを含まずそれより大きい場合 */
+  .spot-show, .spot-comment, .map {
+    .tab-content .container {
+      width: 1040px;
     }
   }
 }
