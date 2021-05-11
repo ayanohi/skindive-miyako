@@ -217,7 +217,7 @@ li {
   pointer-events: none;
   content: " ";
 }
-.comment-content:hover  .fukidashi {
+.comment-content:hover + .fukidashi {
   display: block;
 }
 
