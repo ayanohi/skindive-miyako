@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     post 'users/guest_sign_in', to: 'users/sessions#new_guest'
   end
 
+  delete 'users/:id', to: 'users#destroy'
   root "tops#index"
   resources :spots do
     get 'map'
