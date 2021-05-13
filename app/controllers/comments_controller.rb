@@ -1,6 +1,8 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!, except: %i[index all]
   before_action :set_comment, only: %i[index new create edit update]
+  before_action :no_current_user, only: %i[edit update]
+  before_action :no_current_user_nor_admin, only: %i[destroy]
 
   def all
     @q = Comment.ransack(params[:q])
@@ -68,5 +70,15 @@ class CommentsController < ApplicationController
       :spot_id
     )
     # .merge(user_id: current_user.id, spot_id: params[:spot_id])
+  end
+
+  def no_current_user
+    @comment = Comment.find(params[:id])
+    redirect_to root_path unless @comment.user == current_user
+  end
+
+  def no_current_user_nor_admin
+    @comment = Comment.find(params[:id])
+    redirect_to root_path unless @comment.user == current_user || current_user.admin?
   end
 end
