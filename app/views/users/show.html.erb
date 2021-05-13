@@ -3,7 +3,11 @@
   <%= alert %>
   <section class="profile">
     <div class="to-login-page">
-      <% if !user_signed_in? %>
+      <% if user_signed_in? && current_user.admin? && ( @user.admin == true || @user.email == 'guest@example.com') %>
+        <p>管理者アカウントおよびゲストユーザーの削除はできません</p>
+      <% elsif user_signed_in? && current_user.admin? %>
+        <%= link_to "削除", user_path(@user), method: :delete, data: {confirm: "削除しますか？"} %>
+      <% elsif !user_signed_in? %>
         <%= link_to "ログインしてマイページ機能を使う", new_user_session_path %>
       <% elsif @user.id != current_user.id %>
         <%= link_to "マイページへ", user_path(current_user.id) %>

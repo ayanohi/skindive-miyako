@@ -47,6 +47,10 @@
                         <%=link_to "編集", edit_spot_comment_path(comment.spot.id, comment.id), class: 'edit' %>
                         <%=link_to "削除", spot_comment_path(comment.spot.id, comment.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'delete' %>
                       </span>
+                    <% elsif user_signed_in? && current_user.admin? %>
+                      <span class="comment-btn">
+                        <%=link_to "削除", spot_comment_path(comment.spot.id, comment.id), method: :delete, data: {confirm: "削除しますか？"}, class: 'delete' %>
+                      </span>
                     <% end %>
                   </li>
                 </div>

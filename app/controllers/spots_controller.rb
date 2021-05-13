@@ -1,4 +1,5 @@
 class SpotsController < ApplicationController
+  before_action :move_to_root, only: %i[new edit update destroy]
 
   def index
     @spots = Spot.all
@@ -86,6 +87,10 @@ class SpotsController < ApplicationController
       feature_ids: [],
       images: []
     )
+  end
+
+  def move_to_root
+    redirect_to root_path unless user_signed_in? && current_user.admin?
   end
 
 end
