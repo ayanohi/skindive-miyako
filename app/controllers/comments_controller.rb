@@ -1,6 +1,7 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!, except: %i[index all]
-  before_action :set_comment, only: %i[index new create edit update]
+  before_action :set_spot, only: %i[index new create edit update]
+  before_action :set_comment, only: %i[edit update destroy]
   before_action :no_current_user, only: %i[edit update]
   before_action :no_current_user_nor_admin, only: %i[destroy]
 
@@ -31,12 +32,10 @@ class CommentsController < ApplicationController
   end
 
   def edit
-    @comment = Comment.find(params[:id])
     @info = "口コミを編集する"
   end
 
   def update
-    @comment = Comment.find(params[:id])
     if @comment.update(comment_params)
       redirect_to spot_comments_path
     else
@@ -45,7 +44,6 @@ class CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
     if @comment.destroy
       redirect_to spot_comments_path, alert: "削除しました"
     else
@@ -54,8 +52,12 @@ class CommentsController < ApplicationController
   end
 
   private
-  def set_comment
+  def set_spot
     @spot = Spot.find_by(id: params[:spot_id])
+  end
+
+  def set_comment
+    @comment = Comment.find(params[:id])
   end
 
   def comment_params
@@ -73,12 +75,12 @@ class CommentsController < ApplicationController
   end
 
   def no_current_user
-    @comment = Comment.find(params[:id])
+    set_comment
     redirect_to root_path unless @comment.user == current_user
   end
 
   def no_current_user_nor_admin
-    @comment = Comment.find(params[:id])
+    set_comment
     redirect_to root_path unless @comment.user == current_user || current_user.admin?
   end
 end
