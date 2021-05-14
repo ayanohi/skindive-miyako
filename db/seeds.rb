@@ -329,3 +329,16 @@ comments = Comment.create([
   {content: 'マンタに会えたー！！2枚なかよく泳いでて人生で一番感動しました、、！',
   visit_date: '2021-02-25', visit_time: '8:00:00', spot_id: 1, user_id: 3, weather_id: 1, tide_id: 5, wind_id: 6},
 ])
+
+histories = History.create([
+  {user_id: 1, spot_id: 1},
+  {user_id: 1, spot_id: 2},
+  {user_id: 1, spot_id: 3},
+  {user_id: 1, spot_id: 6},
+  {user_id: 1, spot_id: 7},
+  {user_id: 1, spot_id: 8},
+  {user_id: 1, spot_id: 11},
+  {user_id: 1, spot_id: 12},
+  {user_id: 2, spot_id: 1},
+  {user_id: 3, spot_id: 1},
+])
