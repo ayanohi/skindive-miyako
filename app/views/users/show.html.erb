@@ -25,7 +25,7 @@
           <% if @user.sns.blank? %>
             <p class="ig">INSTAGRAM 未登録</p>
           <% else %>
-            <p class="ig">IG <%= link_to @user.sns, 'https://www.instagram.com/#{@user.sns}/', target: '_blank' %></p>
+            <p class="ig">IG <%= link_to @user.sns, "https://www.instagram.com/#{@user.sns}/", target: '_blank' %></p>
           <% end %>
         </div>
         <div class="col-8">
