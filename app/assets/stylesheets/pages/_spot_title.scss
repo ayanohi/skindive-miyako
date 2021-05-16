@@ -1,0 +1,45 @@
+.title {
+  text-align: center;
+  h1 {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 3rem;
+  }
+  h1:before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    display: inline-block;
+    width: 80px;
+    height: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #B9D0D7;
+    border-radius: 2px;
+  }
+  .twitter-share-icon {
+    position: absolute;
+    right: -265px;
+  }
+  .weather {
+    position: absolute;
+    right: -400px;
+    top: -1px;
+    .weather__content--report {
+      display: inline-block;
+      margin-right: 0.2rem;
+      img {
+        max-width: 70%;
+        background-color: #ebebeb;
+        border-radius: 8px;
+        padding: 0.1rem;
+      }
+      p{
+        font-size: 0.7rem;
+        margin: 0.3rem;
+      }
+    }
+  }
+}
