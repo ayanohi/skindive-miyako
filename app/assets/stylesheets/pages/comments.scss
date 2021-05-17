@@ -1,36 +1,6 @@
 // 口コミソートビュー
 @import "all_comments";
 
-// タイトル
-.spot-comment, .form {
-  .title {
-    text-align: center;
-    h1 {
-      text-align: center;
-      position: relative;
-      display: inline-block;
-      margin-bottom: 3rem;
-    }
-    h1:before {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      display: inline-block;
-      width: 80px;
-      height: 5px;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-      transform: translateX(-50%);
-      background-color: #B9D0D7;
-      border-radius: 2px;
-    }
-    .twitter-share-icon {
-      position: absolute;
-      right: -50px;
-    }
-  }
-}
-
 .form {
   .tab-content {
     margin-top: 4.2rem;
@@ -154,10 +124,12 @@ ul {
   list-style-type: none;
   margin-bottom: 0;
 }
+.list_item li {
+  padding-right: 0.8rem;
+}
 li {
   display: inline-block;
   font-size: 0.8rem;
-  padding-right: 0.8rem;
   .spot-name {
     display: inline-block;
     height: 24px;

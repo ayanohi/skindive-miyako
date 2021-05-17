@@ -15,6 +15,8 @@ class CommentsController < ApplicationController
 
   def index
     @comments = Comment.where(spot_id: params[:spot_id])
+    gon.spot = @spot
+    gon.api = Rails.application.credentials.open_weather_api_key
   end
 
   def new
