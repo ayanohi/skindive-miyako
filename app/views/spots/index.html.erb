@@ -22,7 +22,11 @@
 %>
 
       <div class="row">
-        <%= render partial: 'spot', collection: @spots %>
+        <% if @spots.present? %>
+          <%= render partial: 'spot', collection: @spots %>
+        <% else %>
+          <p class="spot-nothing">－ スポットはまだありません －</p>
+        <% end %>
       </div>
     </div>
   </section>
