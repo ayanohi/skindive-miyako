@@ -4,9 +4,9 @@ users = User.create([
   introduction: 'リゾートスキンダイバーです', pb: '12', sns: 'instagram' },
   {name: 'ゆき', email: 'test1@example.com', password: 'ffffff', password_confirmation: 'ffffff', admin: 'false',
   image: File.open("#{Rails.root}/db/fixtures/user-two.jpg"),
-  introduction: '移住3年目', pb: '25', sns: 'instagram'},
+  introduction: '移住3年目', pb: '25', sns: ''},
   {name: 'みく', email: 'test2@example.com', password: 'ffffff', password_confirmation: 'ffffff', admin: 'false',
-  introduction: 'リーダーフィンとガルのマスクを使ってます', pb: '18', sns: 'instagram'},
+  introduction: 'リーダーフィンとガルのマスクを使ってます', pb: '18', sns: ''},
 ])
 
 areas = Area.create([
