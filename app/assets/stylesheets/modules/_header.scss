@@ -4,6 +4,9 @@ header {
 }
 nav {
   padding: 0 2rem !important;
+   .navbar-brand {
+    font-family: english-grotesque, sans-serif;
+   }
   a {
     color: #EFEFEF;
     margin-right: 2rem;
@@ -11,6 +14,10 @@ nav {
   }
   a:hover {
     color: #313131;
+  }
+  .nav-item {
+    padding: 0.6rem 0.8rem !important;
+    letter-spacing: 0.08rem;
   }
 }
 .navbar-toggler .navbar-toggler-icon {

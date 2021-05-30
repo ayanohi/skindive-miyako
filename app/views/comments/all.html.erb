@@ -1,34 +1,35 @@
 <div class="container">
-  <h1 class="search-title">口コミから今日のスポットを探す</h1>
+  <h1 class="search-title"><span>口コミ</span>から<span>今日のスポット</span>を探す</h1>
   <div class="row">
     <div class="col-md-8 offset-md-2 p-0">
       <div class="search-form">
+        <span class="search-form-img"><%= image_tag 'fish.png' %></span>
         <div class="search-box">
-            <span class="search-box_label">訪問年:</span>
+            <span class="search-box_label">訪問年</span>
             <% @list_of_years.each do |year| %>
               <label><input type="checkbox" name="year" value="<%= year %>" checked="true"><span><%= year %></span></label>
             <% end %>
         </div>
         <div class="search-box">
-            <span class="search-box_label">訪問月:</span>
+            <span class="search-box_label">訪問月</span>
             <% @list_of_months.each do |month| %>
               <label><input type="checkbox" name="month" value="<%= month %>"><span><%= month %></span></label>
             <% end %>
         </div>
         <div class="search-box">
-            <span class="search-box_label">天気:</span>
+            <span class="search-box_label">天気</span>
             <% Weather.find_each do |weather| %>
               <label><input type="checkbox" name="weather" value="<%= weather.name %>"><span><%= weather.name %></span></label>
             <% end %>
         </div>
         <div class="search-box">
-            <span class="search-box_label">潮:</span>
+            <span class="search-box_label">潮</span>
             <% Tide.find_each do |tide| %>
               <label><input type="checkbox" name="tide" value="<%= tide.name %>"><span><%= tide.name %></span></label>
             <% end %>
         </div>
         <div class="search-box">
-            <span class="search-box_label">風:</span>
+            <span class="search-box_label">風</span>
             <% Wind.find_each do |wind| %>
               <label><input type="checkbox" name="wind" value="<%= wind.name %>"><span><%= wind.name %></span></label>
             <% end %>

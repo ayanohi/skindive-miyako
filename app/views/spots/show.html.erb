@@ -18,8 +18,9 @@
     <div class="container col-md-8 mx-auto">
       <div class="row">
         <div class="col-md-8 order-md-2">
-          <%= safe_join(@spot.description.split("\n"), tag(:br)) %>
-
+          <p class="show-text">
+            <%= safe_join(@spot.description.split("\n"), tag(:br)) %>
+          </p>
             <section class="row tag">
               <div class="col-12 mt-4">
                 <ul>

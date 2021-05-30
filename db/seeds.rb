@@ -1,12 +1,12 @@
 users = User.create([
   {name: 'あや', email: 'test@example.com', password: 'ffffff', password_confirmation: 'ffffff', admin: 'true',
   image: File.open("#{Rails.root}/db/fixtures/user-one.jpg"),
-  introduction: 'リゾートスキンダイバーです', pb: '12', sns: 'aya' },
+  introduction: 'リゾートスキンダイバーです', pb: '12', sns: 'skindive-aya' },
   {name: 'ゆき', email: 'test1@example.com', password: 'ffffff', password_confirmation: 'ffffff', admin: 'false',
   image: File.open("#{Rails.root}/db/fixtures/user-two.jpg"),
-  introduction: '移住3年目', pb: '25', sns: 'yuki'},
+  introduction: '移住3年目', pb: '25', sns: 'skindive-yuki' },
   {name: 'みく', email: 'test2@example.com', password: 'ffffff', password_confirmation: 'ffffff', admin: 'false',
-  introduction: 'リーダーフィンとガルのマスクを使ってます', pb: '18', sns: 'miku'},
+  introduction: 'リーダーフィンとガルのマスクを使ってます', pb: '18', sns: 'skindive-miku' },
 ])
 
 areas = Area.create([
@@ -48,9 +48,7 @@ weathers = Weather.create([
   {name: '快晴'},
   {name: '晴れ'},
   {name: '曇り'},
-  {name: '小雨'},
-  {name: '大雨'},
-  {name: '台風'},
+  {name: '雨'},
   {name: '不明'}
 ])
 
@@ -67,7 +65,6 @@ winds = Wind.create([
   {name: '北'},
   {name: '東'},
   {name: '西'},
-  {name: '強'},
   {name: '無'},
   {name: '不明'}
 ])
@@ -291,22 +288,22 @@ end
 
 comments = Comment.create([
   {content: 'Ryuさんの八重干瀬ツアーに初参加。佐良浜港集合で9-15時コース。船で約30分、4スポットまわってくれました。白砂のイフに着いたら風が止まって波もなくて天国だった。みんな過去一だって言ってた！ウミガメと泳いだり、ドローン撮影してくれた。次も絶対行く！',
-  visit_date: '2020-07-21', visit_time: '9:00:00', spot_id: 6, user_id: 1, weather_id: 1, tide_id: 5, wind_id: 6},
+  visit_date: '2020-07-21', visit_time: '9:00:00', spot_id: 6, user_id: 1, weather_id: 1, tide_id: 5, wind_id: 5},
 
   {content: '青の洞窟がとにかくきれい！！小魚多くてちょっと座れる岩場もある。エントリーまでの階段がきつい。帰り（上り）はもっとしんどいです。',
-  visit_date: '2020-07-22', visit_time: '9:00:00', spot_id: 2, user_id: 1, weather_id: 1, tide_id: 5, wind_id: 6},
+  visit_date: '2020-07-22', visit_time: '9:00:00', spot_id: 2, user_id: 1, weather_id: 1, tide_id: 5, wind_id: 5},
 
   {content: 'サンセットダイブしました。無風で泳ぎながら見るサンセット最高でしたが、洞窟は暗くて行けませんでした。次はお昼に行きたい。',
-  visit_date: '2020-07-22', visit_time: '17:00:00', spot_id: 1, user_id: 1, weather_id: 2, tide_id: 3, wind_id: 6},
+  visit_date: '2020-07-22', visit_time: '17:00:00', spot_id: 1, user_id: 1, weather_id: 2, tide_id: 3, wind_id: 5},
 
   {content: '好きすぎて2日連続行きました！水深7-8mあるから初心者の練習にもいい。サンゴに当たっちゃうから干潮時刻は避けた方がいいです。',
-  visit_date: '2020-07-23', visit_time: '10:00:00', spot_id: 2, user_id: 1, weather_id: 1, tide_id: 4, wind_id: 6},
+  visit_date: '2020-07-23', visit_time: '10:00:00', spot_id: 2, user_id: 1, weather_id: 1, tide_id: 4, wind_id: 5},
 
   {content: '絵に描いたような白浜ビーチ。前日はウミガメもいたとか。',
   visit_date: '2020-09-21', visit_time: '11:00:00', spot_id: 3, user_id: 1, weather_id: 2, tide_id: 5, wind_id: 1},
 
   {content: '風が強かった。ここは泳ぐより、のんびりするのにいいビーチみたい。',
-  visit_date: '2020-09-22', visit_time: '11:00:00', spot_id: 8, user_id: 1, weather_id: 2, tide_id: 5, wind_id: 5},
+  visit_date: '2020-09-22', visit_time: '11:00:00', spot_id: 8, user_id: 1, weather_id: 2, tide_id: 5, wind_id: 6},
 
   {content: '島移住した友達に連れて行ってもらった隠れビーチ。沖に15分くらい泳いだところにある水深10mの砂地！！とにかく幻想的でキレイだった！絶対また行く！帰りに寄ったキッチンみほりんの冷やしみやこそば美味しかった〜',
   visit_date: '2020-09-23', visit_time: '11:00:00', spot_id: 11, user_id: 1, weather_id: 1, tide_id: 5, wind_id: 2},
@@ -315,19 +312,19 @@ comments = Comment.create([
   visit_date: '2020-09-24', visit_time: '9:00:00', spot_id: 6, user_id: 1, weather_id: 1, tide_id: 5, wind_id: 2},
 
   {content: 'カマスの大群に会えました！2年に一度くらいのタイミングで出会えるみたい。幻想的だった〜',
-  visit_date: '2020-09-25', visit_time: '10:00:00', spot_id: 7, user_id: 1, weather_id: 3, tide_id: 5, wind_id: 6},
+  visit_date: '2020-09-25', visit_time: '10:00:00', spot_id: 7, user_id: 1, weather_id: 3, tide_id: 5, wind_id: 5},
 
   {content: '一日中練習したい場所だった',
-  visit_date: '2020-09-26', visit_time: '10:00:00', spot_id: 12, user_id: 1, weather_id: 2, tide_id: 4, wind_id: 6},
+  visit_date: '2020-09-26', visit_time: '10:00:00', spot_id: 12, user_id: 1, weather_id: 2, tide_id: 4, wind_id: 5},
 
   {content: '水深が結構深いのでスキンダイブ練習にすごくいい。中級者以上なら行けそうな洞窟あります。',
-  visit_date: '2020-07-23', visit_time: '11:00:00', spot_id: 1, user_id: 2, weather_id: 2, tide_id: 5, wind_id: 6},
+  visit_date: '2020-07-23', visit_time: '11:00:00', spot_id: 1, user_id: 2, weather_id: 2, tide_id: 5, wind_id: 5},
 
   {content: '風のない日はここ最高です。冬のマンタにも会いたい。',
-  visit_date: '2020-07-25', visit_time: '8:00:00', spot_id: 1, user_id: 2, weather_id: 1, tide_id: 5, wind_id: 6},
+  visit_date: '2020-07-25', visit_time: '8:00:00', spot_id: 1, user_id: 2, weather_id: 1, tide_id: 5, wind_id: 5},
 
   {content: 'マンタに会えたー！！2枚なかよく泳いでて人生で一番感動しました、、！',
-  visit_date: '2021-02-25', visit_time: '8:00:00', spot_id: 1, user_id: 3, weather_id: 1, tide_id: 5, wind_id: 6},
+  visit_date: '2021-02-25', visit_time: '8:00:00', spot_id: 1, user_id: 3, weather_id: 1, tide_id: 5, wind_id: 5},
 ])
 
 histories = History.create([
