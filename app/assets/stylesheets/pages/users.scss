@@ -132,38 +132,6 @@
       display: none;
     }
   }
-
-  // タブー行ったリスト
-  //スポット一覧
-/* --------------- card-section --------------- */
-  .index-card{
-    padding-top: 2rem;
-    .card {
-      box-shadow:-5px 5px 5px rgba(170, 170, 170, 0.342);
-    }
-    .card:hover {
-      box-shadow:-2px 4px 4px rgba(177, 177, 177, 0.205);
-    }
-    .card-link {
-      color: #555;
-    }
-    .card-link:hover {
-      color: #222;
-      text-shadow: 1px 2px 3px #b3b3b3;
-    }
-    .card-area {
-      font-size: 0.8rem;
-    }
-    .card-text {
-      font-size: 0.75rem;
-      width: 100%;
-      display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
 }
 
 /* ---------------  --------------- */
