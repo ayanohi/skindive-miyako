@@ -20,7 +20,7 @@ class User < ApplicationRecord
 
   # ゲストユーザーを探す or 作成する機能
   def self.guest
-    find_or_create_by!(name: 'ゲスト', email: 'guest@example.com', introduction: 'よろしくお願いします', pb: 12, sns: '' ) do |user|
+    find_or_create_by!(name: 'ゲスト', email: 'guest@example.com', introduction: 'よろしくお願いします', pb: 12, sns: 'instagram' ) do |user|
       user.password = SecureRandom.urlsafe_base64
       # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
     end

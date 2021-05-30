@@ -1,12 +1,12 @@
 users = User.create([
   {name: 'あや', email: 'test@example.com', password: 'ffffff', password_confirmation: 'ffffff', admin: 'true',
   image: File.open("#{Rails.root}/db/fixtures/user-one.jpg"),
-  introduction: 'リゾートスキンダイバーです', pb: '12', sns: 'instagram' },
+  introduction: 'リゾートスキンダイバーです', pb: '12', sns: 'skindive-aya' },
   {name: 'ゆき', email: 'test1@example.com', password: 'ffffff', password_confirmation: 'ffffff', admin: 'false',
   image: File.open("#{Rails.root}/db/fixtures/user-two.jpg"),
-  introduction: '移住3年目', pb: '25', sns: ''},
+  introduction: '移住3年目', pb: '25', sns: 'skindive-yuki' },
   {name: 'みく', email: 'test2@example.com', password: 'ffffff', password_confirmation: 'ffffff', admin: 'false',
-  introduction: 'リーダーフィンとガルのマスクを使ってます', pb: '18', sns: ''},
+  introduction: 'リーダーフィンとガルのマスクを使ってます', pb: '18', sns: 'skindive-miku' },
 ])
 
 areas = Area.create([
