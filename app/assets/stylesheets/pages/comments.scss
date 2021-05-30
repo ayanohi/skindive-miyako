@@ -201,8 +201,13 @@ li {
 }
 .search-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.2rem;
   margin: 2rem 0 3rem 0;
+  letter-spacing: 0.1rem;
+  span {
+    font-size: 1.8rem;
+    margin: 0 0.4rem;
+  }
 }
 .search-form {
   margin-bottom: 4rem;
