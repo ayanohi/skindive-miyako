@@ -18,6 +18,9 @@ https://skindive-miyako.com/
 - 当日の気象情報等を含む口コミ投稿機能を実装  
 - 行ったスポット、気になるスポットをマイページで管理できる機能を実装  
 
+作成した背景や想いなど、より詳細な情報は下記をご覧ください。  
+[ポートフォリオ解説](https://qiita.com/ayalikesweb/private/7f0f58d9ace7fbd5d89e)
+
 <br>
 
 ## 機能
