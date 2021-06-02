@@ -1,3 +1,16 @@
 <div class="title">
-  <h1><%= @spot.name %><%= render 'twitter_share' %><%= render 'weather_api' %></h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+      </div>
+      <div class="col-md">
+        <h1><%= @spot.name %></h1>
+      </div>
+      <div class="col-md tw">
+        <span class="twitter-weather">
+          <%= render 'twitter_share' %><%= render 'weather_api' %>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
