@@ -19,26 +19,28 @@
     background-color: #B9D0D7;
     border-radius: 2px;
   }
-  .twitter-share-icon {
-    position: absolute;
-    right: -265px;
-  }
-  .weather {
-    position: absolute;
-    right: -400px;
-    top: -1px;
-    .weather__content--report {
-      display: inline-block;
-      margin-right: 0.2rem;
-      img {
-        max-width: 70%;
-        background-color: #ebebeb;
-        border-radius: 8px;
-        padding: 0.1rem;
+  .tw {
+    padding-right: 30px;
+    .twitter-weather {
+      margin: 0 auto;
+      .twitter-share-icon {
+        position: relative;
+        top: -3.3rem;
+        left: -1rem;
       }
-      p{
-        font-size: 0.6rem;
-        margin: 0.3rem;
+      .weather .weather__content--report {
+        display: inline-block;
+        margin-right: 0.2rem;
+        img {
+          max-width: 70%;
+          background-color: #ebebeb;
+          border-radius: 8px;
+          padding: 0.1rem;
+        }
+        p {
+          font-size: 0.6rem;
+          margin: 0;
+        }
       }
     }
   }
